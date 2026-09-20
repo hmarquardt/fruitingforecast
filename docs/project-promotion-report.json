@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-09-20T19:43:24.024998+00:00",
-  "status": "VALIDATED_READY_TO_PUSH",
+  "status": "COMPLETE",
   "source": {
     "repository": "hmarquardt/junkdrawer",
     "checkpoint": "4024133e00b28a12124dee259ac95e4cacea722d",
@@ -20,13 +20,16 @@
       "ref": "refs/heads/main",
       "resolve": "git rev-parse HEAD",
       "note": "The final report belongs to this commit. Embedding its own SHA would change the commit; the pushed SHA is supplied in the final handoff."
-    }
+    },
+    "firstProjectCommit": "1859c514a92386105932657c7c866cd026a91aa9",
+    "validatedApplicationCommit": "1859c514a92386105932657c7c866cd026a91aa9"
   },
   "history": {
     "method": "Resumed isolated path-filtered history; exact blob-subset verification against all 167 corresponding source commits. Original filter command was lost with temporary reboot state. No source history rewritten.",
     "retainedCommits": 167,
     "map": "history-map.json",
-    "unrelatedProjects": false
+    "unrelatedProjects": false,
+    "totalCommitsAfterFinalReport": 169
   },
   "inventory": "extraction-inventory.json",
   "promoted": [
@@ -52,7 +55,7 @@
     "Junk Drawer analytics and registry"
   ],
   "size": {
-    "trackedBytes": 20226171,
+    "trackedBytes": 20227067,
     "trackedFiles": 118,
     "largestFiles": [
       {
@@ -96,7 +99,7 @@
         "bytes": 117883
       }
     ],
-    "gitDirectoryBytesAtAudit": 3953029,
+    "gitDirectoryBytesAtAudit": 3975271,
     "rawDataBinariesTracked": false
   },
   "versions": {
@@ -168,7 +171,8 @@
     "healthy": true,
     "htmlMatchesCheckpoint": true,
     "browserCanaries": 6,
-    "url": "https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html"
+    "url": "https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html",
+    "verifiedAfterStandalonePush": true
   },
   "cors": {
     "apexPermitted": false,
@@ -177,8 +181,25 @@
     "evidence": "promotion-evidence/cors.json"
   },
   "github": {
-    "push": "pending",
-    "verification": "pending"
+    "push": "successful",
+    "upstream": "origin/main",
+    "defaultBranch": "main",
+    "verification": {
+      "checkedAt": "2026-09-20T19:53:46.004859+00:00",
+      "sha": "1859c514a92386105932657c7c866cd026a91aa9",
+      "defaultBranch": "main",
+      "branchShaMatchesLocal": true,
+      "readmeRendered": true,
+      "trackedFiles": 118,
+      "trackedBytes": 20226171,
+      "expectedFilesPresent": true,
+      "productionParquetTracked": false,
+      "commits": 168,
+      "hasPages": false,
+      "oldProductionHealthyAfterPush": true,
+      "oldProductionSha256": "41e95ca97edf56bf6dda6143561e554551dfea7c3d066dc9ce87b31ec90b4014"
+    },
+    "finalReportCommit": "refs/heads/main (resolve after this evidence-only commit)"
   },
   "deployment": {
     "domainLiveClaimed": false,
