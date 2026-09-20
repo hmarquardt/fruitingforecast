@@ -1,0 +1,61 @@
+{
+  "sourceAppSha256": "41e95ca97edf56bf6dda6143561e554551dfea7c3d066dc9ce87b31ec90b4014",
+  "standaloneAppSha256": "aafaac56000d52435d954e0b55b49731dc31ee59d8d2f2487b0ee976399927a7",
+  "allowedChangesOnly": true,
+  "productionByteIdenticalToCheckpoint": true,
+  "biologySha256": "a28ffa821c907db855f40215ee55138fcc47e60fd0f9b3b54316a28f2d1e1a3c",
+  "biologyByteIdentical": true,
+  "allRuntimeCodeUnchangedExceptGisBase": true,
+  "dataFiles": [
+    {
+      "path": "data/public-land-rules.json",
+      "sha256": "934597d230bc81aa5706c5d511a8b38499f7ae8b7a23a8613700f4d24cb0eefa",
+      "unchanged": true
+    },
+    {
+      "path": "data/national-relevance-v2.json",
+      "sha256": "a3cb621779088c08a12640c95468371df02252f5b154907dd60042370eeeb1d5",
+      "unchanged": true
+    },
+    {
+      "path": "data/tile-catalog.json",
+      "sha256": "49c23ef9ba9d7fc194e31274783b12f23ca66a28205ab9080653a2fe42b693c4",
+      "unchanged": true
+    },
+    {
+      "path": "data/ecoregions.json",
+      "sha256": "73f8dcde4c47b95d215f611b7c081d84b339b1ab3f092c7f6a4bbcabacd5139f",
+      "unchanged": true
+    },
+    {
+      "path": "data/biology-research.json",
+      "sha256": "96888a21bf9861133bab4f5ebf5db8fbe337df500054fa5cef68cf2c63dae89d",
+      "unchanged": true
+    },
+    {
+      "path": "data/states.json",
+      "sha256": "c01e25f28efa02103b126644f8f206c2f97b7e1fc87af6ccff0d530c302221de",
+      "unchanged": true
+    },
+    {
+      "path": "data/tile-catalog-full.json",
+      "sha256": "23dd3c8341b1331b735eb663b1c7b3f5358194f5c373f30688a7d9a91118ff20",
+      "unchanged": true
+    },
+    {
+      "path": "data/states.js",
+      "sha256": "daa063d65f9e71b1e7a6dff8d978cdf5ae336203aa5413b2cb5797509f3b7441",
+      "unchanged": true
+    },
+    {
+      "path": "data/manifest.json",
+      "sha256": "44ea23cfd61a0911ad432daadef3ee83937b406ef273b0e3a9301b5b55d73317",
+      "unchanged": true
+    },
+    {
+      "path": "data/ecoregions.js",
+      "sha256": "f9600666e84cfd881a09278a0eef6b5307c7f668c2f760b4a096140f7577f383",
+      "unchanged": true
+    }
+  ]
+}

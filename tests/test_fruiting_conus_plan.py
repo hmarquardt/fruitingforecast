@@ -15,7 +15,7 @@ spec = importlib.util.spec_from_file_location('conus_plan', ROOT / 'tools/fruiti
 planner = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(planner)
 
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 MANIFEST = json.loads((DATA / 'manifest.json').read_text())
 
 # Published modern release tiles whose coastal land share the legacy catalog

@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 require('./fruiting-local-manifest.cjs')(test);
 const path = require('path');
-const manifest = require('../data/fruiting-forecast/manifest.json');
-const url = `file://${path.resolve(process.cwd(), 'fruiting-forecast.html')}`;
+const manifest = require('../data/manifest.json');
+const url = `file://${path.resolve(process.cwd(), 'index.html')}`;
 test.use({ channel: 'chrome', viewport: { width: 1280, height: 850 } });
 function weatherPayload(lat = 39.1653, lon = -86.5264) {
   const now = new Date();
@@ -135,7 +135,7 @@ test('manifest counts are derived from descriptors and handle partial resource p
   const errors=await setup(page);
   await page.evaluate(m => window.__FRUITING_FORECAST_TEST__.getState().gis.manifest=m, manifest); await about(page);
   const coverage=page.locator('#aboutCoverageStatus');
-  const vendor = require('../data/fruiting-forecast/manifest.json');
+  const vendor = require('../data/manifest.json');
   const counts = vendor.summary.layers;
   for(const [label,count] of [['Complete habitat tiles',counts.habitat.populated],['Public-land layer',counts['public-land'].populated],['Access-point layer',counts.access.populated],['Fire-history layer',counts.fire.populated]]) await expect(coverage.locator('dl > div').filter({hasText:label})).toContainText(String(count));
   await expect(coverage).toContainText(vendor.datasetVersion);
@@ -177,14 +177,14 @@ for(const theme of ['light','dark','system']) test(`About mobile 390 × 844: ${t
 
 test('hosted About loads only manifest metadata and reuses it without starting GIS', async ({ page }) => {
   const errors=await setup(page), requests=[];
-  const html=require('fs').readFileSync(path.resolve('fruiting-forecast.html'),'utf8');
+  const html=require('fs').readFileSync(path.resolve('index.html'),'utf8');
   await page.route('http://fruiting.test/**', r => {
     const u=new URL(r.request().url());requests.push(u.pathname);
     if(u.pathname.endsWith('/manifest.json')) return r.fulfill({contentType:'application/json',body:JSON.stringify(manifest)});
-    if(u.pathname.endsWith('/fruiting-forecast.html')) return r.fulfill({contentType:'text/html',body:html});
+    if(u.pathname.endsWith('/index.html')) return r.fulfill({contentType:'text/html',body:html});
     return r.fulfill({contentType:'application/javascript',body:''});
   });
-  await page.goto('http://fruiting.test/fruiting-forecast.html',{waitUntil:'domcontentloaded'});
+  await page.goto('http://fruiting.test/index.html',{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__);
   await about(page); await expect(page.locator('#aboutCoverageStatus')).toContainText(manifest.datasetVersion);
   await page.getByRole('tab',{name:'Forecast',exact:true}).click(); await about(page);

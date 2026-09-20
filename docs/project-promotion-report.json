@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-20T19:43:24.024998+00:00",
+  "status": "VALIDATED_READY_TO_PUSH",
+  "source": {
+    "repository": "hmarquardt/junkdrawer",
+    "checkpoint": "4024133e00b28a12124dee259ac95e4cacea722d",
+    "runtimeCandidate": "fe5c08fe3b048c5d583cbae3104dd41be7c93b39",
+    "observedHead": "55d4954d36233598b578920e7b77305915f7a7d6",
+    "workingTreePreserved": true
+  },
+  "standalone": {
+    "repository": "hmarquardt/fruitingforecast",
+    "remote": "git@github.com:hmarquardt/fruitingforecast.git",
+    "branch": "main",
+    "entryPoint": "index.html",
+    "firstRetainedCommit": "c37fd9720f3fbe8e57b211ff46d3414264d10454",
+    "filteredTip": "6c59bf0",
+    "finalCommit": {
+      "ref": "refs/heads/main",
+      "resolve": "git rev-parse HEAD",
+      "note": "The final report belongs to this commit. Embedding its own SHA would change the commit; the pushed SHA is supplied in the final handoff."
+    }
+  },
+  "history": {
+    "method": "Resumed isolated path-filtered history; exact blob-subset verification against all 167 corresponding source commits. Original filter command was lost with temporary reboot state. No source history rewritten.",
+    "retainedCommits": 167,
+    "map": "history-map.json",
+    "unrelatedProjects": false
+  },
+  "inventory": "extraction-inventory.json",
+  "promoted": [
+    "index.html",
+    "data/",
+    "config/",
+    "tools/",
+    "tests/",
+    "docs/",
+    "README.md",
+    "LICENSE.md",
+    "AGENTS.md",
+    ".gitignore",
+    "package.json",
+    "package-lock.json"
+  ],
+  "exclusions": [
+    "Production Parquet throughout history",
+    "Raw GIS source caches, PBF/DEM/rasters",
+    "Repeated chunk/journal/metrics/run-state artifacts",
+    "Secrets, OAuth state and browser profiles",
+    "Unrelated Junk Drawer projects",
+    "Junk Drawer analytics and registry"
+  ],
+  "size": {
+    "trackedBytes": 20226171,
+    "trackedFiles": 118,
+    "largestFiles": [
+      {
+        "path": "data/manifest.json",
+        "bytes": 14497876
+      },
+      {
+        "path": "data/ecoregions.js",
+        "bytes": 1206644
+      },
+      {
+        "path": "data/ecoregions.json",
+        "bytes": 1206542
+      },
+      {
+        "path": "index.html",
+        "bytes": 332180
+      },
+      {
+        "path": "data/national-relevance-v2.json",
+        "bytes": 247466
+      },
+      {
+        "path": "docs/fruiting-forecast-conus-expansion.md",
+        "bytes": 244044
+      },
+      {
+        "path": "data/production/batch3-report.json",
+        "bytes": 242683
+      },
+      {
+        "path": "data/production/remote-audit.json",
+        "bytes": 178063
+      },
+      {
+        "path": "data/production/batch2-report.json",
+        "bytes": 163807
+      },
+      {
+        "path": "data/states.js",
+        "bytes": 117883
+      }
+    ],
+    "gitDirectoryBytesAtAudit": 3953029,
+    "rawDataBinariesTracked": false
+  },
+  "versions": {
+    "sourceApp": "2026.09.20.3",
+    "standaloneApp": "2026.09.20.4",
+    "scoring": "FF-1.7.0",
+    "gis": "content-db0f839a4352ef82",
+    "appBumpReason": "Standalone entry point and relative data paths; removed collection analytics dependency. No biological/scoring/GIS changes."
+  },
+  "tests": {
+    "python": {
+      "passed": 124,
+      "failedRemaining": 0,
+      "subtestsPassed": 6,
+      "warnings": 4,
+      "execution": "Final full sweep: 124 passed, 6 subtests passed, no skips/failures; four existing rasterio deprecation warnings. Legacy access schema fixture preserves mixed-schema assertions."
+    },
+    "playwright": {
+      "passed": 134,
+      "skipped": 1,
+      "failed": 0,
+      "discovered": 135,
+      "skipReason": "Existing opt-in live Princeton test; separate unmocked Salida analysis passed."
+    },
+    "launchProfiles": {
+      "passed": 13,
+      "total": 13,
+      "consoleErrors": 0,
+      "pageErrors": 0,
+      "warmAdditionalParquet": 0
+    },
+    "browserParity": {
+      "passed": true,
+      "cases": 6,
+      "filterRecovery": true,
+      "fullScoreTraceEquality": true,
+      "evidence": "promotion-evidence/browser-parity.json"
+    },
+    "liveSalida": {
+      "passed": true,
+      "services": "Unmocked weather and observations; real R2, DuckDB and local assets"
+    }
+  },
+  "biology": {
+    "unchanged": true,
+    "proof": "Full application bytes equal source after only three allowlisted transformations: data paths, footer version, analytics tag removal. Profile declarations and all scoring code unchanged.",
+    "evidence": "promotion-evidence/byte-parity.json"
+  },
+  "gis": {
+    "unchanged": true,
+    "datasetVersion": "content-db0f839a4352ef82",
+    "normalizedTiles": 922,
+    "references": 3688,
+    "activeBytes": 271077299,
+    "remoteValid": 3688,
+    "remoteInvalid": 0,
+    "remoteMissing": 0,
+    "uploaded": 0,
+    "manifestBytesUnchanged": true,
+    "auditScope": "Every active object, public full-byte GET SHA-256; no exhaustive orphan inventory"
+  },
+  "secretAudit": {
+    "clean": true,
+    "historicalBlobsScanned": 516,
+    "findings": 0,
+    "evidence": "promotion-evidence/secret-audit.json"
+  },
+  "oldProduction": {
+    "healthy": true,
+    "htmlMatchesCheckpoint": true,
+    "browserCanaries": 6,
+    "url": "https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html"
+  },
+  "cors": {
+    "apexPermitted": false,
+    "wwwPermitted": false,
+    "modified": false,
+    "evidence": "promotion-evidence/cors.json"
+  },
+  "github": {
+    "push": "pending",
+    "verification": "pending"
+  },
+  "deployment": {
+    "domainLiveClaimed": false,
+    "handoff": "domain-deployment-handoff.md",
+    "blockers": [
+      "Select/configure a static host and apex/optional www",
+      "Append selected future domain origins to R2 CORS",
+      "Deploy and run actual-domain acceptance",
+      "Decide old URL compatibility after successful new-domain launch"
+    ],
+    "manualDecisions": [
+      "Software license remains unspecified; owner may select separately",
+      "GIS hostname migration is optional and separate"
+    ]
+  }
+}

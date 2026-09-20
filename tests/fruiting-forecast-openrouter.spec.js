@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 require('./fruiting-local-manifest.cjs')(test);
 const path = require('path');
 
-const url = `file://${path.resolve(process.cwd(), 'fruiting-forecast.html')}`;
+const url = `file://${path.resolve(process.cwd(), 'index.html')}`;
 test.use({ channel: 'chrome', viewport: { width: 1440, height: 900 } });
 
 function weatherPayload(lat = 39.1653, lon = -86.5264) {

@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-09-20",
+  "method": "npx wrangler r2 bucket cors list fruiting-forecast-data; read-only",
+  "rules": [
+    {
+      "allowed": {
+        "origins": [
+          "https://hanksjunkdrawer.com",
+          "https://www.hanksjunkdrawer.com",
+          "https://hmarquardt.github.io",
+          "http://localhost:8000",
+          "http://127.0.0.1:8000"
+        ],
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "headers": [
+          "Range"
+        ]
+      },
+      "exposeHeaders": [
+        "Accept-Ranges",
+        "Content-Range"
+      ],
+      "maxAgeSeconds": 3600
+    }
+  ],
+  "futureApexPermitted": false,
+  "futureWwwPermitted": false,
+  "modified": false,
+  "note": "Direct OPTIONS probe returned HTTP 403 for all origins including allowed localhost; authoritative bucket configuration plus successful browser GET verifies current app path. No CORS changes made."
+}

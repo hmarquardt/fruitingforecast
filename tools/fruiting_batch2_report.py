@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Machine-readable Batch 2 report from scope, state-prep, chunks, metrics, manifest.
 
-Usage: python3 tools/fruiting_batch2_report.py [--out data/fruiting-forecast/production/batch2-report.json]
+Usage: python3 tools/fruiting_batch2_report.py [--out data/production/batch2-report.json]
 Enough state lands in the report for a fresh session to resume or audit without
 conversation history: frozen scope, prepared states, chunks, metrics, R2 totals.
 """
@@ -12,7 +12,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 PROD = DATA / 'production'
 WORK = Path('/tmp/ff-batch2-normalized')
 
@@ -113,9 +113,9 @@ def main():
                'ledgerScope': 'publisher upload-intent ledger since the first Batch-2 metrics event; not a bucket listing'},
         'metrics': stats,
         'remoteAudit': json.loads(audit.read_text()) if audit.exists() else None,
-        'resume': {'command': 'uv run tools/fruiting_batch2.py run --scope data/fruiting-forecast/production/batch2-scope.json --chunk <n>',
+        'resume': {'command': 'uv run tools/fruiting_batch2.py run --scope data/production/batch2-scope.json --chunk <n>',
                    'nextChunk': len(chunk_records),
-                   'journal': 'data/fruiting-forecast/production/pnw-release-journal-batch2.json'},
+                   'journal': 'data/production/pnw-release-journal-batch2.json'},
     }
     a.out.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({k: report[k] for k in ('frozenTiles', 'newlyComplete', 'nationalComplete', 'nationalRemaining', 'nextChunk' if 'nextChunk' in report else 'r2')}, default=str))

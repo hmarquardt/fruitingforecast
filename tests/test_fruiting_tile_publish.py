@@ -85,7 +85,7 @@ class AccessPublication(unittest.TestCase):
 class CoverageMetadata(unittest.TestCase):
     def test_profile_roster_matches_the_browser_mapping(self):
         import re
-        html=(ROOT/'fruiting-forecast.html').read_text()
+        html=(ROOT/'index.html').read_text()
         marker='ECO_PROFILE_GROUPS='
         start=html.index(marker)+len(marker)
         literal=html[start:html.index('};',start)+1]

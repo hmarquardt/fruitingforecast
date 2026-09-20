@@ -1,0 +1,966 @@
+{
+  "sourceCheckpoint": "4024133e00b28a12124dee259ac95e4cacea722d",
+  "sourceHead": "55d4954d36233598b578920e7b77305915f7a7d6",
+  "resumedFilteredHead": "6c59bf05ca5c7a946007d0376f1b13b12ffb2dd9",
+  "resumedCommits": 167,
+  "note": "Reconstructed before resumed mutation; previous temporary inventory was lost on reboot. Existing filtered commits and uncommitted path normalization preserved.",
+  "retainedPaths": [
+    {
+      "source": "config/fruiting-forecast-r2-cors.json",
+      "destination": "config/fruiting-forecast-r2-cors.json"
+    },
+    {
+      "source": "data/fruiting-forecast/biology-research.json",
+      "destination": "data/biology-research.json"
+    },
+    {
+      "source": "data/fruiting-forecast/ecoregions.js",
+      "destination": "data/ecoregions.js"
+    },
+    {
+      "source": "data/fruiting-forecast/ecoregions.json",
+      "destination": "data/ecoregions.json"
+    },
+    {
+      "source": "data/fruiting-forecast/manifest.json",
+      "destination": "data/manifest.json"
+    },
+    {
+      "source": "data/fruiting-forecast/national-relevance-v2.json",
+      "destination": "data/national-relevance-v2.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch1-checkpoint.md",
+      "destination": "data/production/batch1-checkpoint.md"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch1-report.json",
+      "destination": "data/production/batch1-report.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch1-report.md",
+      "destination": "data/production/batch1-report.md"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch1-scope.json",
+      "destination": "data/production/batch1-scope.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch2-final-analysis.json",
+      "destination": "data/production/batch2-final-analysis.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch2-report.json",
+      "destination": "data/production/batch2-report.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch2-scope.json",
+      "destination": "data/production/batch2-scope.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch2-state-prep.json",
+      "destination": "data/production/batch2-state-prep.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch2-storage-stats.json",
+      "destination": "data/production/batch2-storage-stats.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch3-final-analysis.json",
+      "destination": "data/production/batch3-final-analysis.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch3-final-scope.json",
+      "destination": "data/production/batch3-final-scope.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch3-report.json",
+      "destination": "data/production/batch3-report.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch3-scope.json",
+      "destination": "data/production/batch3-scope.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch3-state-prep.json",
+      "destination": "data/production/batch3-state-prep.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/batch3-tests.json",
+      "destination": "data/production/batch3-tests.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/browser-deployed.json",
+      "destination": "data/production/browser-deployed.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/browser-final.json",
+      "destination": "data/production/browser-final.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/browser-migration.json",
+      "destination": "data/production/browser-migration.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/edge-tiles-characterization.json",
+      "destination": "data/production/edge-tiles-characterization.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/launch-qa-report.json",
+      "destination": "data/production/launch-qa-report.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/manifest-normalization.json",
+      "destination": "data/production/manifest-normalization.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/migration.json",
+      "destination": "data/production/migration.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/national-normalization-report.json",
+      "destination": "data/production/national-normalization-report.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/national-storage-stats.json",
+      "destination": "data/production/national-storage-stats.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/normalization-build-scope.json",
+      "destination": "data/production/normalization-build-scope.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/remaining-batches.json",
+      "destination": "data/production/remaining-batches.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/remote-audit.json",
+      "destination": "data/production/remote-audit.json"
+    },
+    {
+      "source": "data/fruiting-forecast/production/revision18-tests.json",
+      "destination": "data/production/revision18-tests.json"
+    },
+    {
+      "source": "data/fruiting-forecast/public-land-rules.json",
+      "destination": "data/public-land-rules.json"
+    },
+    {
+      "source": "data/fruiting-forecast/states.js",
+      "destination": "data/states.js"
+    },
+    {
+      "source": "data/fruiting-forecast/states.json",
+      "destination": "data/states.json"
+    },
+    {
+      "source": "data/fruiting-forecast/tile-catalog-full.json",
+      "destination": "data/tile-catalog-full.json"
+    },
+    {
+      "source": "data/fruiting-forecast/tile-catalog.json",
+      "destination": "data/tile-catalog.json"
+    },
+    {
+      "source": "docs/fruiting-forecast-conus-expansion.md",
+      "destination": "docs/fruiting-forecast-conus-expansion.md"
+    },
+    {
+      "source": "docs/fruiting-forecast-hosting.md",
+      "destination": "docs/fruiting-forecast-hosting.md"
+    },
+    {
+      "source": "docs/fruiting-forecast-implementation.md",
+      "destination": "docs/fruiting-forecast-implementation.md"
+    },
+    {
+      "source": "docs/fruiting-forecast-launch-acceptance.md",
+      "destination": "docs/fruiting-forecast-launch-acceptance.md"
+    },
+    {
+      "source": "fruiting-forecast.html",
+      "destination": "index.html"
+    },
+    {
+      "source": "tests/fixtures/fruiting-access/access.osm",
+      "destination": "tests/fixtures/fruiting-access/access.osm"
+    },
+    {
+      "source": "tests/fruiting-forecast-about.spec.js",
+      "destination": "tests/fruiting-forecast-about.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-access-theme.spec.js",
+      "destination": "tests/fruiting-forecast-access-theme.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-conus.spec.js",
+      "destination": "tests/fruiting-forecast-conus.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-filter-state.spec.js",
+      "destination": "tests/fruiting-forecast-filter-state.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-gis.spec.js",
+      "destination": "tests/fruiting-forecast-gis.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-hosting.spec.js",
+      "destination": "tests/fruiting-forecast-hosting.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-huntability.spec.js",
+      "destination": "tests/fruiting-forecast-huntability.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-national.spec.js",
+      "destination": "tests/fruiting-forecast-national.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-openrouter.spec.js",
+      "destination": "tests/fruiting-forecast-openrouter.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-osm-access.spec.js",
+      "destination": "tests/fruiting-forecast-osm-access.spec.js"
+    },
+    {
+      "source": "tests/fruiting-forecast-pnw.spec.js",
+      "destination": "tests/fruiting-forecast-pnw.spec.js"
+    },
+    {
+      "source": "tests/fruiting-local-manifest.cjs",
+      "destination": "tests/fruiting-local-manifest.cjs"
+    },
+    {
+      "source": "tests/test_fruiting_batch2.py",
+      "destination": "tests/test_fruiting_batch2.py"
+    },
+    {
+      "source": "tests/test_fruiting_bulk_adapters.py",
+      "destination": "tests/test_fruiting_bulk_adapters.py"
+    },
+    {
+      "source": "tests/test_fruiting_conus_plan.py",
+      "destination": "tests/test_fruiting_conus_plan.py"
+    },
+    {
+      "source": "tests/test_fruiting_osm_access.py",
+      "destination": "tests/test_fruiting_osm_access.py"
+    },
+    {
+      "source": "tests/test_fruiting_pnw_release.py",
+      "destination": "tests/test_fruiting_pnw_release.py"
+    },
+    {
+      "source": "tests/test_fruiting_remote.py",
+      "destination": "tests/test_fruiting_remote.py"
+    },
+    {
+      "source": "tests/test_fruiting_tile_publish.py",
+      "destination": "tests/test_fruiting_tile_publish.py"
+    },
+    {
+      "source": "tools/build-fruiting-ecoregions.py",
+      "destination": "tools/build-fruiting-ecoregions.py"
+    },
+    {
+      "source": "tools/build-fruiting-gis.py",
+      "destination": "tools/build-fruiting-gis.py"
+    },
+    {
+      "source": "tools/build-fruiting-states.py",
+      "destination": "tools/build-fruiting-states.py"
+    },
+    {
+      "source": "tools/fruiting_batch1.py",
+      "destination": "tools/fruiting_batch1.py"
+    },
+    {
+      "source": "tools/fruiting_batch2.py",
+      "destination": "tools/fruiting_batch2.py"
+    },
+    {
+      "source": "tools/fruiting_batch2_final.py",
+      "destination": "tools/fruiting_batch2_final.py"
+    },
+    {
+      "source": "tools/fruiting_batch2_report.py",
+      "destination": "tools/fruiting_batch2_report.py"
+    },
+    {
+      "source": "tools/fruiting_batch3_final.py",
+      "destination": "tools/fruiting_batch3_final.py"
+    },
+    {
+      "source": "tools/fruiting_batch3_plan.py",
+      "destination": "tools/fruiting_batch3_plan.py"
+    },
+    {
+      "source": "tools/fruiting_batch3_report.py",
+      "destination": "tools/fruiting_batch3_report.py"
+    },
+    {
+      "source": "tools/fruiting_browser_qa.js",
+      "destination": "tools/fruiting_browser_qa.js"
+    },
+    {
+      "source": "tools/fruiting_bulk_adapters.py",
+      "destination": "tools/fruiting_bulk_adapters.py"
+    },
+    {
+      "source": "tools/fruiting_conus_plan.py",
+      "destination": "tools/fruiting_conus_plan.py"
+    },
+    {
+      "source": "tools/fruiting_launch_qa.js",
+      "destination": "tools/fruiting_launch_qa.js"
+    },
+    {
+      "source": "tools/fruiting_manifest_normalize.py",
+      "destination": "tools/fruiting_manifest_normalize.py"
+    },
+    {
+      "source": "tools/fruiting_metrics.py",
+      "destination": "tools/fruiting_metrics.py"
+    },
+    {
+      "source": "tools/fruiting_normalization_report.py",
+      "destination": "tools/fruiting_normalization_report.py"
+    },
+    {
+      "source": "tools/fruiting_osm_access.py",
+      "destination": "tools/fruiting_osm_access.py"
+    },
+    {
+      "source": "tools/fruiting_pnw_release.py",
+      "destination": "tools/fruiting_pnw_release.py"
+    },
+    {
+      "source": "tools/fruiting_production_report.py",
+      "destination": "tools/fruiting_production_report.py"
+    },
+    {
+      "source": "tools/fruiting_relevance.py",
+      "destination": "tools/fruiting_relevance.py"
+    },
+    {
+      "source": "tools/fruiting_remote.py",
+      "destination": "tools/fruiting_remote.py"
+    },
+    {
+      "source": "tools/fruiting_revision16.py",
+      "destination": "tools/fruiting_revision16.py"
+    },
+    {
+      "source": "tools/fruiting_revision17.py",
+      "destination": "tools/fruiting_revision17.py"
+    },
+    {
+      "source": "tools/fruiting_revision18.py",
+      "destination": "tools/fruiting_revision18.py"
+    },
+    {
+      "source": "tools/fruiting_stage_stats.py",
+      "destination": "tools/fruiting_stage_stats.py"
+    },
+    {
+      "source": "tools/fruiting_storage_stats.py",
+      "destination": "tools/fruiting_storage_stats.py"
+    },
+    {
+      "source": "tools/fruiting_tile_publish.py",
+      "destination": "tools/fruiting_tile_publish.py"
+    }
+  ],
+  "excludedPaths": [
+    "data/fruiting-forecast/production/batch3/chunk-000.json",
+    "data/fruiting-forecast/production/batch3/chunk-001.json",
+    "data/fruiting-forecast/production/batch3/chunk-002.json",
+    "data/fruiting-forecast/production/batch3/chunk-003.json",
+    "data/fruiting-forecast/production/batch3/chunk-004.json",
+    "data/fruiting-forecast/production/batch3/chunk-005.json",
+    "data/fruiting-forecast/production/batch3/chunk-006.json",
+    "data/fruiting-forecast/production/batch3/chunk-007.json",
+    "data/fruiting-forecast/production/batch3/chunk-008.json",
+    "data/fruiting-forecast/production/batch3/chunk-009.json",
+    "data/fruiting-forecast/production/batch3/chunk-010.json",
+    "data/fruiting-forecast/production/batch3/chunk-011.json",
+    "data/fruiting-forecast/production/batch3/chunk-012.json",
+    "data/fruiting-forecast/production/batch3/chunk-013.json",
+    "data/fruiting-forecast/production/batch3/chunk-014.json",
+    "data/fruiting-forecast/production/batch3/chunk-015.json",
+    "data/fruiting-forecast/production/batch3/chunk-016.json",
+    "data/fruiting-forecast/production/batch3/chunk-017.json",
+    "data/fruiting-forecast/production/batch3/chunk-018.json",
+    "data/fruiting-forecast/production/batch3/chunk-019.json",
+    "data/fruiting-forecast/production/batch3/chunk-020.json",
+    "data/fruiting-forecast/production/batch3/chunk-021.json",
+    "data/fruiting-forecast/production/batch3/chunk-022.json",
+    "data/fruiting-forecast/production/batch3/chunk-023.json",
+    "data/fruiting-forecast/production/batch3/chunk-024.json",
+    "data/fruiting-forecast/production/batch3/chunk-025.json",
+    "data/fruiting-forecast/production/batch3/chunk-026.json",
+    "data/fruiting-forecast/production/batch3/chunk-027.json",
+    "data/fruiting-forecast/production/batch3/chunk-028.json",
+    "data/fruiting-forecast/production/batch3/chunk-029.json",
+    "data/fruiting-forecast/production/batch3/chunk-030.json",
+    "data/fruiting-forecast/production/batch3/chunk-031.json",
+    "data/fruiting-forecast/production/batch3/journal.json",
+    "data/fruiting-forecast/production/batch3/metrics.jsonl",
+    "data/fruiting-forecast/production/batch3/run-state.json",
+    "data/fruiting-forecast/production/browser-midbatch.json",
+    "data/fruiting-forecast/production/chunk-000.json",
+    "data/fruiting-forecast/production/chunk-001.json",
+    "data/fruiting-forecast/production/chunk-002.json",
+    "data/fruiting-forecast/production/chunk-003.json",
+    "data/fruiting-forecast/production/chunk-004.json",
+    "data/fruiting-forecast/production/chunk-005.json",
+    "data/fruiting-forecast/production/chunk-006.json",
+    "data/fruiting-forecast/production/chunk-007.json",
+    "data/fruiting-forecast/production/chunk-008.json",
+    "data/fruiting-forecast/production/chunk-009.json",
+    "data/fruiting-forecast/production/chunk-010.json",
+    "data/fruiting-forecast/production/chunk-011.json",
+    "data/fruiting-forecast/production/chunk-012.json",
+    "data/fruiting-forecast/production/chunk-013.json",
+    "data/fruiting-forecast/production/chunk-014.json",
+    "data/fruiting-forecast/production/chunk-015.json",
+    "data/fruiting-forecast/production/chunk-016.json",
+    "data/fruiting-forecast/production/chunk-017.json",
+    "data/fruiting-forecast/production/chunk-018.json",
+    "data/fruiting-forecast/production/chunk-019.json",
+    "data/fruiting-forecast/production/chunk-020.json",
+    "data/fruiting-forecast/production/chunk-021.json",
+    "data/fruiting-forecast/production/chunk-022.json",
+    "data/fruiting-forecast/production/chunk-023.json",
+    "data/fruiting-forecast/production/chunk-024.json",
+    "data/fruiting-forecast/production/chunk-025.json",
+    "data/fruiting-forecast/production/chunk-026.json",
+    "data/fruiting-forecast/production/chunk-027.json",
+    "data/fruiting-forecast/production/normalization-build/chunk-000.json",
+    "data/fruiting-forecast/production/normalization-build/journal.json",
+    "data/fruiting-forecast/production/normalization-build/metrics.jsonl",
+    "data/fruiting-forecast/production/pnw-release-journal-batch1.json",
+    "data/fruiting-forecast/production/pnw-release-journal-batch2.json",
+    "data/fruiting-forecast/production/preflight.json"
+  ],
+  "additionalRequiredPaths": [
+    "tests/fruiting-forecast.spec.js"
+  ],
+  "preResumeFiles": [
+    {
+      "path": "index.html",
+      "sha256": "aafaac56000d52435d954e0b55b49731dc31ee59d8d2f2487b0ee976399927a7"
+    },
+    {
+      "path": "tools/fruiting_pnw_release.py",
+      "sha256": "8f462ba452a908743a94d2b1c8867f857f71aef830fec72133995ddd98ea8e25"
+    },
+    {
+      "path": "tools/fruiting_batch2.py",
+      "sha256": "dd084d92ca9794d4b0e787fb94d6ab82ab7730ca7c878cadfeff31a21ce131f9"
+    },
+    {
+      "path": "tools/fruiting_manifest_normalize.py",
+      "sha256": "944479c2f8da6479b906c8d8ba3b9900385197c5f010b7d24017a95b31c8a9d2"
+    },
+    {
+      "path": "tools/fruiting_batch3_report.py",
+      "sha256": "6bae1a45e519a97b7cbc45cd68e7dfea53a62afea89d12f54a93dd4fd8d90f1b"
+    },
+    {
+      "path": "tools/fruiting_conus_plan.py",
+      "sha256": "0161b4128eaaaeb45b33255acc3e4b42e2f3bde377d5a261f3ffa73436bc5e5f"
+    },
+    {
+      "path": "tools/fruiting_osm_access.py",
+      "sha256": "7371ed492c0b2cd064b8f8da0259689da42448c1e029f39d3903cc35f64b57ef"
+    },
+    {
+      "path": "tools/fruiting_batch3_final.py",
+      "sha256": "3078149eee682d6af2b8287e2cf85068366c02a3b2deeac65afc17eef1cf2a0a"
+    },
+    {
+      "path": "tools/fruiting_batch2_final.py",
+      "sha256": "f85f3f159095501a321fa2daea916487e8a4de908bf73285083c6bbeb98e80c4"
+    },
+    {
+      "path": "tools/fruiting_metrics.py",
+      "sha256": "a55e8f8bace1a97baaeef915cfb5b88a6f16df9498f1b843cec3b813afbf5ca9"
+    },
+    {
+      "path": "tools/build-fruiting-states.py",
+      "sha256": "5473c6aff70d866ac79c6e186d03b286df7bd54aea6d8f795dc35e6f087b92a4"
+    },
+    {
+      "path": "tools/fruiting_production_report.py",
+      "sha256": "04a190b3aecfbf1238304fee7abd6ba0c5e1cd6c33b493797182509240c28515"
+    },
+    {
+      "path": "tools/fruiting_batch2_report.py",
+      "sha256": "21a234b01340c40de31efa5e3c5912cd4c81544d9795b4de86d476614c59ea5f"
+    },
+    {
+      "path": "tools/fruiting_storage_stats.py",
+      "sha256": "a6e0626fe2c94a908762dab2442b844ed8f8a51bcc3aa38661cbe6031b4a308b"
+    },
+    {
+      "path": "tools/fruiting_remote.py",
+      "sha256": "0d67c9dd434d53634413e0825fcf7fd3d7a1355f584db563b44d9a6ece83b665"
+    },
+    {
+      "path": "tools/fruiting_normalization_report.py",
+      "sha256": "8d265212d9eae05e142d8b7b89186848b0a6a3f29ea990a961b09c682ba31c26"
+    },
+    {
+      "path": "tools/fruiting_bulk_adapters.py",
+      "sha256": "63eb911552fbc1753ae23297a5bc588964c7bd64ccacb854a785e2d79cca9e70"
+    },
+    {
+      "path": "tools/fruiting_browser_qa.js",
+      "sha256": "62f8a3bf710cbe76d76239e6bae82e827ee4b2ff73db1ae960f7b59af0931f19"
+    },
+    {
+      "path": "tools/fruiting_launch_qa.js",
+      "sha256": "cc1bc8c6b31a7eac79c0f01d0c65f321d6cb9b046690ffe0ef94aa9fc6c768b2"
+    },
+    {
+      "path": "tools/build-fruiting-ecoregions.py",
+      "sha256": "884351122484fe3fc4dd3f64db10ffc84ad391ddef122beeeed80fea6bf7ab79"
+    },
+    {
+      "path": "tools/fruiting_stage_stats.py",
+      "sha256": "29a40d72fdeb1aa0702812b55e5cc0960ed590c7e509667b7726ff41c075fdca"
+    },
+    {
+      "path": "tools/fruiting_revision18.py",
+      "sha256": "22e433ee08af23c9e14209b00c4de32663f659637dede28091e948c8b258ec58"
+    },
+    {
+      "path": "tools/fruiting_tile_publish.py",
+      "sha256": "6bc2fa6f20cd52ca84edd6cf2a01bb0176f77f9a8859c8e8ebb90994efe0c3ac"
+    },
+    {
+      "path": "tools/fruiting_batch1.py",
+      "sha256": "641b658343d43a91020d76158cf3343f0dbb851872b188df4e0440a293f7bd67"
+    },
+    {
+      "path": "tools/fruiting_revision16.py",
+      "sha256": "ed61b3be20e59fca09264e7c25b2ca6f36c53f7f9556bd36cf1042e3b3884b8d"
+    },
+    {
+      "path": "tools/build-fruiting-gis.py",
+      "sha256": "f89dd6b12026058053bd117ac1547403efd72efd2f5e91e95b30a44a4256ee4a"
+    },
+    {
+      "path": "tools/fruiting_batch3_plan.py",
+      "sha256": "45f01d8ff789c50bff9214155f5bcdb555515bb69816ae07098dd5f9351365e7"
+    },
+    {
+      "path": "tools/fruiting_revision17.py",
+      "sha256": "735d059f17bf53425823fccb10792eef2c3b72703fb4b7006e40b49f700d3388"
+    },
+    {
+      "path": "tools/fruiting_relevance.py",
+      "sha256": "a1ba0536689392c3e1c1671b5fa909e07c2b8db06926e09cdf321d8238279cf3"
+    },
+    {
+      "path": "config/fruiting-forecast-r2-cors.json",
+      "sha256": "9066093217dd5ae4e6ab19af13b7c51444a478e4e4f686eb1932717cc6e72863"
+    },
+    {
+      "path": "tests/fruiting-forecast-national.spec.js",
+      "sha256": "b8de3a002ec4cdf74dd7b3ccb5964c07a666a8cb62184e188fb2abd7298b95cb"
+    },
+    {
+      "path": "tests/fruiting-forecast-osm-access.spec.js",
+      "sha256": "6e4454aca5986bb9522dd6d3480343b278f6fcbc306253e10c15785bda11482e"
+    },
+    {
+      "path": "tests/fruiting-forecast-pnw.spec.js",
+      "sha256": "394a82e938f0f399737832bcc4cc3eb43018338bf75653be794c35215309036a"
+    },
+    {
+      "path": "tests/test_fruiting_tile_publish.py",
+      "sha256": "a1035bdf392e93c27a48be17c5e19c273c5ed94ef28fb14649f425f1544387f6"
+    },
+    {
+      "path": "tests/fruiting-local-manifest.cjs",
+      "sha256": "eaaa239fd8c1390fd228616ea4983b6f17f3818cc5045e6771b312f914e95f7c"
+    },
+    {
+      "path": "tests/test_fruiting_osm_access.py",
+      "sha256": "3f6781cf4eee49784f530d4eec3c082b95adf4b3b0604e0cae13a79441c5b4a5"
+    },
+    {
+      "path": "tests/fruiting-forecast-gis.spec.js",
+      "sha256": "2e239882e7b619560fe20f5b8af1080df271557b90d931afacf192f1451992d1"
+    },
+    {
+      "path": "tests/fruiting-forecast-hosting.spec.js",
+      "sha256": "ae887aab9ad172023ad339826da106e50b9ffe9eb9e8a2240083a64286d6e3ab"
+    },
+    {
+      "path": "tests/fruiting-forecast-access-theme.spec.js",
+      "sha256": "9e726fca722468faa12c9f13b6ac36bac69b90689529df6803ded4a27b809ef2"
+    },
+    {
+      "path": "tests/test_fruiting_conus_plan.py",
+      "sha256": "6133c680ced881d3ed0db01d557a20256725693567bd1c064a7ffee281170af2"
+    },
+    {
+      "path": "tests/fruiting-forecast-huntability.spec.js",
+      "sha256": "8dd7d7e620f828aa1c0cdb073eb3f774dad857d7b54926ca3f7fa777d2f24a15"
+    },
+    {
+      "path": "tests/fruiting-forecast-conus.spec.js",
+      "sha256": "e1c9fd7175365b5810d0592efac4ba511452bea2fc74073db0c8128a96570f3c"
+    },
+    {
+      "path": "tests/test_fruiting_batch2.py",
+      "sha256": "6d56b929eba80282e1f8daad684a3c788b8be6b44b224ce08ec2d9b00a28917f"
+    },
+    {
+      "path": "tests/test_fruiting_pnw_release.py",
+      "sha256": "d78bb8eb5620b1d291ebe53a808d5791b474ca72a9c0ba9e494d2230feeb09cd"
+    },
+    {
+      "path": "tests/fruiting-forecast-about.spec.js",
+      "sha256": "05fdcc8fdf2b0050c8311741a90f94b35d6a72df49d7e12cb4c6046862ccbea5"
+    },
+    {
+      "path": "tests/fruiting-forecast-openrouter.spec.js",
+      "sha256": "e2809ff7c08c54d648ef97ed41209f1b2db96504204cb256b82ccb168f3c3f7a"
+    },
+    {
+      "path": "tests/test_fruiting_bulk_adapters.py",
+      "sha256": "6cea66e0d767d83d321ef985fcb946904a00448fb93fc71b6997a5ac7fe27e31"
+    },
+    {
+      "path": "tests/test_fruiting_remote.py",
+      "sha256": "c4d1c1f851e530439f318bca9f983920b21493bf632e13dc73f8d18ed51e41b3"
+    },
+    {
+      "path": "tests/fruiting-forecast-filter-state.spec.js",
+      "sha256": "ad09466dc7df390a22c9d6eceac070a0af1fadc50595947d082dec1ce987593d"
+    },
+    {
+      "path": "docs/fruiting-forecast-hosting.md",
+      "sha256": "c0e28367671c681f3368a485d03f83b65d19634b22d242bbac54ffceb7901186"
+    },
+    {
+      "path": "docs/fruiting-forecast-implementation.md",
+      "sha256": "f1faf1f9c10e5c339acd31bcbe57ee0bf9a5eab88a9a56cbc3892ccba42ce4b8"
+    },
+    {
+      "path": "docs/fruiting-forecast-launch-acceptance.md",
+      "sha256": "7507a9cb3fc2e6498fbe68bd45b7bb7ee7178ba1cbec9b3aa7b2abbe9f454873"
+    },
+    {
+      "path": "docs/fruiting-forecast-conus-expansion.md",
+      "sha256": "5c27de0078039a622b1ffc7b5bf860e483cc525c8abc79eea1ccc121ce813b36"
+    },
+    {
+      "path": "data/public-land-rules.json",
+      "sha256": "934597d230bc81aa5706c5d511a8b38499f7ae8b7a23a8613700f4d24cb0eefa"
+    },
+    {
+      "path": "data/national-relevance-v2.json",
+      "sha256": "a3cb621779088c08a12640c95468371df02252f5b154907dd60042370eeeb1d5"
+    },
+    {
+      "path": "data/tile-catalog.json",
+      "sha256": "49c23ef9ba9d7fc194e31274783b12f23ca66a28205ab9080653a2fe42b693c4"
+    },
+    {
+      "path": "data/ecoregions.json",
+      "sha256": "73f8dcde4c47b95d215f611b7c081d84b339b1ab3f092c7f6a4bbcabacd5139f"
+    },
+    {
+      "path": "data/biology-research.json",
+      "sha256": "96888a21bf9861133bab4f5ebf5db8fbe337df500054fa5cef68cf2c63dae89d"
+    },
+    {
+      "path": "data/states.json",
+      "sha256": "c01e25f28efa02103b126644f8f206c2f97b7e1fc87af6ccff0d530c302221de"
+    },
+    {
+      "path": "data/tile-catalog-full.json",
+      "sha256": "23dd3c8341b1331b735eb663b1c7b3f5358194f5c373f30688a7d9a91118ff20"
+    },
+    {
+      "path": "data/states.js",
+      "sha256": "daa063d65f9e71b1e7a6dff8d978cdf5ae336203aa5413b2cb5797509f3b7441"
+    },
+    {
+      "path": "data/manifest.json",
+      "sha256": "44ea23cfd61a0911ad432daadef3ee83937b406ef273b0e3a9301b5b55d73317"
+    },
+    {
+      "path": "data/ecoregions.js",
+      "sha256": "f9600666e84cfd881a09278a0eef6b5307c7f668c2f760b4a096140f7577f383"
+    },
+    {
+      "path": "data/production/manifest-normalization.json",
+      "sha256": "bc7d18435322c7fc4b34a08368cca3ece5be1860f1e5d0df91da47b80b2ad35d"
+    },
+    {
+      "path": "data/production/browser-deployed.json",
+      "sha256": "9927742c586843630208f2a3d33f029c04e546e7426162d65d461ff88eb59036"
+    },
+    {
+      "path": "data/production/batch3-tests.json",
+      "sha256": "026a21621faa930b5b3a5169a53c38aff35b41cb835608fbf0efc412bc8149e8"
+    },
+    {
+      "path": "data/production/normalization-build-scope.json",
+      "sha256": "2fd28b5e9efccdd7a044ebd4ac8ad03f55a269f88273cf66d809efa4e1c0f54f"
+    },
+    {
+      "path": "data/production/national-storage-stats.json",
+      "sha256": "b46cd7d66e6a4133a7fefa7b41f6811b4b1bcfbef23a53b6d1e2b7d700c6b6a7"
+    },
+    {
+      "path": "data/production/remaining-batches.json",
+      "sha256": "abfdf692e7ffa758c7473264dfd6c75492ae4f373512f5e5f9119cc8af24fa52"
+    },
+    {
+      "path": "data/production/remote-audit.json",
+      "sha256": "e15805a4c10bd73993b1d06f1e6b9ca57a198411705559abccf5a3294191ec3a"
+    },
+    {
+      "path": "data/production/batch1-report.json",
+      "sha256": "6a5f950ae245abe57bb108dbb26acac648151380bb224b8f196cffd6a39ab232"
+    },
+    {
+      "path": "data/production/batch1-scope.json",
+      "sha256": "5fe98612976fdc7bf065aead7d88efe9b42834481499bd31e92216eb46a2b044"
+    },
+    {
+      "path": "data/production/batch2-report.json",
+      "sha256": "025422cc9a5a6eb8728f7c713873857576299d076d672365f07b8faf9d08a2a8"
+    },
+    {
+      "path": "data/production/migration.json",
+      "sha256": "ac40c89b0b2851b1d2bea07df0fd423173b61c764d5e2d6e847e7208ede5177c"
+    },
+    {
+      "path": "data/production/batch3-scope.json",
+      "sha256": "1bafdec17fa72b50a0120ebd44cafc2ad5ee3d9b7dc5a5ad3f027babed1f445e"
+    },
+    {
+      "path": "data/production/browser-migration.json",
+      "sha256": "59309bb72f3fa5b17396a455d55b65de75e215db7de2bb7d7e2b1d8e48946858"
+    },
+    {
+      "path": "data/production/national-normalization-report.json",
+      "sha256": "1b2a86477c0fcec9bdace714affc76898af75e047e2c52dfaac36b4b4ab1c201"
+    },
+    {
+      "path": "data/production/batch1-report.md",
+      "sha256": "dcfbbd7a501e51b53a0c673eddf70deb15790ca28eedb455617fb7e53b67d28f"
+    },
+    {
+      "path": "data/production/batch3-final-scope.json",
+      "sha256": "a6ad22ade9bb6dbec8289f344d25563bc04b228d98a7090245e4fcce28f0df49"
+    },
+    {
+      "path": "data/production/revision18-tests.json",
+      "sha256": "a6f0800489b362f0cd819f3cc0f40c1f2bf88985758d7b3ff81d3877fafc0ca0"
+    },
+    {
+      "path": "data/production/batch3-state-prep.json",
+      "sha256": "773a56315b0778cb8b6ccd6cd918e2ea6ef638dd3d78246a0f0efed10d97993f"
+    },
+    {
+      "path": "data/production/launch-qa-report.json",
+      "sha256": "83c91b7153f7a509640ad3fbdd94ed8dddce45b13e65225323de0ea54dbd08b9"
+    },
+    {
+      "path": "data/production/batch1-checkpoint.md",
+      "sha256": "e890dac458c1c5b0bd2f9a947ff2d7cd2561316f6217851366fd48b577abad74"
+    },
+    {
+      "path": "data/production/browser-final.json",
+      "sha256": "1b858bbb17942261e8372da2b7a55b8f10a1fcff68fd261a4e25644c08716069"
+    },
+    {
+      "path": "data/production/batch2-storage-stats.json",
+      "sha256": "baf39d9ac77e9fc5a4b03dc29f8aa5d4508221190ab94d3b162b5319bd5b53ad"
+    },
+    {
+      "path": "data/production/batch2-state-prep.json",
+      "sha256": "1d7688b65e554984b9fee386febe9fb8f70f37bbc2749d914557fd26a1d62565"
+    },
+    {
+      "path": "data/production/batch2-scope.json",
+      "sha256": "0cd0830186ff09577e4aa2b9b816d93a0851cf322a5296b27341f03279a9a987"
+    },
+    {
+      "path": "data/production/batch2-final-analysis.json",
+      "sha256": "a9d631d4b42c7aa5d49f025878a04de2176ca8f319498d7a0614dbb350a0e9ca"
+    },
+    {
+      "path": "data/production/batch3-final-analysis.json",
+      "sha256": "6b37ac41ec59dbaaaf9e2e3c6f4ce50f48f9716ce74b1865574f3bb581c4b411"
+    },
+    {
+      "path": "data/production/batch3-report.json",
+      "sha256": "b0428dcd29b5e92b307b496581df2e998e959752f089595926307f60f432aa6b"
+    },
+    {
+      "path": "data/production/edge-tiles-characterization.json",
+      "sha256": "ca4b351eab15ece140768f170e09f9ea456138a064fab097086565bf8588b0fb"
+    },
+    {
+      "path": "tests/fixtures/fruiting-access/access.osm",
+      "sha256": "04ef64bd40c6839f9ef1634b1e7cc3129ea3a27cbff9ea89913fad61587a36d2"
+    }
+  ],
+  "historicalArtifactPolicy": {
+    "A": "Permanent product provenance, normalization, biology and source contracts retained.",
+    "B": "Release state, launch QA, remote audit, storage totals retained as dated snapshots.",
+    "C": "Compact batch/final/scope/state-prep evidence retained for auditability and report-tool compatibility.",
+    "D": "Repeated checkpoints, journals, metrics, temporary state excluded; originals remain in Junk Drawer."
+  },
+  "additionalPromotedFixture": {
+    "path": "tests/fixtures/fruiting-access/legacy-access.json",
+    "reason": "Earlier local access schema required by the mixed-schema test; original data preserved as JSON, converted to temporary Parquet at test time."
+  },
+  "dependencyReview": {
+    "appLocal": [
+      "data/ecoregions.js",
+      "data/states.js",
+      "data/manifest.json",
+      "data/public-land-rules.json",
+      "data/biology-research.json",
+      "data/tile-catalog.json"
+    ],
+    "removedCollectionDependency": "analytics-lite.js",
+    "testDependency": "@playwright/test pinned in package-lock.json",
+    "missingOriginalSuiteRestored": "tests/fruiting-forecast.spec.js",
+    "legacyMixedSchemaFixturePreserved": true
+  },
+  "finalTrackedPaths": [
+    ".gitignore",
+    "AGENTS.md",
+    "LICENSE.md",
+    "README.md",
+    "config/fruiting-forecast-r2-cors.json",
+    "data/biology-research.json",
+    "data/ecoregions.js",
+    "data/ecoregions.json",
+    "data/manifest.json",
+    "data/national-relevance-v2.json",
+    "data/production/batch1-checkpoint.md",
+    "data/production/batch1-report.json",
+    "data/production/batch1-report.md",
+    "data/production/batch1-scope.json",
+    "data/production/batch2-final-analysis.json",
+    "data/production/batch2-report.json",
+    "data/production/batch2-scope.json",
+    "data/production/batch2-state-prep.json",
+    "data/production/batch2-storage-stats.json",
+    "data/production/batch3-final-analysis.json",
+    "data/production/batch3-final-scope.json",
+    "data/production/batch3-report.json",
+    "data/production/batch3-scope.json",
+    "data/production/batch3-state-prep.json",
+    "data/production/batch3-tests.json",
+    "data/production/browser-deployed.json",
+    "data/production/browser-final.json",
+    "data/production/browser-migration.json",
+    "data/production/edge-tiles-characterization.json",
+    "data/production/launch-qa-report.json",
+    "data/production/manifest-normalization.json",
+    "data/production/migration.json",
+    "data/production/national-normalization-report.json",
+    "data/production/national-storage-stats.json",
+    "data/production/normalization-build-scope.json",
+    "data/production/remaining-batches.json",
+    "data/production/remote-audit.json",
+    "data/production/revision18-tests.json",
+    "data/public-land-rules.json",
+    "data/states.js",
+    "data/states.json",
+    "data/tile-catalog-full.json",
+    "data/tile-catalog.json",
+    "docs/architecture.md",
+    "docs/data-build.md",
+    "docs/deployment.md",
+    "docs/domain-deployment-handoff.md",
+    "docs/extraction-inventory.json",
+    "docs/fruiting-forecast-conus-expansion.md",
+    "docs/fruiting-forecast-hosting.md",
+    "docs/fruiting-forecast-implementation.md",
+    "docs/fruiting-forecast-launch-acceptance.md",
+    "docs/history-map.json",
+    "docs/project-promotion-report.json",
+    "docs/promotion-evidence/browser-parity.json",
+    "docs/promotion-evidence/byte-parity.json",
+    "docs/promotion-evidence/cors.json",
+    "docs/promotion-evidence/launch-qa.json",
+    "docs/promotion-evidence/live-salida.json",
+    "docs/promotion-evidence/python-corrected-canary.xml",
+    "docs/promotion-evidence/python-suite.xml",
+    "docs/promotion-evidence/remote-audit.json",
+    "docs/promotion-evidence/secret-audit.json",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "tests/fixtures/fruiting-access/access.osm",
+    "tests/fixtures/fruiting-access/legacy-access.json",
+    "tests/fixtures/fruiting-access/legacy-access.provenance.json",
+    "tests/fruiting-forecast-about.spec.js",
+    "tests/fruiting-forecast-access-theme.spec.js",
+    "tests/fruiting-forecast-conus.spec.js",
+    "tests/fruiting-forecast-filter-state.spec.js",
+    "tests/fruiting-forecast-gis.spec.js",
+    "tests/fruiting-forecast-hosting.spec.js",
+    "tests/fruiting-forecast-huntability.spec.js",
+    "tests/fruiting-forecast-national.spec.js",
+    "tests/fruiting-forecast-openrouter.spec.js",
+    "tests/fruiting-forecast-osm-access.spec.js",
+    "tests/fruiting-forecast-pnw.spec.js",
+    "tests/fruiting-forecast.spec.js",
+    "tests/fruiting-local-manifest.cjs",
+    "tests/test_fruiting_batch2.py",
+    "tests/test_fruiting_bulk_adapters.py",
+    "tests/test_fruiting_conus_plan.py",
+    "tests/test_fruiting_osm_access.py",
+    "tests/test_fruiting_pnw_release.py",
+    "tests/test_fruiting_remote.py",
+    "tests/test_fruiting_tile_publish.py",
+    "tools/build-fruiting-ecoregions.py",
+    "tools/build-fruiting-gis.py",
+    "tools/build-fruiting-states.py",
+    "tools/fruiting_batch1.py",
+    "tools/fruiting_batch2.py",
+    "tools/fruiting_batch2_final.py",
+    "tools/fruiting_batch2_report.py",
+    "tools/fruiting_batch3_final.py",
+    "tools/fruiting_batch3_plan.py",
+    "tools/fruiting_batch3_report.py",
+    "tools/fruiting_browser_qa.js",
+    "tools/fruiting_bulk_adapters.py",
+    "tools/fruiting_conus_plan.py",
+    "tools/fruiting_launch_qa.js",
+    "tools/fruiting_manifest_normalize.py",
+    "tools/fruiting_metrics.py",
+    "tools/fruiting_normalization_report.py",
+    "tools/fruiting_osm_access.py",
+    "tools/fruiting_pnw_release.py",
+    "tools/fruiting_production_report.py",
+    "tools/fruiting_promotion_parity.js",
+    "tools/fruiting_relevance.py",
+    "tools/fruiting_remote.py",
+    "tools/fruiting_revision16.py",
+    "tools/fruiting_revision17.py",
+    "tools/fruiting_revision18.py",
+    "tools/fruiting_stage_stats.py",
+    "tools/fruiting_storage_stats.py",
+    "tools/fruiting_tile_publish.py"
+  ]
+}

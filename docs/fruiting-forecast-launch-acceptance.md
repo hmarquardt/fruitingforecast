@@ -1,6 +1,6 @@
 # Fruiting Forecast launch acceptance checklist
 
-Allow about 10–15 minutes. Use the production application at <https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html>.
+Allow about 10–15 minutes. For standalone acceptance, start the local server and use <http://localhost:8000/>. The reference production application remains <https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html>. The future fruitingforecast.com deployment is not yet proven.
 
 1. Open **About**. Confirm the page reports 922 normalized relevant tiles, dataset `content-db0f839a4352ef82`, and national four-layer coverage. Return to **Forecast**.
 2. Search **Salida, Colorado**, choose a 10-mile radius and **Best opportunities**, then run the analysis. Confirm the profile is Southern Rockies, ranked targets appear, and GIS evidence loads.

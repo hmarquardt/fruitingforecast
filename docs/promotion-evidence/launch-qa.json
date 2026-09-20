@@ -1,0 +1,912 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-20T19:20:51.114Z",
+  "application": "http://localhost:8000/",
+  "mutableInputs": "Open-Meteo forecast, iNaturalist and Salida geocoding were deterministically intercepted; app/manifest/R2/DuckDB were deployed production.",
+  "deployment": {
+    "appVersion": "2026.09.20.4",
+    "modelVersion": "SCORING MODEL FF-1.7.0",
+    "datasetVersion": "content-db0f839a4352ef82",
+    "tiles": 922,
+    "assetBaseUrl": "https://data.hanksjunkdrawer.com/"
+  },
+  "firstLoadMs": 265,
+  "profiles": [
+    {
+      "label": "pnw",
+      "ecoregion": {
+        "code": "1",
+        "name": "Coast Range"
+      },
+      "profile": "pnw",
+      "profileName": "Pacific Northwest Maritime",
+      "maturity": "PROVISIONAL",
+      "targetCount": 5,
+      "rankedCount": 5,
+      "topState": "BEST OVERALL OPPORTUNITYWhite ChanterelleCantharellus subalbidus69/ 100Good opportunity \u00b7 confidence MediumProvisional maritime model; thermal, stand-age and coarse-woody-debris responses are not calibrated; seasonal timing is in the core fruiting window; autumn rains have recharged the site after the dry season.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit63Seasonal timing100Recent moisture67Autumn moisture transition83Recent observations0Regional model evidenceBiological modelPacific Northwest Maritime \u00b7 PROVISIONALEPA ecoregionCoast RangeRegional targetsPacific Golden Chanterelle, White Chanterelle, Western Matsutake, Winter Craterelle / Yellowfoot (Pacific Northwest), Burn MorelsMapped habitatPresent \u00b7 63/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 67/100Autumn moisture transitionPresent \u00b7 83/100Recent reportsPresent \u00b7 0/100Missing evidence: stand age (published mature-to-old-forest association). Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n47_w124"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 49,
+      "accessEvidence": 156,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 14,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 5,
+        "focusMatchedTargetCount": 5,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 3570,
+      "warmAnalysisMs": 2111
+    },
+    {
+      "label": "california",
+      "ecoregion": {
+        "code": "6",
+        "name": "Central California Foothills and Coastal Mountains"
+      },
+      "profile": "california",
+      "profileName": "California Mediterranean",
+      "maturity": "PROVISIONAL",
+      "targetCount": 4,
+      "rankedCount": 4,
+      "topState": "BEST OVERALL OPPORTUNITYCalifornia Golden ChanterelleCantharellus californicus0/ 100Very Poor opportunity \u00b7 confidence MediumIt is outside the regional fruiting window; mapped habitat is a limiting factor in this sector.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit34Seasonal timing0Recent moisture65TemperatureN/ADrying resistance100Recent observations0Access usefulnessN/ARegional model evidenceBiological modelCalifornia Mediterranean \u00b7 PROVISIONALEPA ecoregionCentral California Foothills and Coastal MountainsRegional targetsCalifornia Golden Chanterelle, California Black Trumpet, Candy Cap (Western), MorelsMapped habitatPresent \u00b7 34/100SeasonPresent \u00b7 0/100Recent moisturePresent \u00b7 65/100Thermal physiologyNot availableDrying pressurePresent \u00b7 100/100Recent reportsPresent \u00b7 0/100Access usefulnessNot availableMissing evidence: Thermal physiology, Access usefulness, Coast Live Oak is finer than the mapped Western Oak group; species-level host evidence is unavailable. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n38_w123"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 994,
+      "accessEvidence": 1361,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 52,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 4,
+        "focusMatchedTargetCount": 4,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2680,
+      "warmAnalysisMs": 2272
+    },
+    {
+      "label": "sierraNevada",
+      "ecoregion": {
+        "code": "5",
+        "name": "Sierra Nevada"
+      },
+      "profile": "sierraNevada",
+      "profileName": "Sierra Nevada",
+      "maturity": "PROVISIONAL",
+      "targetCount": 2,
+      "rankedCount": 2,
+      "topState": "BEST OVERALL OPPORTUNITYBurn MorelsMorchella spp. \u2014 fire-associated groups0/ 100Fire evidence unavailable opportunity \u00b7 confidence LowIt is outside the regional fruiting window; fire history is unavailable, so a burn site cannot be confirmed; mapped terrain elevation sits inside its provisional host belt.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit58Seasonal timing0Recent moisture53Prior-year fireN/AElevation suitability100Regional model evidenceBiological modelSierra Nevada \u00b7 PROVISIONALEPA ecoregionSierra NevadaRegional targetsBurn Morels, Spring King (Sierra Porcini)Mapped habitatPresent \u00b7 58/100SeasonPresent \u00b7 0/100Recent moisturePresent \u00b7 53/100Fire historyNot availableElevationPresent \u00b7 100/100Missing evidence: Fire history. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n37_w120"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 51,
+      "accessEvidence": 400,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 16,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 2,
+        "focusMatchedTargetCount": 2,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2579,
+      "warmAnalysisMs": 2098
+    },
+    {
+      "label": "interiorMountains",
+      "ecoregion": {
+        "code": "16",
+        "name": "Idaho Batholith"
+      },
+      "profile": "interiorMountains",
+      "profileName": "Northern Rockies / Interior Mountains",
+      "maturity": "PROVISIONAL",
+      "targetCount": 2,
+      "rankedCount": 2,
+      "topState": "BEST OVERALL OPPORTUNITYWestern MatsutakeTricholoma murrillianum61/ 100Good opportunity \u00b7 confidence MediumSeasonal timing is in the core fruiting window; mapped terrain elevation sits inside its provisional host belt; mapped habitat is a limiting factor in this sector.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit21Seasonal timing100Recent moisture32TemperatureN/AElevation suitability100Regional model evidenceBiological modelNorthern Rockies / Interior Mountains \u00b7 PROVISIONALEPA ecoregionIdaho BatholithRegional targetsBurn Morels, Western MatsutakeMapped habitatPresent \u00b7 21/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 32/100Thermal physiologyNot availableElevationPresent \u00b7 100/100Missing evidence: Thermal physiology. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n44_w116"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 35,
+      "accessEvidence": 50,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 5,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 2,
+        "focusMatchedTargetCount": 2,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2635,
+      "warmAnalysisMs": 2177
+    },
+    {
+      "label": "southernRockies",
+      "ecoregion": {
+        "code": "21",
+        "name": "Southern Rockies"
+      },
+      "profile": "southernRockies",
+      "profileName": "Southern Rockies",
+      "maturity": "PROVISIONAL",
+      "targetCount": 4,
+      "rankedCount": 4,
+      "topState": "BEST OVERALL OPPORTUNITYRainbow Chanterelle (Southern Rockies conifer chanterelle)Cantharellus roseocanus55/ 100Good opportunity \u00b7 confidence MediumProvisional regional model; thermal and soil-moisture responses are not calibrated; seasonal timing is in the core fruiting window; mapped terrain elevation is outside its provisional host belt.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit56Seasonal timing100Recent moisture50TemperatureN/AElevation suitability0Regional model evidenceBiological modelSouthern Rockies \u00b7 PROVISIONALEPA ecoregionSouthern RockiesRegional targetsRocky Mountain King Bolete / Porcini, Rainbow Chanterelle (Southern Rockies conifer chanterelle), Natural (non-burn) Morels, Burn MorelsMapped habitatPresent \u00b7 56/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 50/100Thermal physiologyNot availableElevationPresent \u00b7 0/100Missing evidence: Thermal physiology. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 2,
+      "tiles": [
+        "n39_w106",
+        "n39_w107"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 344,
+      "accessEvidence": 291,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 29,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 4,
+        "focusMatchedTargetCount": 4,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 8,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 3492,
+      "warmAnalysisMs": 2303
+    },
+    {
+      "label": "madrean",
+      "ecoregion": {
+        "code": "22",
+        "name": "Arizona/New Mexico Plateau"
+      },
+      "profile": "madrean",
+      "profileName": "Madrean / Southwest Highlands",
+      "maturity": "PROVISIONAL",
+      "targetCount": 1,
+      "rankedCount": 1,
+      "topState": "BEST OVERALL OPPORTUNITYWhite King Bolete (Southwest)Boletus barrowsii25/ 100Poor opportunity \u00b7 confidence MediumThe calendar is only on the shoulder of its typical window; mapped terrain elevation is outside its provisional host belt; mapped habitat is a limiting factor in this sector.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit11Seasonal timing22Recent moisture40TemperatureN/AElevation suitability29Regional model evidenceBiological modelMadrean / Southwest Highlands \u00b7 PROVISIONALEPA ecoregionArizona/New Mexico PlateauRegional targetsWhite King Bolete (Southwest)Mapped habitatPresent \u00b7 11/100SeasonPresent \u00b7 22/100Recent moisturePresent \u00b7 40/100Thermal physiologyNot availableElevationPresent \u00b7 29/100Missing evidence: Thermal physiology. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n35_w112"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 66,
+      "accessEvidence": 110,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 15,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 1,
+        "focusMatchedTargetCount": 1,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2453,
+      "warmAnalysisMs": 1941
+    },
+    {
+      "label": "northernForests",
+      "ecoregion": {
+        "code": "50",
+        "name": "Northern Lakes and Forests"
+      },
+      "profile": "northernForests",
+      "profileName": "Northern Forests / Great Lakes",
+      "maturity": "PROVISIONAL",
+      "targetCount": 7,
+      "rankedCount": 7,
+      "topState": "BEST OVERALL OPPORTUNITYChanterellesCantharellus spp.52/ 100Marginal opportunity \u00b7 confidence HighSeasonal timing is in the core fruiting window.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit51Seasonal timing100Recent moisture50Temperature0Drying resistance100Recent observations0Access usefulnessN/ARegional model evidenceBiological modelNorthern Forests / Great Lakes \u00b7 PROVISIONALEPA ecoregionNorthern Lakes and ForestsRegional targetsMorels, Chanterelles, Chicken of the Woods, Hen of the Woods / Maitake, Oyster Mushrooms, Giant Puffballs, Lion's Mane / HericiumMapped habitatPresent \u00b7 51/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 50/100Thermal physiologyPresent \u00b7 0/100Drying pressurePresent \u00b7 100/100Recent reportsPresent \u00b7 0/100Access usefulnessNot availableMissing evidence: Access usefulness. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n46_w090"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 53,
+      "accessEvidence": 37,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 3,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 7,
+        "focusMatchedTargetCount": 7,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2483,
+      "warmAnalysisMs": 2018
+    },
+    {
+      "label": "hardwood",
+      "ecoregion": {
+        "code": "72",
+        "name": "Interior River Valleys and Hills"
+      },
+      "profile": "hardwood",
+      "profileName": "Central & Eastern Hardwood",
+      "maturity": "PROVISIONAL",
+      "targetCount": 7,
+      "rankedCount": 7,
+      "topState": "BEST OVERALL OPPORTUNITYGiant PuffballsCalvatia gigantea61/ 100Good opportunity \u00b7 confidence HighSeasonal timing is in the core fruiting window; aggregated forest, host-group, soil, and terrain evidence fits this species.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit90Seasonal timing100Recent moisture51Temperature0Drying resistance100Recent observations0Access usefulnessN/ARegional model evidenceBiological modelCentral & Eastern Hardwood \u00b7 PROVISIONALEPA ecoregionInterior River Valleys and HillsRegional targetsMorels, Chanterelles, Chicken of the Woods, Hen of the Woods / Maitake, Oyster Mushrooms, Giant Puffballs, Lion's Mane / HericiumMapped habitatPresent \u00b7 90/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 51/100Thermal physiologyPresent \u00b7 0/100Drying pressurePresent \u00b7 100/100Recent reportsPresent \u00b7 0/100Access usefulnessNot availableMissing evidence: Access usefulness. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n38_w088"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 103,
+      "accessEvidence": 12,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "ALLOWED_WITH_LIMITS",
+        "PROHIBITED",
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 2,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 7,
+        "focusMatchedTargetCount": 7,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 3,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2377,
+      "warmAnalysisMs": 1992
+    },
+    {
+      "label": "appalachians",
+      "ecoregion": {
+        "code": "67",
+        "name": "Ridge and Valley"
+      },
+      "profile": "appalachians",
+      "profileName": "Appalachians / Ozarks",
+      "maturity": "PROVISIONAL",
+      "targetCount": 7,
+      "rankedCount": 7,
+      "topState": "BEST OVERALL OPPORTUNITYHen of the Woods / MaitakeGrifola frondosa63/ 100Good opportunity \u00b7 confidence HighSeasonal timing is in the core fruiting window; aggregated forest, host-group, soil, and terrain evidence fits this species.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit90Seasonal timing100Recent moisture52Temperature0Drying resistance100Recent observations0Access usefulnessN/ARegional model evidenceBiological modelAppalachians / Ozarks \u00b7 PROVISIONALEPA ecoregionRidge and ValleyRegional targetsMorels, Chanterelles, Chicken of the Woods, Hen of the Woods / Maitake, Oyster Mushrooms, Giant Puffballs, Lion's Mane / HericiumMapped habitatPresent \u00b7 90/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 52/100Thermal physiologyPresent \u00b7 0/100Drying pressurePresent \u00b7 100/100Recent reportsPresent \u00b7 0/100Access usefulnessNot availableMissing evidence: Access usefulness. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n36_w084"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 94,
+      "accessEvidence": 14,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 2,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 7,
+        "focusMatchedTargetCount": 7,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2619,
+      "warmAnalysisMs": 2068
+    },
+    {
+      "label": "southeast",
+      "ecoregion": {
+        "code": "65",
+        "name": "Southeastern Plains"
+      },
+      "profile": "southeast",
+      "profileName": "Southeast / Coastal Plain",
+      "maturity": "PROVISIONAL",
+      "targetCount": 8,
+      "rankedCount": 8,
+      "topState": "BEST OVERALL OPPORTUNITYRingless Honey MushroomDesarmillaria caespitosa (as treated by iNaturalist 1238700; traditionally Armillaria tabescens)43/ 100Marginal opportunity \u00b7 confidence HighSeasonal timing is in the core fruiting window; mapped habitat is a limiting factor in this sector.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit18Seasonal timing100Recent moisture55Temperature0Drying resistance100Recent observations0Access usefulnessN/ARegional model evidenceBiological modelSoutheast / Coastal Plain \u00b7 PROVISIONALEPA ecoregionSoutheastern PlainsRegional targetsSmooth Chanterelle (Southeast), Ringless Honey Mushroom, Morels, Chicken of the Woods, Oyster Mushrooms, Hen of the Woods / Maitake, Giant Puffballs, Lion's Mane / HericiumMapped habitatPresent \u00b7 18/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 55/100Thermal physiologyPresent \u00b7 0/100Drying pressurePresent \u00b7 100/100Recent reportsPresent \u00b7 0/100Access usefulnessNot availableMissing evidence: Access usefulness. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n31_w084"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 92,
+      "accessEvidence": 10,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 3,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 8,
+        "focusMatchedTargetCount": 8,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2452,
+      "warmAnalysisMs": 2076
+    },
+    {
+      "label": "plains",
+      "ecoregion": {
+        "code": "25",
+        "name": "High Plains"
+      },
+      "profile": "plains",
+      "profileName": "Great Plains",
+      "maturity": "PROVISIONAL",
+      "targetCount": 2,
+      "rankedCount": 2,
+      "topState": "BEST OVERALL OPPORTUNITYGiant PuffballCalvatia gigantea70/ 100High opportunity \u00b7 confidence MediumSeasonal timing is in the core fruiting window; aggregated forest, host-group, soil, and terrain evidence fits this species; recent moisture timing or accumulation is unfavorable.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit100Seasonal timing100Recent moisture33TemperatureN/ADrying resistance100Recent observations0Access usefulnessN/ARegional model evidenceBiological modelGreat Plains \u00b7 PROVISIONALEPA ecoregionHigh PlainsRegional targetsGreat Plains Morel (White Morel), Giant PuffballMapped habitatPresent \u00b7 100/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 33/100Thermal physiologyNot availableDrying pressurePresent \u00b7 100/100Recent reportsPresent \u00b7 0/100Access usefulnessNot availableMissing evidence: Thermal physiology, Access usefulness. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n38_w101"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 13,
+      "accessEvidence": 11,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 2,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 2,
+        "focusMatchedTargetCount": 2,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 4,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2516,
+      "warmAnalysisMs": 2026
+    },
+    {
+      "label": "coldBasins",
+      "ecoregion": {
+        "code": "10",
+        "name": "Columbia Plateau"
+      },
+      "profile": "coldBasins",
+      "profileName": "Cold Western Basins and Plateaus",
+      "maturity": "MODELED_SPARSE",
+      "targetCount": 0,
+      "rankedCount": 0,
+      "topState": "Cold Western Basins and Plateaus \u00b7 Modeled \u00b7 sparseThis ecology has been researched and modeled, but no mushroom target currently clears the evidence and forecastability bar here: forest host habitat is genuinely sparse and no sourced target can be ranked honestly. This is modeled behavior, not missing data; habitat and weather evidence remain visible where available.",
+      "gisStatus": "enhanced",
+      "tileCount": 2,
+      "tiles": [
+        "n46_w119",
+        "n46_w120"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 30,
+      "accessEvidence": 40,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 2,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 0,
+        "focusMatchedTargetCount": 0,
+        "emptyResultReason": "MODELED_SPARSE"
+      },
+      "coldParquetRequests": 8,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 3112,
+      "warmAnalysisMs": 2175
+    },
+    {
+      "label": "warmDesert",
+      "ecoregion": {
+        "code": "81",
+        "name": "Sonoran Basin and Range"
+      },
+      "profile": "warmDesert",
+      "profileName": "Warm Deserts",
+      "maturity": "MODELED_SPARSE",
+      "targetCount": 0,
+      "rankedCount": 0,
+      "topState": "Warm Deserts \u00b7 Modeled \u00b7 sparseThis ecology has been researched and modeled, but no mushroom target currently clears the evidence and forecastability bar here: forest host habitat is genuinely sparse and no sourced target can be ranked honestly. This is modeled behavior, not missing data; habitat and weather evidence remain visible where available.",
+      "gisStatus": "enhanced",
+      "tileCount": 2,
+      "tiles": [
+        "n33_w112",
+        "n33_w113"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 1109,
+      "accessEvidence": 3596,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 73,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 0,
+        "focusMatchedTargetCount": 0,
+        "emptyResultReason": "MODELED_SPARSE"
+      },
+      "coldParquetRequests": 8,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 3103,
+      "warmAnalysisMs": 2361
+    }
+  ],
+  "filterStateMatrix": {
+    "beginnerSource": {
+      "label": "persisted-beginner-source",
+      "ecoregion": {
+        "code": "72",
+        "name": "Interior River Valleys and Hills"
+      },
+      "profile": "hardwood",
+      "profileName": "Central & Eastern Hardwood",
+      "maturity": "PROVISIONAL",
+      "targetCount": 7,
+      "rankedCount": 4,
+      "topState": "BEST OVERALL OPPORTUNITYGiant PuffballsCalvatia gigantea61/ 100Good opportunity \u00b7 confidence HighSeasonal timing is in the core fruiting window; aggregated forest, host-group, soil, and terrain evidence fits this species.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit90Seasonal timing100Recent moisture51Temperature0Drying resistance100Recent observations0Access usefulnessN/ARegional model evidenceBiological modelCentral & Eastern Hardwood \u00b7 PROVISIONALEPA ecoregionInterior River Valleys and HillsRegional targetsChicken of the Woods, Hen of the Woods / Maitake, Giant Puffballs, Lion's Mane / HericiumMapped habitatPresent \u00b7 90/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 51/100Thermal physiologyPresent \u00b7 0/100Drying pressurePresent \u00b7 100/100Recent reportsPresent \u00b7 0/100Access usefulnessNot availableMissing evidence: Access usefulness. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 1,
+      "tiles": [
+        "n38_w088"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 103,
+      "accessEvidence": 12,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "ALLOWED_WITH_LIMITS",
+        "PROHIBITED",
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 2,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "beginner",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 7,
+        "focusMatchedTargetCount": 4,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 0,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 1786,
+      "warmAnalysisMs": 2022
+    },
+    "salidaBeginner": {
+      "label": "salida-beginner",
+      "ecoregion": {
+        "code": "21",
+        "name": "Southern Rockies"
+      },
+      "profile": "southernRockies",
+      "profileName": "Southern Rockies",
+      "maturity": "PROVISIONAL",
+      "targetCount": 4,
+      "rankedCount": 0,
+      "topState": "No Southern Rockies targets match Beginner-friendly ediblesThis region has forecast data, but none of its supported targets are included by the active Beginner-friendly edibles filter. Try Best opportunities or All supported edibles.Best opportunitiesAll supported edibles",
+      "gisStatus": "enhanced",
+      "tileCount": 2,
+      "tiles": [
+        "n38_w106",
+        "n38_w107"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 180,
+      "accessEvidence": 186,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 12,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "beginner",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 4,
+        "focusMatchedTargetCount": 0,
+        "emptyResultReason": "FILTER_NO_MATCH"
+      },
+      "coldParquetRequests": 8,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 3214,
+      "warmAnalysisMs": 2123
+    },
+    "salidaBest": {
+      "label": "salida-best",
+      "ecoregion": {
+        "code": "21",
+        "name": "Southern Rockies"
+      },
+      "profile": "southernRockies",
+      "profileName": "Southern Rockies",
+      "maturity": "PROVISIONAL",
+      "targetCount": 4,
+      "rankedCount": 4,
+      "topState": "BEST OVERALL OPPORTUNITYRainbow Chanterelle (Southern Rockies conifer chanterelle)Cantharellus roseocanus38/ 100Poor opportunity \u00b7 confidence MediumProvisional regional model; thermal and soil-moisture responses are not calibrated; seasonal timing is in the core fruiting window; mapped terrain elevation is outside its provisional host belt.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit5Seasonal timing100Recent moisture50TemperatureN/AElevation suitability0Regional model evidenceBiological modelSouthern Rockies \u00b7 PROVISIONALEPA ecoregionSouthern RockiesRegional targetsRocky Mountain King Bolete / Porcini, Rainbow Chanterelle (Southern Rockies conifer chanterelle), Natural (non-burn) Morels, Burn MorelsMapped habitatPresent \u00b7 5/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 50/100Thermal physiologyNot availableElevationPresent \u00b7 0/100Missing evidence: Thermal physiology. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 2,
+      "tiles": [
+        "n38_w106",
+        "n38_w107"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 180,
+      "accessEvidence": 186,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 12,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "best",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 4,
+        "focusMatchedTargetCount": 4,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 0,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2103,
+      "warmAnalysisMs": 2152
+    },
+    "salidaAll": {
+      "label": "salida-all",
+      "ecoregion": {
+        "code": "21",
+        "name": "Southern Rockies"
+      },
+      "profile": "southernRockies",
+      "profileName": "Southern Rockies",
+      "maturity": "PROVISIONAL",
+      "targetCount": 4,
+      "rankedCount": 4,
+      "topState": "BEST OVERALL OPPORTUNITYRainbow Chanterelle (Southern Rockies conifer chanterelle)Cantharellus roseocanus38/ 100Poor opportunity \u00b7 confidence MediumProvisional regional model; thermal and soil-moisture responses are not calibrated; seasonal timing is in the core fruiting window; mapped terrain elevation is outside its provisional host belt.Best sector: Central sector \u00b7 0 mi from centerExplain scoreOpen species briefHabitat fit5Seasonal timing100Recent moisture50TemperatureN/AElevation suitability0Regional model evidenceBiological modelSouthern Rockies \u00b7 PROVISIONALEPA ecoregionSouthern RockiesRegional targetsRocky Mountain King Bolete / Porcini, Rainbow Chanterelle (Southern Rockies conifer chanterelle), Natural (non-burn) Morels, Burn MorelsMapped habitatPresent \u00b7 5/100SeasonPresent \u00b7 100/100Recent moisturePresent \u00b7 50/100Thermal physiologyNot availableElevationPresent \u00b7 0/100Missing evidence: Thermal physiology. Missing evidence reduces confidence and is never scored as a negative biological signal.",
+      "gisStatus": "enhanced",
+      "tileCount": 2,
+      "tiles": [
+        "n38_w106",
+        "n38_w107"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 180,
+      "accessEvidence": 186,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 12,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "all",
+        "requestedSpeciesId": null,
+        "requestedSpeciesName": null,
+        "regionalTargetCount": 4,
+        "focusMatchedTargetCount": 4,
+        "emptyResultReason": null
+      },
+      "coldParquetRequests": 0,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2138,
+      "warmAnalysisMs": 2068
+    },
+    "salidaSpecific": {
+      "label": "salida-specific-mismatch",
+      "ecoregion": {
+        "code": "21",
+        "name": "Southern Rockies"
+      },
+      "profile": "southernRockies",
+      "profileName": "Southern Rockies",
+      "maturity": "PROVISIONAL",
+      "targetCount": 4,
+      "rankedCount": 0,
+      "topState": "Morels isn\u2019t modeled for Southern RockiesRegional forecast data is available. Choose a supported regional species or switch Hunt focus.Best opportunitiesAll supported edibles",
+      "gisStatus": "enhanced",
+      "tileCount": 2,
+      "tiles": [
+        "n38_w106",
+        "n38_w107"
+      ],
+      "habitatZones": 1,
+      "publicProperties": 180,
+      "accessEvidence": 186,
+      "fireStatus": "AVAILABLE",
+      "ruleStatuses": [
+        "UNKNOWN_VERIFY"
+      ],
+      "suggestedStartsChecked": 12,
+      "suggestedStartViolations": [],
+      "filterState": {
+        "focus": "specific",
+        "requestedSpeciesId": "morel",
+        "requestedSpeciesName": "Morels",
+        "regionalTargetCount": 4,
+        "focusMatchedTargetCount": 0,
+        "emptyResultReason": "SPECIES_NOT_MODELED"
+      },
+      "coldParquetRequests": 0,
+      "warmParquetRequests": 0,
+      "coldAnalysisMs": 2144,
+      "warmAnalysisMs": 2175
+    }
+  },
+  "boundaries": [
+    {
+      "center": [
+        45,
+        -122.5
+      ],
+      "profiles": [
+        "pnw",
+        "interiorMountains"
+      ],
+      "speciesUnion": [
+        "chanterelleFormosus",
+        "chanterelleSubalbidus",
+        "craterelleNeotubaeformis",
+        "matsutakeMurrillianum",
+        "morelBurn"
+      ],
+      "zones": [
+        {
+          "zone": "center",
+          "profile": "pnw",
+          "species": [
+            "chanterelleFormosus",
+            "chanterelleSubalbidus",
+            "matsutakeMurrillianum",
+            "craterelleNeotubaeformis",
+            "morelBurn"
+          ]
+        },
+        {
+          "zone": "z0",
+          "profile": "pnw",
+          "species": [
+            "chanterelleFormosus",
+            "chanterelleSubalbidus",
+            "matsutakeMurrillianum",
+            "craterelleNeotubaeformis",
+            "morelBurn"
+          ]
+        },
+        {
+          "zone": "z90",
+          "profile": "interiorMountains",
+          "species": [
+            "morelBurn",
+            "matsutakeMurrillianum"
+          ]
+        },
+        {
+          "zone": "z180",
+          "profile": "pnw",
+          "species": [
+            "chanterelleFormosus",
+            "chanterelleSubalbidus",
+            "matsutakeMurrillianum",
+            "craterelleNeotubaeformis",
+            "morelBurn"
+          ]
+        },
+        {
+          "zone": "z270",
+          "profile": "pnw",
+          "species": [
+            "chanterelleFormosus",
+            "chanterelleSubalbidus",
+            "matsutakeMurrillianum",
+            "craterelleNeotubaeformis",
+            "morelBurn"
+          ]
+        }
+      ]
+    },
+    {
+      "center": [
+        35.5,
+        -111.5
+      ],
+      "profiles": [
+        "madrean",
+        "southernRockies"
+      ],
+      "speciesUnion": [
+        "boleteBarrowsii",
+        "chanterelleRoseocanus",
+        "morelBurn",
+        "morelNatural",
+        "porcini"
+      ],
+      "zones": [
+        {
+          "zone": "center",
+          "profile": "madrean",
+          "species": [
+            "boleteBarrowsii"
+          ]
+        },
+        {
+          "zone": "z0",
+          "profile": "madrean",
+          "species": [
+            "boleteBarrowsii"
+          ]
+        },
+        {
+          "zone": "z90",
+          "profile": "madrean",
+          "species": [
+            "boleteBarrowsii"
+          ]
+        },
+        {
+          "zone": "z180",
+          "profile": "southernRockies",
+          "species": [
+            "porcini",
+            "chanterelleRoseocanus",
+            "morelNatural",
+            "morelBurn"
+          ]
+        },
+        {
+          "zone": "z270",
+          "profile": "madrean",
+          "species": [
+            "boleteBarrowsii"
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": {
+    "width": 390,
+    "height": 844,
+    "horizontalOverflow": 0,
+    "focusVisible": true,
+    "locationVisible": true,
+    "topVisible": true,
+    "mapHeight": 440,
+    "buttons": [
+      {
+        "text": "Best opportunities",
+        "width": 146.984375,
+        "height": 42.03125
+      },
+      {
+        "text": "All supported edibles",
+        "width": 166.34375,
+        "height": 42.03125
+      }
+    ]
+  },
+  "accessibility": {
+    "locationLabel": true,
+    "focusLabel": true,
+    "radiusLabel": true,
+    "analyzeName": "Run field analysis",
+    "statusLive": "polite",
+    "dialogs": true
+  },
+  "network": {
+    "r2ParquetRequests": 71,
+    "unexpectedParquetOrigins": [],
+    "manifestRequests": [
+      "http://localhost:8000/data/manifest.json",
+      "http://localhost:8000/data/manifest.json"
+    ],
+    "failedRequests": []
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "suggestedStartTotals": {
+    "checked": 218,
+    "violations": 0
+  },
+  "verdictChecks": {
+    "profilesResolved": 13,
+    "sparseTruthful": true,
+    "warmCacheAdditionalParquet": 0,
+    "salidaFilterTruthful": true,
+    "specificMismatchTruthful": true
+  }
+}

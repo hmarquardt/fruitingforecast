@@ -4,7 +4,7 @@ const { spawn } = require('child_process');
 const http = require('http');
 
 const port = 8800 + (process.pid % 700) + 3;
-const url = `http://127.0.0.1:${port}/fruiting-forecast.html`;
+const url = `http://127.0.0.1:${port}/index.html`;
 let server;
 
 test.use({ channel: 'chrome', viewport: { width: 1280, height: 850 } });

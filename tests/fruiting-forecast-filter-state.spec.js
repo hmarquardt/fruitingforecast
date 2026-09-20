@@ -21,7 +21,7 @@ async function open(page){
     return r.fulfill({json:rows.length===1?rows[0]:rows});
   });
   await page.route('https://api.inaturalist.org/**',r=>r.fulfill({json:{total_results:0,results:[]}}));
-  await page.goto('file://'+path.resolve('fruiting-forecast.html'));
+  await page.goto('file://'+path.resolve('index.html'));
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__&&window.__FRUITING_FORECAST_BIO_TEST__);
   return {consoleErrors,pageErrors};
 }
@@ -45,7 +45,7 @@ test('Salida distinguishes normal, filter-empty, and regional species mismatch s
   expect(state.profile).toBe('southernRockies');
   expect(state.maturity).toBe('PROVISIONAL');
   expect(state.ranked).toBeGreaterThan(0);
-  const published=await page.evaluate(manifest=>{const t=__FRUITING_FORECAST_TEST__.selectGisTiles(manifest,38.5347,-105.9989,10),tile=t.find(x=>x.id==='n38_w106');return {ids:t.map(x=>x.id),layers:tile&&['habitat','publicLands','accessPoints','fireHistory'].every(k=>tile[k]&&tile[k].status==='AVAILABLE')}} ,JSON.parse(fs.readFileSync('data/fruiting-forecast/manifest.json','utf8')));
+  const published=await page.evaluate(manifest=>{const t=__FRUITING_FORECAST_TEST__.selectGisTiles(manifest,38.5347,-105.9989,10),tile=t.find(x=>x.id==='n38_w106');return {ids:t.map(x=>x.id),layers:tile&&['habitat','publicLands','accessPoints','fireHistory'].every(k=>tile[k]&&tile[k].status==='AVAILABLE')}} ,JSON.parse(fs.readFileSync('data/manifest.json','utf8')));
   expect(published.ids).toContain('n38_w106');
   expect(published.layers).toBe(true);
   expect(state.reason).toBeNull();

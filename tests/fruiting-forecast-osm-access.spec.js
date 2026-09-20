@@ -16,7 +16,7 @@ async function open(page){
   page.on('console',m=>{if(m.type()==='error'&&!/Failed to load resource/.test(m.text()))errors.push(m.text())});
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
-  await page.goto(base+'/fruiting-forecast.html',{waitUntil:'domcontentloaded'});
+  await page.goto(base+'/index.html',{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_ACCESS_TEST__);
   return errors;
 }
@@ -80,7 +80,7 @@ test('DuckDB-Wasm reads published access schemas and caches tile bytes',async({p
     const t=__FRUITING_FORECAST_TEST__,a=__FRUITING_FORECAST_ACCESS_TEST__,s=t.getState(),conn=await t.initDuckDB();
     const m=await t.gisManifest(true),tiles=['n39_w106','n44_w124','n38_w087'].map(id=>m.tiles.find(t=>t.id===id));
     const names=[];
-    for(const tile of tiles){const bytes=await fetch('data/fruiting-forecast/'+tile.accessPoints.url).then(r=>r.arrayBuffer());const name=tile.id+'_mixed';names.push(name);await s.gis.duckdb.registerFileBuffer(name,new Uint8Array(bytes))}
+    for(const tile of tiles){const bytes=await fetch('data/'+tile.accessPoints.url).then(r=>r.arrayBuffer());const name=tile.id+'_mixed';names.push(name);await s.gis.duckdb.registerFileBuffer(name,new Uint8Array(bytes))}
     const sql="SELECT count(*) n,count(evidence_grade) modern FROM read_parquet(["+names.map(n=>"'"+n+"'").join(',')+"],union_by_name=true)";
     const union=(await conn.query(sql)).toArray().map(r=>({n:Number(r.n),modern:Number(r.modern)}));
     const results=[];

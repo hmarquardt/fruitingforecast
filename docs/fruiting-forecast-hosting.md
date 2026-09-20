@@ -1,3 +1,5 @@
+> Historical development/provenance document from Junk Drawer. Paths, commands and infrastructure observations below describe their original revision; they are not instructions to resume completed production. For the standalone layout and current transition, read [architecture](architecture.md), [data build](data-build.md) and [deployment](deployment.md).
+
 # Fruiting Forecast production data hosting
 
 Infrastructure initially verified 2026-09-17 from `main` at `84b29580e0ffadd4d8f1c6ee1a27a753a817d34b`.

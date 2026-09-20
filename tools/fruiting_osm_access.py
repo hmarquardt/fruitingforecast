@@ -438,7 +438,7 @@ def in_tile(candidate, bbox):
 
 def build(cache, states, tile_id, out, root=Path(__file__).resolve().parents[1]):
     started = time.monotonic()
-    manifest = json.loads((root / 'data/fruiting-forecast/manifest.json').read_text())
+    manifest = json.loads((root / 'data/manifest.json').read_text())
     tiles = {t['id']: t for t in manifest['tiles']}
     if tile_id not in manifest['summary']['coverageTiles']:
         raise ValueError('Access proof is limited to existing release geography')
@@ -453,7 +453,7 @@ def build(cache, states, tile_id, out, root=Path(__file__).resolve().parents[1])
             if not box(*tile['bbox']).intersects(box(*halo)) or not tile.get('publicLands', {}).get('url'):
                 continue
             from fruiting_remote import ensure_local
-            path = ensure_local(tile['publicLands'], root / 'data/fruiting-forecast', manifest.get('assetBaseUrl') or 'https://data.hanksjunkdrawer.com/')
+            path = ensure_local(tile['publicLands'], root / 'data', manifest.get('assetBaseUrl') or 'https://data.hanksjunkdrawer.com/')
             for pid, name, ownership, geometry in con.execute('SELECT property_id, property_name, ownership_class, geometry_json FROM read_parquet(?)', [str(path)]).fetchall():
                 if ownership in {'PRIVATE', 'LIKELY_PRIVATE'}:
                     continue

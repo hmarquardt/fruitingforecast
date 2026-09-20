@@ -32,7 +32,7 @@ except ImportError:
     rasterio = None
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "fruiting-forecast"
+OUT = ROOT / "data"
 NLCD = "https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_data/wms"
 CANOPY = "https://dmsdata.cr.usgs.gov/geoserver/mrlc_NLCD-Tree-Canopy-Native_conus_year_data/wms"
 EPQS = "https://epqs.nationalmap.gov/v1/json"

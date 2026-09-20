@@ -34,7 +34,7 @@ from shapely.validation import make_valid
 from pyproj import Transformer
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 sys.path.insert(0, str(ROOT / 'tools'))
 METRIC_CRS = 'EPSG:5070'
 LAYERS = ('habitat', 'publicLands', 'fireHistory', 'accessPoints')
@@ -130,7 +130,7 @@ def load_geography():
 
 def _profile_maturity_map():
     """Profile maturity read from the browser file."""
-    html = (ROOT / 'fruiting-forecast.html').read_text()
+    html = (ROOT / 'index.html').read_text()
     out = {}
     for match in re_iter_profiles(html):
         out[match.group(1)] = match.group(3)

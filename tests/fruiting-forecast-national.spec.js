@@ -6,7 +6,7 @@ async function open(page){
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(()=>window.__FF_TEST_FAST__=true);
   await page.route('**/api/analytics/**',r=>r.abort());
-  await page.goto('file://'+path.resolve('fruiting-forecast.html'));
+  await page.goto('file://'+path.resolve('index.html'));
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__&&window.FF_ECOREGIONS);
   return errors;
 }

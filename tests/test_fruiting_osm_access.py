@@ -263,13 +263,13 @@ class AccessContract(unittest.TestCase):
 
 class PublishedCanaries(unittest.TestCase):
     def test_real_canaries_and_legacy_mixed_schema(self):
-        manifest = json.loads((ROOT / 'data/fruiting-forecast/manifest.json').read_text())
+        manifest = json.loads((ROOT / 'data/manifest.json').read_text())
         paths = []
         for tid in ['n39_w106', 'n40_w106', 'n44_w124', 'n43_w123']:
             tile = next(t for t in manifest['tiles'] if t['id'] == tid)
             asset = tile['accessPoints']
             self.assertEqual(asset['status'], 'AVAILABLE')
-            path = ROOT / 'data/fruiting-forecast' / asset['url']; paths.append(str(path))
+            path = ROOT / 'data' / asset['url']; paths.append(str(path))
             self.assertEqual(access._sha256(path), asset['sha256'])
             with duckdb.connect() as con:
                 rows = con.execute('SELECT access_id, start_eligible, evidence_grade, geometry_json, lat, lon, source_version FROM read_parquet(?)', [str(path)]).fetchall()
@@ -281,8 +281,13 @@ class PublishedCanaries(unittest.TestCase):
                 if eligible:
                     self.assertIn(grade, ['HIGH', 'MEDIUM'])
                 self.assertTrue(source.startswith(access.VERSION))
-        paths.append(str(ROOT / 'data/fruiting-forecast/ap/n38_w087.parquet'))
-        with duckdb.connect() as con:
+        # National publication upgraded this tile. Preserve the actual earlier
+        # schema as a text fixture so fresh hydration still tests mixed schemas.
+        with tempfile.TemporaryDirectory() as tmp, duckdb.connect() as con:
+            legacy = Path(tmp) / 'legacy.parquet'
+            fixture = ROOT / 'tests/fixtures/fruiting-access/legacy-access.json'
+            con.read_json(str(fixture)).write_parquet(str(legacy))
+            paths.append(str(legacy))
             result = con.execute('SELECT count(*), count(evidence_grade) FROM read_parquet(?, union_by_name=true)', [paths]).fetchone()
         self.assertGreater(result[0], result[1])
 

@@ -14,7 +14,7 @@ spec = importlib.util.spec_from_file_location('pnw_release', ROOT / 'tools/fruit
 pnw_release = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(pnw_release)
 
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 MANIFEST = json.loads((DATA / 'manifest.json').read_text())
 
 

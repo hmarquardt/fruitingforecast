@@ -1,0 +1,11 @@
+{
+  "name": "fruitingforecast",
+  "private": true,
+  "description": "Static application; Node dependencies are test-only.",
+  "scripts": {
+    "test": "playwright test --workers=2 --reporter=line"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}

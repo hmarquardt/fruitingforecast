@@ -4,7 +4,7 @@ const { spawn } = require('child_process');
 const http = require('http');
 
 const port = 8800 + (process.pid % 700);
-const url = `http://127.0.0.1:${port}/fruiting-forecast.html`;
+const url = `http://127.0.0.1:${port}/index.html`;
 let server;
 
 test.use({ channel: 'chrome', viewport: { width: 1280, height: 850 } });
@@ -113,7 +113,7 @@ test('real static property geometry and authoritative rule metadata load', async
 
 test('malformed rules retain geometry and leave collecting permission unverified', async ({ page }) => {
   const errors = await open(page);
-  await page.route('**/data/fruiting-forecast/public-land-rules.json**', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{"schemaVersion":1,"rules":[{"bad":true}]}' }));
+  await page.route('**/data/public-land-rules.json**', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{"schemaVersion":1,"rules":[{"bad":true}]}' }));
   const result = await page.evaluate(async () => {
     const t = window.__FRUITING_FORECAST_TEST__;
     const evidence = await t.HabitatProvider.fetch(t.zonePoints(38.3553, -87.5675, 25, 'standard'), { lat: 38.3553, lon: -87.5675 }, 25, new AbortController().signal, true);
@@ -129,7 +129,7 @@ test('malformed rules retain geometry and leave collecting permission unverified
 test('missing public-land asset leaves static habitat and map fallback intact', async ({ page }) => {
   const errors = await open(page);
   let blockedTiles = 0;
-  await page.route('**/data/fruiting-forecast/pl/*.parquet', r => { blockedTiles++; return r.fulfill({ status: 503, body: 'offline' }); });
+  await page.route('**/data/pl/*.parquet', r => { blockedTiles++; return r.fulfill({ status: 503, body: 'offline' }); });
   const result = await page.evaluate(async () => {
     const t = window.__FRUITING_FORECAST_TEST__;
     const evidence = await t.HabitatProvider.fetch(t.zonePoints(38.3553, -87.5675, 25, 'standard'), { lat: 38.3553, lon: -87.5675 }, 25, new AbortController().signal, true);

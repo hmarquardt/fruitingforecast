@@ -30,7 +30,7 @@ spec = importlib.util.spec_from_file_location('pnw_release', ROOT / 'tools/fruit
 pnw_release = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(pnw_release)
 
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 TILE = 'n40_w106'
 TILE_2 = 'n39_w106'
 # The bounded Colorado release: the 3x3 southern bbox plus the two verified

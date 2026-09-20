@@ -35,7 +35,7 @@ async function open(page){
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
   await page.route('https://api.inaturalist.org/**',r=>r.fulfill({json:{total_results:0,results:[]}}));
   await page.route('https://api.open-meteo.com/v1/forecast**',r=>{const u=new URL(r.request().url());const lat=u.searchParams.get('latitude').split(',').map(Number),lon=u.searchParams.get('longitude').split(',').map(Number);const rows=lat.map((v,i)=>({...weatherPayload(v,lon[i]),elevation:3000}));return r.fulfill({json:rows.length===1?rows[0]:rows})});
-  await page.goto('file://'+path.resolve('fruiting-forecast.html'));
+  await page.goto('file://'+path.resolve('index.html'));
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__&&window.FF_ECOREGIONS);
   return errors;
 }
@@ -311,7 +311,7 @@ let artifactServer;
 test.beforeAll(async()=>{
   artifactServer=spawn('python3',['-m','http.server',String(artifactPort),'--bind','127.0.0.1'],{cwd:process.cwd(),stdio:'ignore'});
   for(let i=0;i<40;i++){
-    try{await new Promise((resolve,reject)=>require('http').get(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,r=>{r.resume();resolve()}).on('error',reject));return}
+    try{await new Promise((resolve,reject)=>require('http').get(`http://127.0.0.1:${artifactPort}/index.html`,r=>{r.resume();resolve()}).on('error',reject));return}
     catch{await new Promise(r=>setTimeout(r,100))}
   }
   throw new Error('Static artifact server did not start');
@@ -346,13 +346,13 @@ test('bounded Southern Rockies release declares complete habitat with real soil 
   page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__);
   const result=await page.evaluate(async(RELEASE_TILES)=>{
     const t=window.__FRUITING_FORECAST_TEST__;
     const manifest=await t.gisManifest(true);
     const digest=async(url,baseline)=>{
-      const response=await fetch('data/fruiting-forecast/'+url);
+      const response=await fetch('data/'+url);
       const buffer=await response.arrayBuffer();
       const value=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',buffer))).map(x=>x.toString(16).padStart(2,'0')).join('');
       return {status:response.status,bytes:buffer.byteLength,matches:value===baseline};
@@ -415,7 +415,7 @@ test('release summary derives bounded PNW production coverage without conflating
   page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__);
   const result=await page.evaluate(async(TILE_SET)=>{
     const t=window.__FRUITING_FORECAST_TEST__;
@@ -463,7 +463,7 @@ test('legacy southern-Rockies tiles and a modern eastern tile load together in D
   test.setTimeout(180000);
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__);
   const result=await page.evaluate(async()=>{
     const t=window.__FRUITING_FORECAST_TEST__,s=t.getState();
@@ -475,7 +475,7 @@ test('legacy southern-Rockies tiles and a modern eastern tile load together in D
     const urls=['n40_w106','n39_w106','n37_w088'].map(id=>pick(id).habitat.url);
     const names=[];
     for(let i=0;i<urls.length;i++){
-      const response=await fetch('data/fruiting-forecast/'+urls[i]);
+      const response=await fetch('data/'+urls[i]);
       names.push('f'+i);
       await s.gis.duckdb.registerFileBuffer('f'+i,new Uint8Array(await response.arrayBuffer()));
     }
@@ -518,14 +518,14 @@ test('real cross-tile public-land and MTBS identities survive DuckDB reads',asyn
   test.setTimeout(180000);
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__);
   const result=await page.evaluate(async()=>{
     const t=window.__FRUITING_FORECAST_TEST__,s=t.getState();
     const conn=await t.initDuckDB();
     const manifest=await t.gisManifest(true);
     const pick=id=>(manifest.tiles||[]).find(x=>x.id===id);
-    const load=async(url,name)=>{const r=await fetch('data/fruiting-forecast/'+url);await s.gis.duckdb.registerFileBuffer(name,new Uint8Array(await r.arrayBuffer()));return "'"+name+"'"};
+    const load=async(url,name)=>{const r=await fetch('data/'+url);await s.gis.duckdb.registerFileBuffer(name,new Uint8Array(await r.arrayBuffer()));return "'"+name+"'"};
     const conv=r=>r.toArray().map(x=>Object.fromEntries(Object.entries(x).map(([k,v])=>[k,typeof v==='bigint'?Number(v):v])));
     const coPl=await load(pick('n37_w107').publicLands.url,'co_pl');
     const nmPl=await load(pick('n36_w107').publicLands.url,'nm_pl');
@@ -556,8 +556,8 @@ test('interstate search loads both states, isolates jurisdiction and follows eco
   await page.route('https://api.inaturalist.org/**',r=>r.fulfill({json:{total_results:0,results:[]}}));
   await page.route('https://api.open-meteo.com/v1/forecast**',r=>{const u=new URL(r.request().url());const lat=u.searchParams.get('latitude').split(',').map(Number),lon=u.searchParams.get('longitude').split(',').map(Number);const rows=lat.map((v,i)=>weatherPayload(v,lon[i]));return r.fulfill({json:rows.length===1?rows[0]:rows})});
   const gisRequests=[];
-  page.on('response',r=>{const u=r.url();if(u.includes('data/fruiting-forecast/'))gisRequests.push(u.split('data/fruiting-forecast/')[1].split('?')[0])});
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  page.on('response',r=>{const u=r.url();if(u.includes('data/'))gisRequests.push(u.split('data/')[1].split('?')[0])});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__&&window.FF_ECOREGIONS);
   await page.addInitScript(()=>window.__FF_TEST_FAST__=true);
   await page.locator('#radiusSelect').selectOption('50');

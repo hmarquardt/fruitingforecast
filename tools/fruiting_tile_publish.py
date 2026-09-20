@@ -45,7 +45,7 @@ def _bbox_intersects(a, b):
     return not (a[2] < b[0] or a[0] > b[2] or a[3] < b[1] or a[1] > b[3])
 
 
-# Explicit roster from fruiting-forecast.html (ECO_PROFILE_GROUPS). A Python test
+# Explicit roster from index.html (ECO_PROFILE_GROUPS). A Python test
 # parses the HTML and fails if this copy drifts from the browser's mapping.
 ECO_PROFILE_GROUPS = {
     'pnw': [1, 2, 3, 4, 77, 78], 'california': [6, 7, 8, 85],
@@ -82,7 +82,7 @@ def coverage_of(tiles, root):
                       and (tile.get('habitat') or {}).get('components')
                       and all(status == 'AVAILABLE'
                               for status in ((tile.get('habitat') or {}).get('components') or {}).values()))
-    geo_dir = root / 'data/fruiting-forecast'
+    geo_dir = root / 'data'
     state_features = json.loads((geo_dir / 'states.json').read_text())['features'] if (geo_dir / 'states.json').exists() else []
     eco_features = json.loads((geo_dir / 'ecoregions.json').read_text())['features'] if (geo_dir / 'ecoregions.json').exists() else []
     code_profile = {str(code): name for name, codes in ECO_PROFILE_GROUPS.items() for code in codes}
@@ -196,7 +196,7 @@ def publish_tiles(root, tids, layers, source_dir, output=None, resume=False):
     after every layer so an interrupted run leaves a valid release behind.
     Returns the failure count.
     """
-    output = output or root/'data/fruiting-forecast'
+    output = output or root/'data'
     output.mkdir(parents=True,exist_ok=True)
     # Kernel-released exclusive lock prevents manifest lost updates across crashes.
     from fruiting_remote import publication_lock, ensure_remote
@@ -267,7 +267,7 @@ def main(root):
     p.add_argument('area', nargs='*')
     p.add_argument('--layer', choices=[*LAYERS,'all'], default='all')
     p.add_argument('--source-dir',type=Path)
-    p.add_argument('--output',type=Path,default=root/'data/fruiting-forecast')
+    p.add_argument('--output',type=Path,default=root/'data')
     p.add_argument('--state-bounds',type=Path,help='JSON mapping state names to authoritative [west,south,east,north] bounds')
     p.add_argument('--plan',action='store_true')
     p.add_argument('--resume',action='store_true')
@@ -283,7 +283,7 @@ def main(root):
         tids=tiles_for_bbox(json.loads(a.state_bounds.read_text())[' '.join(a.area)])
     else:
         # Catalog is approximate addressing, not verified land or publication coverage.
-        catalog=json.loads((root/'data/fruiting-forecast/tile-catalog-full.json').read_text())
+        catalog=json.loads((root/'data/tile-catalog-full.json').read_text())
         tids=[t['id'] for t in catalog['tiles'] if t.get('land')]
     layers=list(LAYERS) if a.layer=='all' else [a.layer]
     if a.plan:

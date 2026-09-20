@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 PROD = DATA / 'production'
 DOC = ROOT / 'docs/fruiting-forecast-conus-expansion.md'
 
@@ -69,7 +69,7 @@ def main():
         f"- Independent cross-check: **{report['crossCheckSource']['product']}**, SHA-256 "
         f"`{report['crossCheckSource']['sha256']}`. {report['crossCheckSource']['role']}",
         f"- Build-time preparation only; runtime reads the committed compact product "
-        '`data/fruiting-forecast/national-relevance-v2.json` (algorithm '
+        '`data/national-relevance-v2.json` (algorithm '
         f"`{report['algorithm']}`). No unpinned URL is used at runtime.",
         '',
         '### Normalized relevance rule',

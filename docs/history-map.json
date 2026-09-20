@@ -1,0 +1,840 @@
+{
+  "method": "Recovered path-filtered history from interrupted prior pass; all 167 commit trees verified as exact blob subsets of corresponding Junk Drawer commits, preserving author timestamp and subject. Original filtering tool unavailable after reboot.",
+  "commits": [
+    {
+      "source": "fc33da8e60b4e74e3e1fccbe8c328162c7925594",
+      "filtered": "c37fd9720f3fbe8e57b211ff46d3414264d10454",
+      "subject": "Document Fruiting Forecast data sources"
+    },
+    {
+      "source": "29521beadef9dad374f560cfc0a8e3293e37fd98",
+      "filtered": "026c91c9fccffeafb5cf7718e8232a451989cc43",
+      "subject": "Add Fruiting Forecast field intelligence tool"
+    },
+    {
+      "source": "97885395c4e67f65a09dfd5084990b701bcce49d",
+      "filtered": "6430d37d49bdded17ad426eeb77379f0235a2b7f",
+      "subject": "Add optional OpenRouter analyst to Fruiting Forecast"
+    },
+    {
+      "source": "18c64536e2d66ba6586d33a74dfdb42458db8384",
+      "filtered": "beece9022a27dba172d6bbfd6050484745bd7e79",
+      "subject": "Add static GIS preprocessing and Southern Indiana tiles"
+    },
+    {
+      "source": "781967168ed21a87418b73b086e4477781853982",
+      "filtered": "6bba76fe415bfd25a03c8c40e5b621ef59f0083f",
+      "subject": "Integrate browser-native habitat intelligence"
+    },
+    {
+      "source": "07eb9aef8143ed937ee7df5dc194f4224356cf90",
+      "filtered": "3696a73815210ab4978f7c0bd61512d38400f3a6",
+      "subject": "Add static GIS and habitat scoring regression coverage"
+    },
+    {
+      "source": "9d0d89e77c7f17245510d7abdc44902009a55e4e",
+      "filtered": "d65c4c787164e2a805b40cc25cd97aaa1c41f8c4",
+      "subject": "Add static public land intelligence dataset"
+    },
+    {
+      "source": "f83b5b343067319d48b18987351b4bd7a5e4c11c",
+      "filtered": "5dbbc32899a24f2736612e0b97edca5135eb5c88",
+      "subject": "Add deterministic huntability planning UI"
+    },
+    {
+      "source": "06af3754644e5ecc5b30bdde669e1b1149f9966d",
+      "filtered": "3febcca46330b72bcf839a56e74c3917936201c2",
+      "subject": "Test public land and huntability workflows"
+    },
+    {
+      "source": "e0d1deda056b05cef6a324d302ee1b233a82805b",
+      "filtered": "bcdf79635da316684cf7efd0c22c108c9749fd4b",
+      "subject": "Add public access/parking pins and polished light-mode the theme"
+    },
+    {
+      "source": "9d89bf1f1dd44b3495fdc0887acbc58f41614c0e",
+      "filtered": "17738900b47690361c7f441d4919cc13d2a9eecc",
+      "subject": "Fruiting Forecast: expand GIS coverage beyond Southern Indiana to broad geographic tile acquisition"
+    },
+    {
+      "source": "e8364670e4fad7f68153ab8c643aadb1bfe7de00",
+      "filtered": "8f5f43347cc1e0487068e6fc206d7b32bcc83b51",
+      "subject": "Add expanded Ohio Valley habitat tiles (n35-n39, w084-w091)"
+    },
+    {
+      "source": "53f549e073675a823d710522a3386a1c8818b7b2",
+      "filtered": "16359b98dcad18186f08b3e88a63b019c2799c8d",
+      "subject": "Fix manifest: restore 15 missing Indiana tiles, add tile catalog + summary"
+    },
+    {
+      "source": "29130b1926fd8b27452e22b083514316d9848b6b",
+      "filtered": "2e1176014153c58028b3e6d37e15639f1cabb4e6",
+      "subject": "Update docs: 40 tiles, 506 KB habitat, 671 KB PL across Ohio Valley/Tennessee Valley corridor"
+    },
+    {
+      "source": "293b91ae54958e14a23ee7b9244de7fc20ade087",
+      "filtered": "3f670239409da87e67049d786de9a75e5f2c6998",
+      "subject": "Fix JS parse error in coverageManager: add missing closing brace for if(toFetch.length) block"
+    },
+    {
+      "source": "f4d3d8df371d0a96d53f08d840fa958be2dfb38a",
+      "filtered": "44fd2982c9b9b8f331402052d41a2fff631808cd",
+      "subject": "Fix OpenRouter settings persistence: make preference writes trustworthy and honest"
+    },
+    {
+      "source": "894163806316ff95a9f0d349954151c026b77a91",
+      "filtered": "f172c82ed4e886fa49c390ecf7e9bebb3a3c9c4f",
+      "subject": "Fix score-scope UX and map access-point overlay architecture"
+    },
+    {
+      "source": "14d0537f99cc96c7c939d33dd4e671d2cea176d6",
+      "filtered": "f68dd276286f34c861d38db1a1f22bc85eee2171",
+      "subject": "Fix Tennessee PL geometry: add valid geometry_json so properties survive publicLandRows filter"
+    },
+    {
+      "source": "f7d087ecee6b5fdb0ef3ee99676412798c57d9a5",
+      "filtered": "b4cda90e09ffa6bcaa2a184e9bcac9b54bf53fee",
+      "subject": "Add Fruiting Forecast About field guide and capability status"
+    },
+    {
+      "source": "e1ccb64dedad989c28b01d3fb35f089227770060",
+      "filtered": "0535a441749454f496b7db3a1327e4e633fb14a9",
+      "subject": "Establish Fruiting Forecast regional biology and incremental tile publication"
+    },
+    {
+      "source": "01aad160f10d0cd5ded36dcaea9c70a23e4c5a9b",
+      "filtered": "fc8111bf9d450f1c64a2d5ba13885d292dc2ad16",
+      "subject": "Complete the Southern Rockies milestone: four regional targets, real Colorado GIS, MTBS burn evidence"
+    },
+    {
+      "source": "e48d02b4c4c571060adbc69a59993a1c1e67ca18",
+      "filtered": "08390907010de9e8bb00b6318674dff41a71aaca",
+      "subject": "Fruiting Forecast 2026.09.14.3: Colorado canopy + NLCD land cover, second independent tile, explicit habitat completeness"
+    },
+    {
+      "source": "7c1020ea3aa5553592cc627fdcae8353caa4e162",
+      "filtered": "674034ebd1ebf232ccf3074b82a3610c09fb730e",
+      "subject": "Fruiting Forecast: real NRCS soil and a bounded 11-tile Southern Rockies release"
+    },
+    {
+      "source": "271806c71bff30d7ef7d72c41b06112ffbb20695",
+      "filtered": "e98f555c3b1546aa371d66eccb25c0c7dce4c128",
+      "subject": "Soil packages: read gNATSGO GeoPackage/SQLite mapunit tables through the same contract"
+    },
+    {
+      "source": "68cc60934c27d255d73851162361f9f0c78a1d15",
+      "filtered": "c24732c7d04227a20c96a47ec54f4063fbdb6658",
+      "subject": "Fruiting Forecast 2026.09.15.1: second state (New Mexico) \u2014 state-scoped soil, conservative jurisdiction, two-state release"
+    },
+    {
+      "source": "192c1609de36ad0eeccbe890e060868ef0a6dea0",
+      "filtered": "65a35914eda70bf9ae90a7487a28c310e5a00712",
+      "subject": "Fruiting Forecast 2026.09.15.2: Pacific Northwest Maritime as a third modeled region"
+    },
+    {
+      "source": "da563022e9b65575030f63c82846a2a44237e620",
+      "filtered": "c510d9b0587ff5c492c571ccae0951191214d74e",
+      "subject": "Fruiting Forecast 2026.09.15.3: regional OSM PBF access pipeline with Southern Rockies and Oregon canaries"
+    },
+    {
+      "source": "058c7b0515dfa0432e669ca0ee5dce9496108626",
+      "filtered": "eff37882e2c8b3d5e75b6d4c2ae4a9c81ed81af7",
+      "subject": "Fruiting Forecast 2026.09.15.4: bounded Oregon PNW production release (11 tiles, complete vertical stack)"
+    },
+    {
+      "source": "153a95d58de6a9311c9264000ce7913e1706f15a",
+      "filtered": "21fcde56975e3b696b7f0181218d127db28ad4d0",
+      "subject": "Fruiting Forecast 2026.09.15.5: bounded Washington PNW production release \u2014 OR+WA region complete"
+    },
+    {
+      "source": "92eca10fb82ba20dd1ddd27ed7ffd5a0fc1901fb",
+      "filtered": "1fac7a25ce828d2de3ffe00bbfca5703e6763ad0",
+      "subject": "Fruiting Forecast 2026.09.15.6: CONUS planner + Northern Forests and Southeast profiles \u2014 national biology pass"
+    },
+    {
+      "source": "e212123f4f24d8d202ecc1031b15329d28246c79",
+      "filtered": "4766fef16360d9885748a70cf1212eae8a9a1712",
+      "subject": "Fruiting Forecast 2026.09.16.1: Task Zero crosswalk audit + coherent Northern Rockies / Interior Mountains profile"
+    },
+    {
+      "source": "067aa7b5cdf59c6d7f177b4ac0faed38fa252c5e",
+      "filtered": "6e32c01853dc98bb3b7519c3d082c879113fc029",
+      "subject": "Fruiting Forecast 2026.09.16.3: California Task Zero split \u2014 Mediterranean + Sierra Nevada profiles, Klamath to PNW"
+    },
+    {
+      "source": "4220c95dc05e975398598e190c092fc51be0ca80",
+      "filtered": "fa4beefb802d7c05cab6676f8871cffab9106626",
+      "subject": "Fruiting Forecast 2026.09.16.4: Southwest Task Zero \u2014 madrean/coldBasins/warmDesert split, MODELED_SPARSE, code-18 fix"
+    },
+    {
+      "source": "940d3a809903ef623b4cada191f5ae3571dc5c49",
+      "filtered": "c21dab99447a860d53e3464137ebcef10176f208",
+      "subject": "Fruiting Forecast 2026.09.16.4: include the publisher crosswalk roster in the Southwest split commit"
+    },
+    {
+      "source": "84b29580e0ffadd4d8f1c6ee1a27a753a817d34b",
+      "filtered": "20d99158253d03f1084ce7fb75f050fcca548c95",
+      "subject": "Fruiting Forecast 2026.09.16.5: Great Plains modeled \u2014 CONUS biology complete at 13 profiles / 0 UNSUPPORTED"
+    },
+    {
+      "source": "92e968ede9df96312721b559d9a5a5c3062142cc",
+      "filtered": "357aa7a88ec50db4ba50b00905e6f151e321077f",
+      "subject": "Fruiting Forecast: establish R2 production data origin"
+    },
+    {
+      "source": "ae07869c1761b66d92ccaa7b6d630838b709f06e",
+      "filtered": "01c7acda20c6aef5fa0d700c720261a353b91dc3",
+      "subject": "Fruiting Forecast: verify remote publication before manifest updates"
+    },
+    {
+      "source": "81843a4be99b2a0de34e32ce761edcd7eb1b3112",
+      "filtered": "c96734ed861ba01b49b5f6d8d57f6d757282ba38",
+      "subject": "Fruiting Forecast: migrate 250 verified Parquet assets and cut over to R2"
+    },
+    {
+      "source": "e089dab8fdabf4294d2dd68cfbc983b2c9494051",
+      "filtered": "21a8df4683e6bfd9804019ad4cee55afc61a7244",
+      "subject": "Fruiting Forecast: bound Batch 1 resources and retain local test delivery"
+    },
+    {
+      "source": "0a027a6583f14766927fba991fef5aa6efdceb9c",
+      "filtered": "1a7a7776be50f88fb021e3c1d2a48c5ba922c2ed",
+      "subject": "Fruiting Forecast: keep unsampled profiles out of measured size groups"
+    },
+    {
+      "source": "895901f89d740890b548700fa1bb9b18db9abb01",
+      "filtered": "0ba149b1d7a3d3a0250976e40348c76a57b86442",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 1/31"
+    },
+    {
+      "source": "0f88f4694538d7c481ed35093b6ce4508daa09ba",
+      "filtered": "ba79cd73ee62a03a6749b4cf89dc4c0399765c8d",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 2/31"
+    },
+    {
+      "source": "e689cf7158411356ac92b0ba502198c0ee520ca4",
+      "filtered": "888d1de45a59bfddfb8d5b94c020a74fa9e24bbf",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 3/31"
+    },
+    {
+      "source": "2f690a397a42b451af4f034c7c14290a66807e93",
+      "filtered": "6349e4c143fbbce22685c427997842037502073b",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 4/31"
+    },
+    {
+      "source": "4b754eaa91de2f924acd5c6f0b8c2580cdc8703b",
+      "filtered": "7afe3baeeff88a6a257795b5d6eb8128d5d38512",
+      "subject": "Fruiting Forecast: page complex MTBS responses deterministically"
+    },
+    {
+      "source": "b15158a4ac4bc34dc2d4770bc2934a23d6d5a8bd",
+      "filtered": "8c4704b34ec37b8137333e3f32e4ff8b95e8ae2c",
+      "subject": "Fruiting Forecast: bound MTBS geometry response precision"
+    },
+    {
+      "source": "101a0a8563285cb60f9004aa666a8b8dfa5b8bd5",
+      "filtered": "306f1862c24fe34ed87d3596e315dac1d53efa52",
+      "subject": "Fruiting Forecast: cover bounded MTBS production queries"
+    },
+    {
+      "source": "d00aeb2e49e1c51e67cdfc97fcc6b0e1f9973a28",
+      "filtered": "676a9f0704a6b4ee20f72cb8a17cf30a293b89d7",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 5/31"
+    },
+    {
+      "source": "aa16e3917abae995c8bd7210cf3b1925819cdc4a",
+      "filtered": "a8f9a364acbb2a94d2a0437fa9555f764a1b4536",
+      "subject": "Fruiting Forecast: enrich Batch 1 production metrics"
+    },
+    {
+      "source": "ef2d163c2167131d7ff83c2423af46295d78d84e",
+      "filtered": "2d019decf203d9efa8cb0e8c9a2987e90b0d7b36",
+      "subject": "Fruiting Forecast: document active R2 client architecture"
+    },
+    {
+      "source": "bc7706a20d31afbfba435b394277c7ea3ec40c41",
+      "filtered": "abb072d3079641ea8b4ee102c6f4ce749a811369",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 6/31"
+    },
+    {
+      "source": "012372794003d97685890dd57222edf3fb6806f2",
+      "filtered": "218d662195655f50137a5d050573273e50285ef7",
+      "subject": "Fruiting Forecast: gate production artifact assertions on hydration"
+    },
+    {
+      "source": "3ca4ef759bec20d6ccdec42e66fc8ca444081bdd",
+      "filtered": "ee4af70c0c213e6c88873d2f86c57ab51b95ffc9",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 7/31"
+    },
+    {
+      "source": "efca06c568212a7efba66c7cc5b37419b80ea45c",
+      "filtered": "ad18792b163de15e0e9d12eec97b82a00107c7e8",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 8/31"
+    },
+    {
+      "source": "26e5225bc7aee6eae6d8753c9ce5ff143ca5b995",
+      "filtered": "ae36ca92794134aa150a99ab33534630363e6c45",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 9/31"
+    },
+    {
+      "source": "50008b86f37d98fc50cf2139d35be7f9fa5c82ba",
+      "filtered": "3f1b7e6857d3fb576dc5d0e5127ba6822f455ba6",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 10/31"
+    },
+    {
+      "source": "f77ee5d96db08d1450eccd1d1e3f5821873f6e31",
+      "filtered": "4655f57120909f295360c0a22aa8b233d6fe5043",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 11/31"
+    },
+    {
+      "source": "15c0519a336152feadb7541a8a061a1093769bfc",
+      "filtered": "3b2d5b6c6d515652ede46669078f6b9c1a4c65bc",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 12/31"
+    },
+    {
+      "source": "e4b33f9f3937db8976df6f1b7dd6fd0af842ec39",
+      "filtered": "dc190872e27c8b6a6e4a4024e8e8b797ad4b3b9b",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 13/31"
+    },
+    {
+      "source": "ca75893adf01ef43405e79b52ebadb45ac277d66",
+      "filtered": "bf3ab56e223bfb37aeb9c298fa3a525b4eee4d6e",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 14/31"
+    },
+    {
+      "source": "3ad47cefd740c408d310f1ef70878e0e42d86a41",
+      "filtered": "10db7625486427ed0986d9797f7e2f443d8ee23e",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 15/31"
+    },
+    {
+      "source": "22bc1b1bbc27d3dc40aa7c64204ec13615b8f50f",
+      "filtered": "f4c5b76b1d674139b3c9bfb434f0bd3d4fd64dc5",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 16/31"
+    },
+    {
+      "source": "41ff9717d9c5caf58212cb9174b4c9fe36ee8b65",
+      "filtered": "c56a4d642c6a6ff3c09fd958d0f7cd4bd3b54fe7",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 17/31"
+    },
+    {
+      "source": "04c580ce3903bcb3bd9bb0332638440ec831fb04",
+      "filtered": "9e907fc24d43f0706fc55d20fca0e6802ee71244",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 18/31"
+    },
+    {
+      "source": "aa290fea8ceba6c0f68665d07b0594c9dd81c80d",
+      "filtered": "75bbd3c34448c4da2d8cacf55b0ae062a1eaa5d0",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 19/31"
+    },
+    {
+      "source": "5aac20502c1633e28587e5bd25cb2fd35f35faec",
+      "filtered": "3735631321632cd27d231ee45056ff7ec11bee02",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 20/31"
+    },
+    {
+      "source": "6a7fe4dfbc80175a4f92ca5883b5242867176ae7",
+      "filtered": "e70f07a1f8bcba868bbf8e17d295d0f06a0e3fa0",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 21/31"
+    },
+    {
+      "source": "133a1831f47b418728a491779b66c12525d6a304",
+      "filtered": "30fc18a5c1c8689b10e29114ba0db0e05c903627",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 22/31"
+    },
+    {
+      "source": "833d10eee5f4c6d711b975243a36d5aa79397257",
+      "filtered": "86a6fef73cfa08e5f839f655fe63ae9d622de6bf",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 23/31"
+    },
+    {
+      "source": "308dee4b40bea6e2bbe52c338c19cca2acb67034",
+      "filtered": "33d89c51789fc7cfebd3e1a448dbca2e8e24357e",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 24/31"
+    },
+    {
+      "source": "ec2824fda8d123b00b1062e1950845575e0622f3",
+      "filtered": "e39934c6fb49b62a1a8a040d4b8df6a37a418d81",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 25/31"
+    },
+    {
+      "source": "24b955b1bc376b863424fa424689480cda11243e",
+      "filtered": "16d6814707b3090ef7b3ea16948153039e5f7c7d",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 26/31"
+    },
+    {
+      "source": "40ff31bb4a1f0026b057eb5b4b6f39c419b214f1",
+      "filtered": "6b59d7768a36071967a7c93a63119eb1235ea18d",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 27/31"
+    },
+    {
+      "source": "ec5add2b9848c3728cb1644e7b5a10f764579bdc",
+      "filtered": "9ae1949f8b5dd92bac26c3a7187ee2069140370f",
+      "subject": "Fruiting Forecast: retry SDA maintenance windows"
+    },
+    {
+      "source": "226f363f4bb954ec25d611939cfe419c64f57356",
+      "filtered": "88c0cdf532553cecb73dc221876d7c91f6891505",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 28/31"
+    },
+    {
+      "source": "934529c3e669434eba05e2316c32ea472e96ccd3",
+      "filtered": "87870630bcbffa157b263af601207aebb87e0e98",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 29/31"
+    },
+    {
+      "source": "c4871b58f310dd8e5aa8c9ce5a1481860100fbcd",
+      "filtered": "d2647d669053e9bfcbe19f7a9ba9f899f8945cfa",
+      "subject": "Fruiting Forecast: preserve empty border soil results"
+    },
+    {
+      "source": "d5bf3a5e96ece626a60ac5ae821311da5fcc47ed",
+      "filtered": "dbcef4c2c3a107e067caa3ff6c81c8005ed7aec3",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 30/31"
+    },
+    {
+      "source": "06112ab2f0a6d60ef25d65b546b033eba6377ba1",
+      "filtered": "cf5e45f0a790025b3bbabb0676e65567fbe8aefa",
+      "subject": "Fruiting Forecast: Batch 1 checkpoint 31/31"
+    },
+    {
+      "source": "a0e02c94a3e4cb490865122d9585a7209576d5ce",
+      "filtered": "6fc55a0371ddcc3760269815c33fc09c6c643ada",
+      "subject": "Fruiting Forecast: finalize Batch 1 production handoff"
+    },
+    {
+      "source": "986729ea14454b00a59a5b282761dec705b04edd",
+      "filtered": "61039bd9e764ad08dd79d5ebe7b0d8988348ae34",
+      "subject": "Fruiting Forecast Batch 2 tooling: two-worker runner, state cohort prep\\n\\n- tools/fruiting_batch2.py: prepare/plan/run for the planner-derived Batch 2;\\n  bounded scheduler with two builder workers, serialized publisher, journal\\n  and checkpoint cadence of 10 tiles.\\n- fruiting_bulk_adapters.py: thread-safe cache-manifest records; process-wide\\n  SDA and PAD-US/MTBS hosted-service locks; DEM downloads stay concurrent.\\n- fruiting_osm_access.py: Batch-2 cohort Geofabrik state extracts.\\n- fruiting_metrics.py: atomic concurrent metric appends."
+    },
+    {
+      "source": "dd3263d8fbba32e6c7d392a1c9a28b27e1a52543",
+      "filtered": "c4fde8f04f6b0b6875a80ad29af700f4d75192d8",
+      "subject": "Batch 2 runner: verify against re-read manifest; resume reuses normalized artifacts"
+    },
+    {
+      "source": "35643885c902d0ad6cc6765c3e9486b461eb8895",
+      "filtered": "7f96fc802ecf459501259c319937131c1efa29c2",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 000"
+    },
+    {
+      "source": "eb2eeccf5a0166509ed7d814769e19282f41873f",
+      "filtered": "efa5a41bc62c687776a3611ace8f5413e014818f",
+      "subject": "Batch 2 mid-batch browser QA: 4 live lookups incl. 3 new Batch-2 tiles (cold 3-4 R2 Parquet, warm 0, no errors)"
+    },
+    {
+      "source": "91fbc5e793e1e55ebabae6f9cbe4eb903a0d83e4",
+      "filtered": "0dfc7d124c0f910e77fe0f640f0f2126e328de67",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 001"
+    },
+    {
+      "source": "2bb49a2f9b5e538dc724c16501ae402a084cbbd5",
+      "filtered": "0fe8f849ef245ea63cda4e7f278ee4669badc43d",
+      "subject": "Batch 2 analysis tooling: stage-metrics aggregator, storage statistics, machine-readable report generator"
+    },
+    {
+      "source": "0784ca8761878452158067afd9765edfab3cb61f",
+      "filtered": "566ac0af6f2279dd607b5ceec148e4462635a944",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 002"
+    },
+    {
+      "source": "50b9d263857b3a1d39ff6e6a0df854a04c40569b",
+      "filtered": "0a6f8b10ee675593c041f03c9599c6ad210a820f",
+      "subject": "storage_stats: stable sort for legacy tiles with unresolved dominant profile"
+    },
+    {
+      "source": "d1ab918c5440090c7217d0a641f6c4e3c911b751",
+      "filtered": "69e86f00a0114c2ccaf629d6691ab39627fa0564",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 003"
+    },
+    {
+      "source": "8ec6cbafdc1f78137a8e8875f31076726d097006",
+      "filtered": "2f7b6504d9a5ee6e0e9260cef480029c75ac558c",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 004"
+    },
+    {
+      "source": "af02c38a63af1428a6a277f180e22d9297fd0d35",
+      "filtered": "624a66894ac9770d324ae054fdcd8ff76151d279",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 005"
+    },
+    {
+      "source": "087f9258cd6f2d0d90fe969a0413f7238ac448e6",
+      "filtered": "3595ef5d6a9bf56805b86301486314d0a0966e31",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 006"
+    },
+    {
+      "source": "840e382ff30a52bd44886ade1b7d24fb07eb8d3c",
+      "filtered": "5bcda4e18315050949cb696f1fbbf7ca335ddb52",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 007"
+    },
+    {
+      "source": "247d1e08ccadb2f0b1c5022d512441b19d24b275",
+      "filtered": "3767045fb2aa92d3558ff34a98b396ee333437ad",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 008"
+    },
+    {
+      "source": "6f0b45c90b44824e611485e4ae0bc49081feefaf",
+      "filtered": "b1dabafd4c202c4a63471fa8a3a04053cc865976",
+      "subject": "Batch 3 derivation tooling (derive-only, not authorized for execution)"
+    },
+    {
+      "source": "a4da2c251ea3b090cbf43ef41e9a54dce5e4a665",
+      "filtered": "c9dfa9259f1b337fb51fdfa942bd5a335f79af14",
+      "subject": "OSM access adapter: topology-validity repair on loaded source geometries (fixes GEOS side-location crash on Batch-2 KY/TN boundary tile)"
+    },
+    {
+      "source": "c78f79c95591255a49683130e2a27e34e802495f",
+      "filtered": "fdd32aa4b7d707d69ee617942bf3689809315609",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 000"
+    },
+    {
+      "source": "79397256415742286dfe85953eb4d8708b342601",
+      "filtered": "08dbc7a7a1897d094663ab328c8615b084c6f63d",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 009"
+    },
+    {
+      "source": "df9723edbd196c1abca958b3818a6ca67a02ec6d",
+      "filtered": "122573e1b69a5205752fb3c696356956a5d8a091",
+      "subject": "Batch 2 runner resilience: ArcGIS body-level 429 retry with paced hosted lane; a failed tile no longer hangs the checkpoint queue"
+    },
+    {
+      "source": "1edc6c077ef1c0a342e088ca4cd3c2ac66eaa5d1",
+      "filtered": "29bc73f426139d0fcd736501d85a0b4de26cf4bf",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 010"
+    },
+    {
+      "source": "84309b7569255fe07ee3cd4aa38016ed7003d56e",
+      "filtered": "3ec5611021300760e1c24d1036dd457dc83f7060",
+      "subject": "stage stats: aggregate real emitted event kinds (service/download retries, DEM downloads, service hosts)"
+    },
+    {
+      "source": "491292f35674c49a35551e845bb11c916578cfd7",
+      "filtered": "d81153f3dca36b20e0f2052d7888ad14337fbc13",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 011"
+    },
+    {
+      "source": "38c4a14c5819528c991d6916a155933cb7918cef",
+      "filtered": "14a0e113938d94bb58a4d20ac3e3da202450da66",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 012"
+    },
+    {
+      "source": "6c5aa42cfad7793210c9fd8ba20145741631a838",
+      "filtered": "4d65abb15c4ee18202603601400b7e9724284a1f",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 013"
+    },
+    {
+      "source": "5fc0ebb20a42b210dd7dd5ecdb9496597dc14adf",
+      "filtered": "9776d68107ac7abc438e750661a5f1bb4750504d",
+      "subject": "Batch 2 finalization tooling: ledger-scoped R2 accounting, honest concurrency/projection analysis, Revision 16 composer"
+    },
+    {
+      "source": "e14905e631c17f5e061281f5cb3843628a85ed90",
+      "filtered": "2c387a2d27187f256b7223163385f30ceb63c511",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 014"
+    },
+    {
+      "source": "ae59756e7cc9f8fc631edb7757d1b35c4056edf8",
+      "filtered": "20fb725b9150250fa3d3181087a17596792c5f22",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 015"
+    },
+    {
+      "source": "eeed1a45fb18b30ecd3a8224aa428443a58d3650",
+      "filtered": "f995589a61ed40268f4cdbc2aebc16270157bb60",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 016"
+    },
+    {
+      "source": "99a50f2c699a4b521b1d9643e1ed4911cd411f7a",
+      "filtered": "62362d2febaad01573faf145ffdeea227e60c401",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 017"
+    },
+    {
+      "source": "4d91444486433bfaf7a382bd0719cb64fe43c496",
+      "filtered": "7ae48927bb04f82f81f25cc2e4bee6bb095d8507",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 018"
+    },
+    {
+      "source": "e3d506aa0d3d7540ae9e33f1214cb768eb264aeb",
+      "filtered": "01172924de4a84dcad6d563d7b14e848c273e75d",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 019"
+    },
+    {
+      "source": "008c05903401d519c4c3c4ee01a42189b347eaf6",
+      "filtered": "634817b84152ad06a74d23488f5847e1c5029c33",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 020"
+    },
+    {
+      "source": "e25cfbfc313a3c3ba36f21b3cc4ee4c918aa9df5",
+      "filtered": "67526555241b71301fae2f210a1c5d7ae52cbd97",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 021"
+    },
+    {
+      "source": "71ff8f8cddc5d945d3f55e1ece19911f6e9737bb",
+      "filtered": "bf3deab1d2c921684447a2e557b1182f7775db60",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 022"
+    },
+    {
+      "source": "8ecf3326f89290016aab9c2efc3995afa6cfb3f4",
+      "filtered": "dcbb2791af7290201484495b2adcac7b7103a141",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 023"
+    },
+    {
+      "source": "5f7b81a5d5b9e3363da8dc6d32e1f1534d58da96",
+      "filtered": "e4f8d86a92c3aa7f21c0c53f22f890a8c4a34f35",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 024"
+    },
+    {
+      "source": "eeefe66078962ef454ad1a907dd48fb54f78639e",
+      "filtered": "a1868dec359a22ccae63af56a20beaed28962370",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 025"
+    },
+    {
+      "source": "8f6e10c5cc60a2a0040df048132ddb6b3e99d8f5",
+      "filtered": "791768695db72944377e6167c567141c68b47fd2",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 026"
+    },
+    {
+      "source": "ab96a6d853ecace8b2e18c8c5d3ba5a18f389a9a",
+      "filtered": "d5554de21acdbee608dc3559c8956e482bb64741",
+      "subject": "Fruiting Forecast National GIS Batch 2 checkpoint chunk 027"
+    },
+    {
+      "source": "205f7257c2c70f1b541e767ee8dc5885fa2492a0",
+      "filtered": "337835001964c25b9c1233d381accb2fb09d2f93",
+      "subject": "Fruiting Forecast National GIS Batch 2 complete: Revision 16 handoff, full remote audit, Batch-2 reports, storage/runtime projections, Batch 3 derivation (not authorized)"
+    },
+    {
+      "source": "8656a069389ed372e56efa1f52936e8bc2d7466d",
+      "filtered": "97b06233e1f0b3918c1248f3a11593687affd8b6",
+      "subject": "Revision 16 correction: report whole-journal vs resumed-pass disk floors separately"
+    },
+    {
+      "source": "4ad2815ad4fbb91e095c5b2c314733a1c261acdb",
+      "filtered": "b72d64cdaa3f2314a9aae65922a0df32756b3d2a",
+      "subject": "Phase A: evidence-based zero-normal-state cell fallback (17 edge tiles resolved), explicit 13-tile border-artifact block, shared planner/runner agreement guard, ArcGIS body-level retry and queue-failure regression tests"
+    },
+    {
+      "source": "2dbac7cd783d1d2a862802cad9d3dcbe08d0cdec",
+      "filtered": "dc2d62feeac21afcc13d245add4edd5e734fd889",
+      "subject": "Batch 3 tooling: state-prep output path, final national report, concurrency/cost analysis, Revision 17 composer"
+    },
+    {
+      "source": "c20204f6fa012134748cb6177b949274dbb5514f",
+      "filtered": "92f02725c423de15b19df184703b5d7c9e15abba",
+      "subject": "OSM access: register the 15 final Batch-3 Geofabrik state extracts"
+    },
+    {
+      "source": "6b577917cc1d93ee0573581dd5c587fe40edc270",
+      "filtered": "ca63291ae0f512278bcb4ce32e0ad63c99a22d5f",
+      "subject": "Final national production scope frozen: 312 tiles (295 ordinary + 17 zero-state fallback), 13 border-artifact tiles explicitly blocked; 17 states prepared"
+    },
+    {
+      "source": "1383029628a747a768d293191de99d6cb54e7f9b",
+      "filtered": "a3d8277d6e5e24cb18745d4c32813052e7d7accd",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 000"
+    },
+    {
+      "source": "731c9bb3f4013bc15c65f25a9cad1d4f83304dd5",
+      "filtered": "be5abc621d3a7cce5853c4ce84ff122a7b3c3fa0",
+      "subject": "Fruiting Forecast National GIS Batch 3 partial checkpoint chunk 001 (stopped, resumable)"
+    },
+    {
+      "source": "1267e960b335111a810a91c53da4b755dae921ca",
+      "filtered": "2e500cd394e5c1605fe5aca3f61f8aae8aae2c03",
+      "subject": "National sources: verified ScienceBase recovery path for the canopy archive; re-validate and resume after the midnight /tmp purge incident"
+    },
+    {
+      "source": "db0f3072d13049cc27f065b9db8cec4ceaa762dd",
+      "filtered": "fe1f6e08169cdaa49c6cfcd616505ae421bec9d9",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 001"
+    },
+    {
+      "source": "339efbbfeb5f6a0f609bbe34ac21950244a708fb",
+      "filtered": "13eaeff5f5f63641bfcab62d64a1fc36a871462e",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 002"
+    },
+    {
+      "source": "1016c89641b526adac1e878d1e9339896e1fcdc0",
+      "filtered": "6b16ced7f08d9cf89dbde3f99f1bc4dba6cc324d",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 003"
+    },
+    {
+      "source": "51fbe9a45467f6bf13a2e1a1bc831036b4478e3e",
+      "filtered": "87abb584dda58d346a7bdb0f0d9d51a967842b46",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 004"
+    },
+    {
+      "source": "5696bf7c6be815fe4883e45ec45230b660edbc02",
+      "filtered": "d2071052343ec13dae505044abad63c3479f3bd2",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 005"
+    },
+    {
+      "source": "5ac4e9ac1a9a39bedc2f9178c0f5e08cc1bd5c60",
+      "filtered": "a48c8092d3bee31d8c81bb9cb2f7bc22babe147c",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 006"
+    },
+    {
+      "source": "97b56500e0b5218eeba741aa554b75068360d84e",
+      "filtered": "4ca06fa44665dd4847998951ed0364148a9a418f",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 007"
+    },
+    {
+      "source": "359ec52d614c64e0263d957b997268853f7323b2",
+      "filtered": "beeb0de844e8d2658b02cfb68c7a64c3bf738a6f",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 008"
+    },
+    {
+      "source": "6e59e57da7dde9ed0fab96865c2d8ad3e839fc74",
+      "filtered": "70c76da8b342359f67c701094a40eb2116c91d7f",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 009"
+    },
+    {
+      "source": "366d4327be2422708921c3da698869fef507d89e",
+      "filtered": "1812e7bf404ffb3c47bcbe67100c657c263aa2a5",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 010"
+    },
+    {
+      "source": "beb31dbc43e74c9e8a35ffc7ae9cc4d779f67953",
+      "filtered": "34543cb3234e915c2bfb2d3e9c86d7c5077ad371",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 011"
+    },
+    {
+      "source": "e43c5d4a8945a67c7a427c4725d7a23b1d068210",
+      "filtered": "a58f2fe089ea32ffb6b9ad0021b6b79d8a6f6176",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 012"
+    },
+    {
+      "source": "75698169167793b8f0fef39fb8f5ae5b7a22e652",
+      "filtered": "b305d40ada9915ef9ab758e9879dfc804fd6c804",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 013"
+    },
+    {
+      "source": "74398e2ed9355242c8f5ef5c073f5ead286bec4d",
+      "filtered": "56ae1bcf1e210c1afadb0806c157ede1dad46b57",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 014"
+    },
+    {
+      "source": "fe124753541122b113c451e359bfcd8e49f573d4",
+      "filtered": "455eb244f9a5cedde9dc58ea741dd3de6df8a3e4",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 015"
+    },
+    {
+      "source": "2922517825619fc119d258db10794ef960c0c3de",
+      "filtered": "8b17b9fc98ddf7bf360ff1ace6707f978c201af5",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 016"
+    },
+    {
+      "source": "051f92b4390eb1ad33b3db9f1c4fee18132288ee",
+      "filtered": "fd8c4b7d1f70fabcc78d7a5c24fd3a12b0d6b16b",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 017"
+    },
+    {
+      "source": "76215c506cdd266c151e598ddecdbe200484a07c",
+      "filtered": "2862753fc49d722bbba9f187386f73c594fa1f4f",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 018"
+    },
+    {
+      "source": "f773b8d97798423b0dab68e928ca0d73c1644395",
+      "filtered": "5cf4094a209491e3e60cfeddb11e96b154a9fc50",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 019"
+    },
+    {
+      "source": "68ddd4421a6cd12797446dbc3c462394cc420db8",
+      "filtered": "1bd2a5939158d3463e09f371fcb50edc80b1ee19",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 020"
+    },
+    {
+      "source": "23ef390676dd659b137e69c6e3bc39d015de5baf",
+      "filtered": "7041ff1db6a9499561cedd3e6c9a9fcd74fa38b2",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 021"
+    },
+    {
+      "source": "4c2b22dcecdffe607e3b8271a1ef5020f1d0552e",
+      "filtered": "c903bd2e74e67b5d6e8e504b8723c760b916bf00",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 022"
+    },
+    {
+      "source": "920926ad2aa26307ce9fc8ee7403db3b7710295c",
+      "filtered": "6458039828650b7901a3193d333ae5ff503fc066",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 023"
+    },
+    {
+      "source": "f09645fdbe7f3060deed98d507e37f72741d12ef",
+      "filtered": "d71ee5e57a638dc66a8cd1b449ebb5d793d25770",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 024"
+    },
+    {
+      "source": "7bd3108b4194258ee931d5e5cd781981b9503e28",
+      "filtered": "8348959b373d7f926c80b9ce265f5acc998a6193",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 025"
+    },
+    {
+      "source": "1652465a28ce438d7c4e31d0db56003b29653efc",
+      "filtered": "d83c4b32788ac8e8f2633d8d8762a20c5742f1ab",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 026"
+    },
+    {
+      "source": "759f8ee80f4a324561e520df17942372c8fce6c0",
+      "filtered": "fbb1d02b4d76daaf6639696b800401f1bb14f423",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 027"
+    },
+    {
+      "source": "f5a0957c8452b66029b3ed50965e156379ea4e4a",
+      "filtered": "a574567bf587c903b3c496a8f910d7d2af95f873",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 028"
+    },
+    {
+      "source": "792cb9f544c8a00a17c5f5f39daf5b59be106cc1",
+      "filtered": "d1fffb584bc155304b261f7c2c9e1b5fe2769147",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 029"
+    },
+    {
+      "source": "acce9bb531cb447c5657694f2cbffd5273e291e5",
+      "filtered": "f1b0968332a3906e00461dce9947ea827e21886a",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 030"
+    },
+    {
+      "source": "e3abd814273ae2719c8c0b146d349774f64292f5",
+      "filtered": "757de13048031e37ea8053ceea09339748990c30",
+      "subject": "Fruiting Forecast National GIS Batch 3 checkpoint chunk 031"
+    },
+    {
+      "source": "d05667afc09af669f9a5747cfde34ebb1659734d",
+      "filtered": "48a6653cc1aba4e2c7e8b2788afaf49b9dc628e2",
+      "subject": "Fruiting Forecast final national GIS production complete: 927/940 (13 border artifacts explicitly blocked), Revision 17 handoff, full remote audit, measured national storage, final browser matrix, updated post-completion test assertions"
+    },
+    {
+      "source": "7d26bba6e6c3399af5ea8702e4c7ae4c88a432c3",
+      "filtered": "8e7d3351c94a96adb050f47c83f488ca8e673814",
+      "subject": "National relevance normalization: pinned cb_2023_us_state_500k + NLCD land evidence-cell rule (940 legacy -> 922 normalized; 23 exclusions, 5 newly relevant), planner/runner single source of truth, tests"
+    },
+    {
+      "source": "8a815e9ae38284ce0a81ceab1124c6939e1dedba",
+      "filtered": "37854df7e6273cb85ee25460652d9f750303c074",
+      "subject": "Revision 18 state: normalized manifest (922 relevant, 10 artifact tiles removed), bounded 5-tile build, LA delta access-source fix, full remote audit clean"
+    },
+    {
+      "source": "dca63b9e20b4d9b5794ec2e0692728fe892c71f6",
+      "filtered": "f97323220df3bf7da2968e5414ce559c51961880",
+      "subject": "Revision 18 handoff: normalized denominator 922/922 complete, whole-roster audit, 13 tiles classified NORMALIZED_IRRELEVANT, bounded 5-tile build, manifest normalization, updated mixed-schema browser tests"
+    },
+    {
+      "source": "1afed7f863d7341a143c9cdff9d73e439286b5e2",
+      "filtered": "35501d5dfa41f24d7da3ea0d0141082f707ae0c3",
+      "subject": "Fruiting Forecast: distinguish empty filter results"
+    },
+    {
+      "source": "6a8fea2c2e905496d4a673d273822c12c0438555",
+      "filtered": "b013f8ac06823cc06ddafa32c5d912a7e2a7bce0",
+      "subject": "Fruiting Forecast: align national launch evidence"
+    },
+    {
+      "source": "fe5c08fe3b048c5d583cbae3104dd41be7c93b39",
+      "filtered": "087055ec247e427e569081c42fda20953bdf7338",
+      "subject": "Fruiting Forecast: preserve verified-empty fire evidence"
+    },
+    {
+      "source": "4024133e00b28a12124dee259ac95e4cacea722d",
+      "filtered": "6c59bf05ca5c7a946007d0376f1b13b12ffb2dd9",
+      "subject": "Fruiting Forecast: record national launch QA"
+    }
+  ]
+}

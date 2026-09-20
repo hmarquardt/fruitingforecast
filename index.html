@@ -138,7 +138,6 @@
     .about-guide details{padding:16px 0;border-top:1px solid var(--line)}.about-guide summary{cursor:pointer;font-weight:600}
     @media(max-width:650px){.app-tabs{padding:0 16px}.about-guide{padding:0 18px;margin-top:12px}.about-hero,.about-grid,.about-status{grid-template-columns:1fr}.about-hero{gap:20px}.about-questions{font-size:21px}.about-flow{grid-template-columns:1fr}.about-matrix thead{display:none}.about-matrix,.about-matrix tbody,.about-matrix tr,.about-matrix th,.about-matrix td{display:block;width:100%}.about-matrix tr{padding:14px 0;border-top:1px solid var(--line)}.about-matrix th,.about-matrix td{border:0;padding:5px 0}.about-matrix td:before{content:attr(data-label);display:block;font:10px/1.8 var(--mono);text-transform:uppercase;color:var(--muted)}.about-status div{gap:10px}}
   </style>
-  <script src="analytics-lite.js" data-site-id="junkdrawer" data-api="https://lab.aismallbizguru.com/api/analytics/collect" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to forecast</a>
@@ -251,19 +250,19 @@
 </div></dialog>
 <dialog id="safetyDialog"><div class="dialog-head"><div><div class="eyebrow">Non-negotiable field rule</div><h2>Finding is not identifying</h2></div><button class="close" data-close="safetyDialog" aria-label="Close">×</button></div><div class="dialog-content"><div class="callout danger"><strong>This app never determines that a mushroom is safe to eat.</strong></div><p>Opportunity scores estimate the likelihood of fruiting conditions for a broad taxon and area. They do not establish identity, edibility, freshness, contamination, land access, or collecting legality. Species groups can include toxic or poorly known members.</p><p>Use multiple current field references, inspect all diagnostic features, make a spore print where appropriate, and obtain in-person verification from a qualified local expert before consumption. When in doubt, leave it.</p></div></dialog>
 
-<!-- JUNKDRAWER_DEPLOY_FOOTER version="2026.09.20.3" bump="Update this version whenever this file changes in a commit." -->
-<footer data-junkdrawer-deploy-footer data-deploy-version="2026.09.20.3" style="margin: 2rem auto 1rem; padding: 1rem; text-align: center; color: rgba(148, 163, 184, 0.88); font: 0.85rem/1.4 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-  &copy; 2026 Hank Marquardt · Fruiting Forecast · version 2026.09.20.3
+<!-- JUNKDRAWER_DEPLOY_FOOTER version="2026.09.20.4" bump="Update this version whenever this file changes in a commit." -->
+<footer data-junkdrawer-deploy-footer data-deploy-version="2026.09.20.4" style="margin: 2rem auto 1rem; padding: 1rem; text-align: center; color: rgba(148, 163, 184, 0.88); font: 0.85rem/1.4 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+  &copy; 2026 Hank Marquardt · Fruiting Forecast · version 2026.09.20.4
 </footer>
 
-<script src="data/fruiting-forecast/ecoregions.js"></script>
-<script src="data/fruiting-forecast/states.js"></script>
+<script src="data/ecoregions.js"></script>
+<script src="data/states.js"></script>
 <script>
 (function(){
   'use strict';
   var VERSION='FF-1.7.0', DB_NAME='FruitingForecastDB', PREF_KEY='fruitingForecast.preferences.v1';
   var DAY=86400000, CACHE_TTL=3*60*60*1000, OBS_TTL=6*60*60*1000, GIS_TTL=30*DAY, RESEARCH_TTL=6*60*60*1000;
-  var DUCKDB_VERSION='1.30.0', DUCKDB_ESM='https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@'+DUCKDB_VERSION+'/+esm', GIS_BASE='data/fruiting-forecast/';
+  var DUCKDB_VERSION='1.30.0', DUCKDB_ESM='https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@'+DUCKDB_VERSION+'/+esm', GIS_BASE='data/';
   var OR_MODELS='https://openrouter.ai/api/v1/models', OR_CHAT='https://openrouter.ai/api/v1/chat/completions', DEFAULT_OR_MODEL='openai/gpt-4.1-mini';
   var ANALYST_GUARDRAIL="Fruiting Forecast's numerical scores and rankings are produced by a deterministic environmental model. Treat them as immutable input data. Never recalculate, overwrite, increase, decrease, or substitute your own probability score. Your role is to interpret, summarize, compare, research supplemental evidence, and explain uncertainty. Missing habitat, soil, access, or environmental evidence must never be inferred merely to complete the analysis. Never state that a mushroom is safe to eat. Fruiting likelihood, identification, and edibility are separate questions. Distinguish sourced facts from inference and preserve all stated uncertainty.";
   var SPECIES=[

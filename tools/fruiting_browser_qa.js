@@ -5,7 +5,7 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 
-const APP = 'https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html';
+const APP = process.env.FF_APP_URL || 'http://localhost:8000/';
 const ASSET_ORIGIN = 'https://data.hanksjunkdrawer.com/';
 
 (async () => {
@@ -94,7 +94,7 @@ const ASSET_ORIGIN = 'https://data.hanksjunkdrawer.com/';
   const out = {
     schemaVersion: 1,
     label: label || 'batch-qa',
-    applicationOrigin: 'https://hmarquardt.github.io/junkdrawer/',
+    applicationOrigin: new URL(APP).origin,
     assetOrigin: ASSET_ORIGIN,
     manifest: manifestState,
     profiles: results,

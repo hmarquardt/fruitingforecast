@@ -2,11 +2,11 @@ const {test,expect}=require('@playwright/test');
 const fs=require('fs');
 const crypto=require('crypto');
 test.use({channel:'chrome'});
-const origin='https://hmarquardt.github.io';
+const origin='https://app.example';
 async function open(page){
  await page.route('**/*',r=>r.fulfill({status:200,body:''}));
- await page.route(origin+'/junkdrawer/fruiting-forecast.html',r=>r.fulfill({contentType:'text/html',body:fs.readFileSync('fruiting-forecast.html','utf8')}));
- await page.goto(origin+'/junkdrawer/fruiting-forecast.html');
+ await page.route(origin+'/index.html',r=>r.fulfill({contentType:'text/html',body:fs.readFileSync('index.html','utf8')}));
+ await page.goto(origin+'/index.html');
  await page.waitForFunction(()=>window.__FRUITING_FORECAST_CACHE_TEST__);
 }
 const bytes=Buffer.from('verified fixture');
@@ -14,7 +14,7 @@ const asset={url:'habitat/fixture.parquet',datasetVersion:'fixture-v1',bytes:byt
 test('Parquet URL join is provider neutral; JSON and legacy remain app hosted',async({page})=>{
  await open(page);
  const result=await page.evaluate(()=>{const s=__FRUITING_FORECAST_TEST__.getState(),t=__FRUITING_FORECAST_CACHE_TEST__;s.gis.manifest={};const legacy=t.gisAssetUrl('habitat/a.parquet');s.gis.manifest.assetBaseUrl='https://objects.example/data';const remote=t.gisAssetUrl('habitat/a.parquet');const json=t.gisAssetUrl('rules.json');s.gis.manifest.assetBaseUrl+='///';return {legacy,remote,json,trailing:t.gisAssetUrl('habitat/a.parquet')}});
- expect(result).toEqual({legacy:origin+'/junkdrawer/data/fruiting-forecast/habitat/a.parquet',remote:'https://objects.example/data/habitat/a.parquet',json:origin+'/junkdrawer/data/fruiting-forecast/rules.json',trailing:'https://objects.example/data/habitat/a.parquet'});
+ expect(result).toEqual({legacy:origin+'/data/habitat/a.parquet',remote:'https://objects.example/data/habitat/a.parquet',json:origin+'/data/rules.json',trailing:'https://objects.example/data/habitat/a.parquet'});
 });
 test('verified cache survives host migration with no second Parquet request',async({page})=>{
  await open(page);let requests=0;
@@ -42,7 +42,7 @@ test('abort never returns cached bytes as a successful refresh',async({page})=>{
  const result=await page.evaluate(async a=>{const t=__FRUITING_FORECAST_CACHE_TEST__;await t.gisAssetBytes('fixture',a,false);const c=new AbortController();c.abort();try{await t.gisAssetBytes('fixture',a,true,c.signal)}catch(e){return e.name}},asset);expect(result).toBe('AbortError');
 });
 test('biology declarations and scoring code are byte-identical to Phase-1B baseline',()=>{
- const {execFileSync}=require('child_process');const old=execFileSync('git',['show','92e968ede9df96312721b559d9a5a5c3062142cc:fruiting-forecast.html'],{encoding:'utf8'}),now=fs.readFileSync('fruiting-forecast.html','utf8');
+ const {execFileSync}=require('child_process');const old=execFileSync('git',['show','357aa7a88ec50db4ba50b00905e6f151e321077f:fruiting-forecast.html'],{encoding:'utf8'}),now=fs.readFileSync('index.html','utf8');
  const range=(s,a,b)=>s.slice(s.indexOf(a),s.indexOf(b));
  expect(range(now,'  var SPECIES=','  var state=')).toBe(range(old,'  var SPECIES=','  var state='));
  for(const name of ['scoreSpecies','scoreHabitat','monthScore','rangeScore']){

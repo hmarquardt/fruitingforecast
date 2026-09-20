@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 PROD = DATA / 'production'
 DOC = ROOT / 'docs/fruiting-forecast-conus-expansion.md'
 

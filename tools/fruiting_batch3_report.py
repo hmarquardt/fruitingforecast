@@ -5,7 +5,7 @@ Reads the frozen scope, the state-preparation record, the durable chunk/journal
 artifacts and the live metrics journal, and writes a report with enough state for
 a fresh session to audit national completion without conversation history.
 
-    python3 tools/fruiting_batch3_report.py [--out data/fruiting-forecast/production/batch3-report.json]
+    python3 tools/fruiting_batch3_report.py [--out data/production/batch3-report.json]
 """
 import argparse
 import json
@@ -14,7 +14,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 PROD = DATA / 'production'
 B3 = PROD / 'batch3'
 WORK = Path('/tmp/ff-batch3-normalized')

@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from fruiting_conus_plan import build_tiles, LAYERS  # noqa: E402
 
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 
 
 def pct(values, q):

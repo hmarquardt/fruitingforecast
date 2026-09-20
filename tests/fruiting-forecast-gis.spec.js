@@ -7,7 +7,7 @@ const fs = require('fs');
 
 // Static JS syntax check: fail fast if the main app IIFE doesn't parse
 test('main application JavaScript has no syntax errors', () => {
-  const html = fs.readFileSync(path.resolve(process.cwd(), 'fruiting-forecast.html'), 'utf-8');
+  const html = fs.readFileSync(path.resolve(process.cwd(), 'index.html'), 'utf-8');
   // Find the main app script block by looking for the test API marker
   const marker = '__FRUITING_FORECAST_TEST__';
   const scriptStart = html.lastIndexOf('<script>', html.indexOf(marker));
@@ -23,7 +23,7 @@ test('page loads without syntax errors and app initializes', async ({ page }) =>
   page.on('console', m => { if (m.type() === 'error' && !m.text().includes('Failed to load resource')) errors.push(m.text()); });
   await page.route('**/api/analytics/**', r => r.abort());
   await page.route('https://tile.openstreetmap.org/**', r => r.abort());
-  await page.goto(`http://127.0.0.1:8791/fruiting-forecast.html`, { waitUntil: 'domcontentloaded' });
+  await page.goto(`http://127.0.0.1:8791/index.html`, { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => window.__FRUITING_FORECAST_TEST__);
   const hasTestApi = await page.evaluate(() => !!window.__FRUITING_FORECAST_TEST__);
   expect(hasTestApi).toBe(true);
@@ -31,8 +31,8 @@ test('page loads without syntax errors and app initializes', async ({ page }) =>
 });
 
 const port = 8791;
-const httpUrl = `http://127.0.0.1:${port}/fruiting-forecast.html`;
-const fileUrl = `file://${path.resolve(process.cwd(), 'fruiting-forecast.html')}`;
+const httpUrl = `http://127.0.0.1:${port}/index.html`;
+const fileUrl = `file://${path.resolve(process.cwd(), 'index.html')}`;
 let server;
 
 test.use({ channel: process.env.FF_LIVE_GIS === '1' ? undefined : 'chrome', viewport: { width: 1280, height: 850 } });
@@ -167,7 +167,7 @@ test('score explanation expands deterministic habitat subcomponents and separate
 
 test('malformed GIS manifest is rejected without damaging the page', async ({ page }) => {
   const errors = await open(page, httpUrl);
-  await page.route('**/data/fruiting-forecast/manifest.json**', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{"tiles":"bad"}' }));
+  await page.route('**/data/manifest.json**', r => r.fulfill({ status: 200, contentType: 'application/json', body: '{"tiles":"bad"}' }));
   const message = await page.evaluate(() => window.__FRUITING_FORECAST_TEST__.gisManifest(true).then(() => 'unexpected', e => e.message));
   expect(message).toContain('malformed');
   await expect(page.locator('#emptyState')).toBeVisible();

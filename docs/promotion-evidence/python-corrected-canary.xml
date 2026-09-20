@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.518" timestamp="2026-09-20T14:41:30.438148-05:00" hostname="Mac.lan"><testcase classname="tests.test_fruiting_osm_access.PublishedCanaries" name="test_real_canaries_and_legacy_mixed_schema" time="0.177" /></testsuite></testsuites>

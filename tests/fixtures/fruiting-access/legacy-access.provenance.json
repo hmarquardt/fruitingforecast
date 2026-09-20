@@ -1,0 +1,5 @@
+{
+  "source": "Junk Drawer historical local ap/n38_w087.parquet",
+  "sourceSha256": "b97a4a94e93fb8678ce9e59fece74b2e13faf21f2cb2ce05c0a381743451295a",
+  "purpose": "Preserve pre-evidence_grade access schema for mixed-schema regression; JSON fixture reconstructed as temporary Parquet during tests, no production Parquet tracked."
+}

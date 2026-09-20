@@ -20,7 +20,7 @@ async function open(page){
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
   await page.route('https://api.inaturalist.org/**',r=>r.fulfill({json:{total_results:0,results:[]}}));
   await page.route('https://api.open-meteo.com/v1/forecast**',r=>{const u=new URL(r.request().url());const lat=u.searchParams.get('latitude').split(',').map(Number),lon=u.searchParams.get('longitude').split(',').map(Number);const rows=lat.map((v,i)=>weatherPayload(v,lon[i]));return r.fulfill({json:rows.length===1?rows[0]:rows})});
-  await page.goto('file://'+path.resolve('fruiting-forecast.html'));
+  await page.goto('file://'+path.resolve('index.html'));
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__&&window.FF_ECOREGIONS);
   return errors;
 }
@@ -228,7 +228,7 @@ let artifactServer;
 test.beforeAll(async()=>{
   artifactServer=spawn('python3',['-m','http.server',String(artifactPort),'--bind','127.0.0.1'],{cwd:process.cwd(),stdio:'ignore'});
   for(let i=0;i<40;i++){
-    try{await new Promise((resolve,reject)=>require('http').get(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,r=>{r.resume();resolve()}).on('error',reject));return}
+    try{await new Promise((resolve,reject)=>require('http').get(`http://127.0.0.1:${artifactPort}/index.html`,r=>{r.resume();resolve()}).on('error',reject));return}
     catch{await new Promise(r=>setTimeout(r,100))}
   }
   throw new Error('Static artifact server did not start');
@@ -239,13 +239,13 @@ test('PNW canary tiles publish five-component habitat with Oregon soil and match
   page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__);
   const result=await page.evaluate(async()=>{
     const t=window.__FRUITING_FORECAST_TEST__;
     const manifest=await t.gisManifest(true);
     const digest=async(url,baseline)=>{
-      const response=await fetch('data/fruiting-forecast/'+url);
+      const response=await fetch('data/'+url);
       const buffer=await response.arrayBuffer();
       const value=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',buffer))).map(x=>x.toString(16).padStart(2,'0')).join('');
       return {status:response.status,bytes:buffer.byteLength,matches:value===baseline};
@@ -289,7 +289,7 @@ test('PNW tiles load beside earlier western and legacy tiles despite the new hem
   test.setTimeout(180000);
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__);
   const result=await page.evaluate(async()=>{
     const t=window.__FRUITING_FORECAST_TEST__,s=t.getState();
@@ -300,7 +300,7 @@ test('PNW tiles load beside earlier western and legacy tiles despite the new hem
     const urls=['n44_w124','n39_w106','n37_w107'].map(id=>pick(id).habitat.url);
     const names=[];
     for(let i=0;i<urls.length;i++){
-      const response=await fetch('data/fruiting-forecast/'+urls[i]);
+      const response=await fetch('data/'+urls[i]);
       names.push('f'+i);
       await s.gis.duckdb.registerFileBuffer('f'+i,new Uint8Array(await response.arrayBuffer()));
     }
@@ -330,7 +330,7 @@ test('a real PNW search loads the canary tile and ranks Pacific Northwest target
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
   await page.route('https://api.inaturalist.org/**',r=>r.fulfill({json:{total_results:0,results:[]}}));
   await page.route('https://api.open-meteo.com/v1/forecast**',r=>{const u=new URL(r.request().url());const lat=u.searchParams.get('latitude').split(',').map(Number),lon=u.searchParams.get('longitude').split(',').map(Number);const rows=lat.map((v,i)=>weatherPayload(v,lon[i]));return r.fulfill({json:rows.length===1?rows[0]:rows})});
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__&&window.FF_ECOREGIONS);
   await page.addInitScript(()=>window.__FF_TEST_FAST__=true);
   await page.locator('#radiusSelect').selectOption('25');
@@ -354,12 +354,12 @@ test('a Columbia cross-state search loads both states, dedupes access and reuses
   const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   let parquetRequests=0;
-  page.on('request',r=>{if(/data\/fruiting-forecast\/(habitat|pl|ap|fire)\/.*\.parquet/.test(r.url()))parquetRequests++});
+  page.on('request',r=>{if(/data\/(habitat|pl|ap|fire)\/.*\.parquet/.test(r.url()))parquetRequests++});
   await page.route('**/api/analytics/**',r=>r.abort());
   await page.route('https://tile.openstreetmap.org/**',r=>r.abort());
   await page.route('https://api.inaturalist.org/**',r=>r.fulfill({json:{total_results:0,results:[]}}));
   await page.route('https://api.open-meteo.com/v1/forecast**',r=>{const u=new URL(r.request().url());const lat=u.searchParams.get('latitude').split(',').map(Number),lon=u.searchParams.get('longitude').split(',').map(Number);const rows=lat.map((v,i)=>weatherPayload(v,lon[i]));return r.fulfill({json:rows.length===1?rows[0]:rows})});
-  await page.goto(`http://127.0.0.1:${artifactPort}/fruiting-forecast.html`,{waitUntil:'domcontentloaded'});
+  await page.goto(`http://127.0.0.1:${artifactPort}/index.html`,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.__FRUITING_FORECAST_TEST__&&window.FF_ECOREGIONS);
   await page.addInitScript(()=>window.__FF_TEST_FAST__=true);
   await page.locator('#radiusSelect').selectOption('50');

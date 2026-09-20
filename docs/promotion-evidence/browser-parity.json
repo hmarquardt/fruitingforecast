@@ -1,0 +1,472 @@
+{
+  "fixedTime": "2026-09-20T12:00:00Z",
+  "source": "https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html",
+  "standalone": "http://localhost:8000/",
+  "mutableInputs": "Fixed weather and empty observations; fixed Date, real timers",
+  "parity": true,
+  "verdict": "PASS",
+  "comparison": "Exact deep equality of profile, maturity, species roster, full ranked scores, sector score traces, GIS output, filter state and recovered output; excludes only transport origin/version.",
+  "runs": [
+    {
+      "url": "https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html",
+      "deployment": {
+        "appVersion": "2026.09.20.3",
+        "datasetVersion": "content-db0f839a4352ef82",
+        "tiles": 922
+      },
+      "parquetRequests": 23,
+      "errors": [],
+      "failedRequests": [
+        {
+          "url": "https://lab.aismallbizguru.com/api/analytics/collect",
+          "error": {
+            "errorText": "net::ERR_ABORTED"
+          }
+        }
+      ],
+      "localErrors": [],
+      "results": [
+        {
+          "label": "salida-best",
+          "profile": "southernRockies",
+          "maturity": "PROVISIONAL",
+          "roster": [
+            "porcini",
+            "chanterelleRoseocanus",
+            "morelNatural",
+            "morelBurn"
+          ],
+          "ranked": [
+            {
+              "speciesId": "chanterelleRoseocanus",
+              "score": 38
+            },
+            {
+              "speciesId": "porcini",
+              "score": 33
+            },
+            {
+              "speciesId": "morelNatural",
+              "score": 0
+            },
+            {
+              "speciesId": "morelBurn",
+              "score": 0
+            }
+          ],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n38_w106",
+            "n38_w107"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 4,
+            "focusMatchedTargetCount": 4,
+            "emptyResultReason": null
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "1cfd7714fe97accf749cd2999af868002a3a92456d02eef9c13616bb696a09d2"
+        },
+        {
+          "label": "salida-beginner",
+          "profile": "southernRockies",
+          "maturity": "PROVISIONAL",
+          "roster": [],
+          "ranked": [],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n38_w106",
+            "n38_w107"
+          ],
+          "filterState": {
+            "focus": "beginner",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 4,
+            "focusMatchedTargetCount": 0,
+            "emptyResultReason": "FILTER_NO_MATCH"
+          },
+          "recoveredRankedCount": 4,
+          "fullResultSha256": "174fd3e6c6cb1448292bfd9e3a7c5782dbecf542ecff12ad20042ba94bdca01e"
+        },
+        {
+          "label": "hardwood",
+          "profile": "hardwood",
+          "maturity": "PROVISIONAL",
+          "roster": [
+            "morel",
+            "chanterelle",
+            "chicken",
+            "maitake",
+            "oyster",
+            "puffball",
+            "hericium"
+          ],
+          "ranked": [
+            {
+              "speciesId": "puffball",
+              "score": 61
+            },
+            {
+              "speciesId": "chanterelle",
+              "score": 56
+            },
+            {
+              "speciesId": "hericium",
+              "score": 54
+            },
+            {
+              "speciesId": "chicken",
+              "score": 52
+            },
+            {
+              "speciesId": "maitake",
+              "score": 52
+            },
+            {
+              "speciesId": "oyster",
+              "score": 47
+            },
+            {
+              "speciesId": "morel",
+              "score": 0
+            }
+          ],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n38_w088"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 7,
+            "focusMatchedTargetCount": 7,
+            "emptyResultReason": null
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "cab5e318163b098157ab47b7fd19137ae23e164cd4ca7944d0d8fec612cf8459"
+        },
+        {
+          "label": "pnw",
+          "profile": "pnw",
+          "maturity": "PROVISIONAL",
+          "roster": [
+            "chanterelleFormosus",
+            "chanterelleSubalbidus",
+            "matsutakeMurrillianum",
+            "craterelleNeotubaeformis",
+            "morelBurn"
+          ],
+          "ranked": [
+            {
+              "speciesId": "chanterelleSubalbidus",
+              "score": 69
+            },
+            {
+              "speciesId": "chanterelleFormosus",
+              "score": 68
+            },
+            {
+              "speciesId": "matsutakeMurrillianum",
+              "score": 65
+            },
+            {
+              "speciesId": "craterelleNeotubaeformis",
+              "score": 0
+            },
+            {
+              "speciesId": "morelBurn",
+              "score": 0
+            }
+          ],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n47_w124"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 5,
+            "focusMatchedTargetCount": 5,
+            "emptyResultReason": null
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "b9f71de7711c0876c0bf60c245b132dc4fce4797be55c1b27b1404103f7324fd"
+        },
+        {
+          "label": "sparse",
+          "profile": "warmDesert",
+          "maturity": "MODELED_SPARSE",
+          "roster": [],
+          "ranked": [],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n33_w112",
+            "n33_w113"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 0,
+            "focusMatchedTargetCount": 0,
+            "emptyResultReason": "MODELED_SPARSE"
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "925e97700d8d05c60a0a8ee249a5d605523fe6defdf7ad1b9c125c8c7444ef9b"
+        },
+        {
+          "label": "border-excluded",
+          "profile": null,
+          "maturity": "UNSUPPORTED",
+          "roster": [],
+          "ranked": [],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 0,
+            "focusMatchedTargetCount": 0,
+            "emptyResultReason": "UNSUPPORTED"
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "c2d8c1733bb2c1230e33710dadc19be4515877a7a00926fa9b91a146ee5df493"
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:8000/",
+      "deployment": {
+        "appVersion": "2026.09.20.4",
+        "datasetVersion": "content-db0f839a4352ef82",
+        "tiles": 922
+      },
+      "parquetRequests": 23,
+      "errors": [],
+      "failedRequests": [],
+      "localErrors": [],
+      "results": [
+        {
+          "label": "salida-best",
+          "profile": "southernRockies",
+          "maturity": "PROVISIONAL",
+          "roster": [
+            "porcini",
+            "chanterelleRoseocanus",
+            "morelNatural",
+            "morelBurn"
+          ],
+          "ranked": [
+            {
+              "speciesId": "chanterelleRoseocanus",
+              "score": 38
+            },
+            {
+              "speciesId": "porcini",
+              "score": 33
+            },
+            {
+              "speciesId": "morelNatural",
+              "score": 0
+            },
+            {
+              "speciesId": "morelBurn",
+              "score": 0
+            }
+          ],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n38_w106",
+            "n38_w107"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 4,
+            "focusMatchedTargetCount": 4,
+            "emptyResultReason": null
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "1cfd7714fe97accf749cd2999af868002a3a92456d02eef9c13616bb696a09d2"
+        },
+        {
+          "label": "salida-beginner",
+          "profile": "southernRockies",
+          "maturity": "PROVISIONAL",
+          "roster": [],
+          "ranked": [],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n38_w106",
+            "n38_w107"
+          ],
+          "filterState": {
+            "focus": "beginner",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 4,
+            "focusMatchedTargetCount": 0,
+            "emptyResultReason": "FILTER_NO_MATCH"
+          },
+          "recoveredRankedCount": 4,
+          "fullResultSha256": "174fd3e6c6cb1448292bfd9e3a7c5782dbecf542ecff12ad20042ba94bdca01e"
+        },
+        {
+          "label": "hardwood",
+          "profile": "hardwood",
+          "maturity": "PROVISIONAL",
+          "roster": [
+            "morel",
+            "chanterelle",
+            "chicken",
+            "maitake",
+            "oyster",
+            "puffball",
+            "hericium"
+          ],
+          "ranked": [
+            {
+              "speciesId": "puffball",
+              "score": 61
+            },
+            {
+              "speciesId": "chanterelle",
+              "score": 56
+            },
+            {
+              "speciesId": "hericium",
+              "score": 54
+            },
+            {
+              "speciesId": "chicken",
+              "score": 52
+            },
+            {
+              "speciesId": "maitake",
+              "score": 52
+            },
+            {
+              "speciesId": "oyster",
+              "score": 47
+            },
+            {
+              "speciesId": "morel",
+              "score": 0
+            }
+          ],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n38_w088"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 7,
+            "focusMatchedTargetCount": 7,
+            "emptyResultReason": null
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "cab5e318163b098157ab47b7fd19137ae23e164cd4ca7944d0d8fec612cf8459"
+        },
+        {
+          "label": "pnw",
+          "profile": "pnw",
+          "maturity": "PROVISIONAL",
+          "roster": [
+            "chanterelleFormosus",
+            "chanterelleSubalbidus",
+            "matsutakeMurrillianum",
+            "craterelleNeotubaeformis",
+            "morelBurn"
+          ],
+          "ranked": [
+            {
+              "speciesId": "chanterelleSubalbidus",
+              "score": 69
+            },
+            {
+              "speciesId": "chanterelleFormosus",
+              "score": 68
+            },
+            {
+              "speciesId": "matsutakeMurrillianum",
+              "score": 65
+            },
+            {
+              "speciesId": "craterelleNeotubaeformis",
+              "score": 0
+            },
+            {
+              "speciesId": "morelBurn",
+              "score": 0
+            }
+          ],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n47_w124"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 5,
+            "focusMatchedTargetCount": 5,
+            "emptyResultReason": null
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "b9f71de7711c0876c0bf60c245b132dc4fce4797be55c1b27b1404103f7324fd"
+        },
+        {
+          "label": "sparse",
+          "profile": "warmDesert",
+          "maturity": "MODELED_SPARSE",
+          "roster": [],
+          "ranked": [],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [
+            "n33_w112",
+            "n33_w113"
+          ],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 0,
+            "focusMatchedTargetCount": 0,
+            "emptyResultReason": "MODELED_SPARSE"
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "925e97700d8d05c60a0a8ee249a5d605523fe6defdf7ad1b9c125c8c7444ef9b"
+        },
+        {
+          "label": "border-excluded",
+          "profile": null,
+          "maturity": "UNSUPPORTED",
+          "roster": [],
+          "ranked": [],
+          "datasetVersion": "content-db0f839a4352ef82",
+          "tiles": [],
+          "filterState": {
+            "focus": "best",
+            "requestedSpeciesId": null,
+            "requestedSpeciesName": null,
+            "regionalTargetCount": 0,
+            "focusMatchedTargetCount": 0,
+            "emptyResultReason": "UNSUPPORTED"
+          },
+          "recoveredRankedCount": 0,
+          "fullResultSha256": "c2d8c1733bb2c1230e33710dadc19be4515877a7a00926fa9b91a146ee5df493"
+        }
+      ]
+    }
+  ]
+}

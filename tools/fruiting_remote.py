@@ -20,7 +20,7 @@ import time
 from urllib.parse import urljoin
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 ORIGIN = 'https://data.hanksjunkdrawer.com/'
 BUCKET = 'fruiting-forecast-data'
 INVENTORY = DATA / '.r2-inventory.jsonl'

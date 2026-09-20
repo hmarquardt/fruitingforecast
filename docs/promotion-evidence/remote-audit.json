@@ -1,0 +1,8 @@
+{
+  "generatedAt": "2026-09-20T19:06:50.659990+00:00",
+  "method": "Read-only full public GET; exact manifest byte count and SHA-256 for every active object; no uploads or listing",
+  "references": 3688,
+  "bytes": 271077299,
+  "valid": 3688,
+  "failures": []
+}

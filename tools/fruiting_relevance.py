@@ -16,7 +16,7 @@ The normalized rule is:
     cover present and not class 11 open water).
 
 Both inputs are official, pinned products. This tool builds a compact derived
-product (data/fruiting-forecast/national-relevance-v2.json) that the planner,
+product (data/national-relevance-v2.json) that the planner,
 runner, release audit and reporting all read, so the denominator cannot drift.
 
     uv run --with pyshp --with shapely --with pyproj --with rasterio \
@@ -32,7 +32,7 @@ import urllib.request
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 DEFAULT_OUT = DATA / 'national-relevance-v2.json'
 
 ALGORITHM = 'us-land-evidence-cells-v1'

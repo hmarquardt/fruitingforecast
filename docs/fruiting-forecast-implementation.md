@@ -1,3 +1,5 @@
+> Historical development/provenance document from Junk Drawer. Paths, commands and infrastructure observations below describe their original revision; they are not instructions to resume completed production. For the standalone layout and current transition, read [architecture](architecture.md), [data build](data-build.md) and [deployment](deployment.md).
+
 # Fruiting Forecast implementation note
 
 Research checked 2026-09-01. This note records the static artifact/data-preparation boundary. It is an engineering decision log, not a claim that any data source can locate mushrooms precisely.

@@ -39,7 +39,7 @@ from shapely.validation import make_valid
 from pyproj import Transformer
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / 'data/fruiting-forecast'
+DATA = ROOT / 'data'
 sys.path.insert(0, str(ROOT / 'tools'))
 
 CORE_PCT = 50.0

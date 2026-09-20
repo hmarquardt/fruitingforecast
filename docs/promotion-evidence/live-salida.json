@@ -1,0 +1,82 @@
+{
+  "status": "Analysis ready \u00b7 38.5347, -105.9989 \u00b7 1 sectors \u00b7 GIS + huntability enhanced",
+  "profile": "southernRockies",
+  "ranked": [
+    {
+      "speciesId": "porcini",
+      "score": 58
+    },
+    {
+      "speciesId": "chanterelleRoseocanus",
+      "score": 56
+    },
+    {
+      "speciesId": "morelNatural",
+      "score": 0
+    },
+    {
+      "speciesId": "morelBurn",
+      "score": 0
+    }
+  ],
+  "gis": {
+    "layers": {
+      "habitat": {
+        "expectedTiles": 2,
+        "statuses": {
+          "AVAILABLE": 2,
+          "PARTIAL": 0,
+          "VERIFIED_EMPTY": 0,
+          "FAILED": 0,
+          "UNBUILT": 0
+        },
+        "note": "Published declarations; successful downloads and field completeness are separate."
+      },
+      "publicLands": {
+        "expectedTiles": 2,
+        "statuses": {
+          "AVAILABLE": 2,
+          "PARTIAL": 0,
+          "VERIFIED_EMPTY": 0,
+          "FAILED": 0,
+          "UNBUILT": 0
+        },
+        "note": "Published declarations; successful downloads and field completeness are separate."
+      },
+      "accessPoints": {
+        "expectedTiles": 2,
+        "statuses": {
+          "AVAILABLE": 2,
+          "PARTIAL": 0,
+          "VERIFIED_EMPTY": 0,
+          "FAILED": 0,
+          "UNBUILT": 0
+        },
+        "note": "Published declarations; successful downloads and field completeness are separate."
+      }
+    },
+    "status": "enhanced",
+    "datasetVersion": "content-db0f839a4352ef82",
+    "tiles": [
+      "n38_w106",
+      "n38_w107"
+    ],
+    "accessPointDataset": null,
+    "accessPointCount": 186,
+    "ruleDatasetVersion": "2026.09.14.1",
+    "ruleVerifiedAt": "2026-09-01",
+    "publicProperties": 180,
+    "unknownRules": 180,
+    "fireDataset": {
+      "status": "AVAILABLE",
+      "datasetVersion": "mtbs-burned-area-2026-09-14",
+      "perimeters": 20,
+      "reason": null,
+      "errors": []
+    },
+    "fireStatus": "AVAILABLE"
+  },
+  "generatedAt": "2026-09-20T19:40:56.060Z",
+  "errors": [],
+  "mutableInputs": "Live Open-Meteo and iNaturalist, no intercepted requests"
+}
