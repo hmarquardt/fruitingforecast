@@ -39,3 +39,6 @@ downloads/
 *.sqlite3
 *.mbtiles
 cookies*.json
+
+# Generated Pages deployment payload
+/dist/

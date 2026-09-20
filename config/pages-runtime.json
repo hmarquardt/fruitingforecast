@@ -1,0 +1,21 @@
+{
+  "project": "fruitingforecast",
+  "productionBranch": "main",
+  "canonicalOrigin": "https://fruitingforecast.com",
+  "gisOrigin": "https://data.hanksjunkdrawer.com/",
+  "files": [
+    "index.html",
+    "data/ecoregions.js",
+    "data/states.js",
+    "data/manifest.json",
+    "data/public-land-rules.json",
+    "data/tile-catalog.json"
+  ],
+  "excludedData": {
+    "ecoregions.json": "Browser uses ecoregions.js; JSON is preprocessing input.",
+    "states.json": "Browser uses states.js; JSON is preprocessing input.",
+    "national-relevance-v2.json": "Build/planner input; normalized release roster and coverage are already in manifest.",
+    "biology-research.json": "Product provenance; runtime biology is inline in index.html.",
+    "production/": "Internal operational reports; never part of the site."
+  }
+}

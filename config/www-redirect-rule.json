@@ -1,0 +1,16 @@
+{
+  "ref": "fruitingforecast_www_to_apex",
+  "description": "Fruiting Forecast canonical www to apex",
+  "expression": "(http.host eq \"www.fruitingforecast.com\")",
+  "action": "redirect",
+  "action_parameters": {
+    "from_value": {
+      "status_code": 301,
+      "target_url": {
+        "expression": "concat(\"https://fruitingforecast.com\", http.request.uri.path)"
+      },
+      "preserve_query_string": true
+    }
+  },
+  "enabled": true
+}

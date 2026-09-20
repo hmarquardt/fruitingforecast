@@ -7,12 +7,23 @@
           "https://www.hanksjunkdrawer.com",
           "https://hmarquardt.github.io",
           "http://localhost:8000",
-          "http://127.0.0.1:8000"
+          "http://127.0.0.1:8000",
+          "https://fruitingforecast.com",
+          "https://www.fruitingforecast.com",
+          "https://fruitingforecast.pages.dev"
         ],
-        "methods": ["GET", "HEAD"],
-        "headers": ["Range"]
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "headers": [
+          "Range"
+        ]
       },
-      "exposeHeaders": ["Accept-Ranges", "Content-Range"],
+      "exposeHeaders": [
+        "Accept-Ranges",
+        "Content-Range"
+      ],
       "maxAgeSeconds": 3600
     }
   ]
