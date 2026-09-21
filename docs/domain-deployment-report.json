@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T01:05:00Z",
+  "verdict": "PRODUCTION DOMAIN ACCEPTED",
+  "repository": {
+    "name": "hmarquardt/fruitingforecast",
+    "branch": "main",
+    "startingSHA": "1b7ab9c86fe41cf72a813ea993383a9484ca34f2",
+    "testedRuntimeSHA": "5fe8d256cbba772fba8d832bf7524cb452c9d4a9",
+    "finalCommit": {
+      "ref": "refs/heads/main",
+      "resolve": "git rev-parse HEAD",
+      "note": "The final report belongs to the later documentation-only commit; embedding that commit's own SHA would change it."
+    }
+  },
+  "pages": {
+    "accountId": "b1aa310aa0a1638d72b8b086a21e557c",
+    "project": "fruitingforecast",
+    "projectId": "4d128d7e-6aac-4a13-822a-c918b2eeb274",
+    "projectHostname": "https://fruitingforecast.pages.dev/",
+    "productionBranch": "main",
+    "deploymentMethod": "Cloudflare Pages Direct Upload through Wrangler from deterministic dist staging",
+    "deploymentId": "b14d7d96-88a2-4371-9a45-b0e7cef22fbb",
+    "deploymentUrl": "https://b14d7d96.fruitingforecast.pages.dev/",
+    "deploymentCommit": "5fe8d256cbba772fba8d832bf7524cb452c9d4a9",
+    "runtimeFiles": [
+      "index.html",
+      "data/ecoregions.js",
+      "data/states.js",
+      "data/manifest.json",
+      "data/public-land-rules.json",
+      "data/tile-catalog.json"
+    ],
+    "generatedFiles": [
+      "_headers",
+      "404.html",
+      "deployment.json"
+    ],
+    "runtimeSourceBytes": 16184203,
+    "excluded": [
+      "tests",
+      "developer tools",
+      "production and browser reports",
+      "source-only datasets",
+      "Git metadata",
+      "secrets and browser profiles"
+    ]
+  },
+  "domains": {
+    "apex": {
+      "url": "https://fruitingforecast.com/",
+      "https": true,
+      "httpStatus": 200,
+      "pagesCustomDomain": "active",
+      "dns": "proxied CNAME to fruitingforecast.pages.dev",
+      "certificate": {
+        "valid": true,
+        "subject": "CN=fruitingforecast.com",
+        "issuer": "Google Trust Services WE1"
+      },
+      "httpToHttps": true
+    },
+    "www": {
+      "servesApplication": false,
+      "status": 301,
+      "target": "https://fruitingforecast.com/<same path and query>",
+      "pathPreserved": true,
+      "queryPreserved": true,
+      "ruleRef": "fruitingforecast_www_to_apex"
+    },
+    "dnsZone": {
+      "zoneId": "ca3b108ed881b542109d5914fd72629e",
+      "status": "active",
+      "mailRecordsPreserved": true,
+      "unrelatedResourcesChanged": false
+    }
+  },
+  "versions": {
+    "application": "2026.09.20.6",
+    "scoringModel": "FF-1.7.0",
+    "gisDataset": "content-db0f839a4352ef82",
+    "normalizedTiles": 922,
+    "normalizedExpected": 922
+  },
+  "gis": {
+    "origin": "https://data.hanksjunkdrawer.com/",
+    "hostnameMigrated": false,
+    "objectsUploaded": 0,
+    "objectsRewritten": 0,
+    "manifestChanged": false,
+    "remoteAudit": {
+      "method": "Read-only full public GET with exact manifest byte count and SHA-256 for every active object",
+      "references": 3688,
+      "valid": 3688,
+      "failures": 0,
+      "bytes": 271077299
+    }
+  },
+  "cors": {
+    "updated": true,
+    "bucket": "fruiting-forecast-data",
+    "origins": [
+      "https://hanksjunkdrawer.com",
+      "https://www.hanksjunkdrawer.com",
+      "https://hmarquardt.github.io",
+      "http://localhost:8000",
+      "http://127.0.0.1:8000",
+      "https://fruitingforecast.com",
+      "https://www.fruitingforecast.com",
+      "https://fruitingforecast.pages.dev"
+    ],
+    "methods": [
+      "GET",
+      "HEAD"
+    ],
+    "allowedHeaders": [
+      "Range"
+    ],
+    "exposedHeaders": [
+      "Accept-Ranges",
+      "Content-Range"
+    ],
+    "maxAgeSeconds": 3600,
+    "directVerification": {
+      "originsChecked": 3,
+      "checks": 12,
+      "get200": true,
+      "head200": true,
+      "range206": true,
+      "contentRangeCorrect": true,
+      "acceptRangesCorrect": true,
+      "etagPresent": true,
+      "options204": true,
+      "browserAccepted": true,
+      "etagUsedAsSha256": false
+    }
+  },
+  "browserQA": {
+    "productionOrigin": "https://fruitingforecast.com/",
+    "acceptanceCases": {
+      "passed": 8,
+      "total": 8,
+      "salidaBest": true,
+      "salidaBeginnerRecovery": true,
+      "salidaUnsupportedSpecificSpecies": true,
+      "hardwood": true,
+      "modeledSparse": true,
+      "suggestedStart": true,
+      "normalizedExcludedBorder": true,
+      "adjacentValidBorder": true
+    },
+    "profileMatrix": {
+      "passed": 13,
+      "total": 13,
+      "provisional": 11,
+      "modeledSparse": 2,
+      "consoleErrors": 0,
+      "pageErrors": 0
+    },
+    "suggestedStarts": {
+      "checked": 218,
+      "violations": 0,
+      "eligibilityIdentityCoordinatesSourceAssociationChecked": true
+    },
+    "mobile": {
+      "viewport": "390x844",
+      "horizontalOverflowPixels": 0,
+      "search": true,
+      "huntFocus": true,
+      "filterRecovery": true,
+      "map": true,
+      "propertyDetails": true,
+      "about": true,
+      "settings": true
+    },
+    "failureModes": {
+      "passed": 6,
+      "total": 6,
+      "manifest": true,
+      "parquetVerifiedCacheAndUncachedFailure": true,
+      "openMeteo": true,
+      "iNaturalist": true,
+      "access": true,
+      "openRouterAbsent": true,
+      "fabricatedFallbackData": false
+    }
+  },
+  "cache": {
+    "coldImmutableParquetRequestsObserved": true,
+    "coldOrigin": "https://data.hanksjunkdrawer.com",
+    "lengthAndShaVerified": true,
+    "duckdbQueriesSuccessful": true,
+    "warmAdditionalImmutableParquetRequests": 0,
+    "mutableAPIsEvaluatedSeparately": true
+  },
+  "networkOriginAudit": {
+    "passed": true,
+    "applicationOrigins": [
+      "https://fruitingforecast.com"
+    ],
+    "gisOrigins": [
+      "https://data.hanksjunkdrawer.com"
+    ],
+    "documentedMutableOrLibraryOrigins": [
+      "https://api.open-meteo.com",
+      "https://api.inaturalist.org",
+      "https://tile.openstreetmap.org",
+      "https://unpkg.com",
+      "https://cdn.jsdelivr.net",
+      "https://extensions.duckdb.org"
+    ],
+    "unexpectedOrigins": [],
+    "credentialBearingUrls": [],
+    "junkDrawerAppLocalRequests": 0,
+    "githubParquetRequests": 0,
+    "previewHostnameDependencies": 0,
+    "note": "Two recorded 503 console messages were deliberate Parquet failure injections; normal profile QA had no console or page errors."
+  },
+  "parity": {
+    "source": "local tested runtime under fixed mutable inputs",
+    "production": "https://fruitingforecast.com/",
+    "cases": 6,
+    "biologyProfile": true,
+    "speciesRoster": true,
+    "ranking": true,
+    "componentScores": true,
+    "datasetVersion": true,
+    "gisSelection": true,
+    "passed": true
+  },
+  "performanceMilliseconds": {
+    "initialLoad": 370,
+    "profileColdMedian": 2859,
+    "profileWarmMedian": 2281,
+    "profileColdMaximum": 4789,
+    "denseHardwoodCold": 4789,
+    "assessment": "No material hosting or path regression; all values are below the Revision 19 reference timings, subject to normal internet variance."
+  },
+  "automatedTests": {
+    "python": {
+      "passed": 124,
+      "failed": 0,
+      "subtestsPassed": 6,
+      "warnings": 4
+    },
+    "playwright": {
+      "passed": 134,
+      "failed": 0,
+      "skipped": 1,
+      "discovered": 135,
+      "skipReason": "Existing opt-in live Princeton test"
+    },
+    "focusedHostingRegression": {
+      "passed": 20,
+      "failed": 0
+    },
+    "productionDomainHarness": "PASS",
+    "productionLaunchHarness": "PASS",
+    "productionParityHarness": "PASS"
+  },
+  "oldDeployment": {
+    "url": "https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html",
+    "healthy": true,
+    "appVersion": "2026.09.20.3",
+    "datasetVersion": "content-db0f839a4352ef82",
+    "normalizedTiles": 922,
+    "browserCanariesPassed": 6,
+    "redirectedOrRemoved": false
+  },
+  "security": {
+    "secretAuditClean": true,
+    "credentialsCommitted": false,
+    "tokenValuesLogged": false,
+    "deploymentArtifactContainsInternalReports": false,
+    "cloudflareAnalyticsInjectionPrevented": true
+  },
+  "unresolvedIssues": [
+    "Direct Upload releases are deliberate operator actions rather than automatic Git deployments.",
+    "The Pages project hostname remains directly reachable in addition to the canonical apex.",
+    "Existing scientific validation and collecting-rule limitations documented by Revision 19 remain non-blocking."
+  ],
+  "manualActionRequired": [],
+  "dataHostnameRecommendation": {
+    "migrateNow": false,
+    "recommendation": "Keep data.hanksjunkdrawer.com. Consider data.fruitingforecast.com only when branding or operations provide a concrete benefit, and handle it as an independent compatibility-tested migration."
+  }
+}

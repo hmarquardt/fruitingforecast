@@ -14,11 +14,11 @@ Revision 19 launch QA: **READY WITH DOCUMENTED NON-BLOCKING ISSUES**. Most prope
 
 | Component | Version |
 | --- | --- |
-| Standalone application | `2026.09.20.4` |
+| Standalone application | `2026.09.20.6` |
 | Deterministic scoring model | `FF-1.7.0` |
 | Immutable GIS dataset | `content-db0f839a4352ef82` |
 
-The app-only increment from `.3` records entry-point/data-path normalization and removal of the Junk Drawer analytics dependency. Biology, scoring, GIS and UI behavior remain unchanged.
+The app-only increments from `.3` record entry-point/data-path normalization, removal of the Junk Drawer analytics dependency, canonical-domain metadata, and deployment-safe response headers. Biology, scoring, GIS and UI behavior remain unchanged.
 
 ## Architecture
 
@@ -60,4 +60,13 @@ Major sources: [EPA ecoregions](https://www.epa.gov/eco-research/ecoregions), [C
 
 ## Deployment
 
-The proven public app remains <https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html>. The standalone project has not yet been deployed to <https://fruitingforecast.com/>. A static host must serve this repository with relative app-local URLs; retain the current R2 origin initially. See the [next-pass handoff](docs/domain-deployment-handoff.md). No secrets belong in this repository.
+The production application is <https://fruitingforecast.com/> on Cloudflare Pages. `www.fruitingforecast.com` permanently redirects to the apex while preserving the path and query string. GIS remains at the independent, immutable origin <https://data.hanksjunkdrawer.com/>. The previous [Junk Drawer deployment](https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html) remains available as rollback/reference.
+
+The deployment is a deterministic direct upload of a minimal runtime artifact. It does not publish tests, tools, internal reports, or source-only data:
+
+```sh
+python3 tools/stage_pages.py
+npx wrangler pages deploy dist --project-name fruitingforecast --branch main --commit-hash "$(git rev-parse HEAD)" --commit-dirty=false
+```
+
+See the [deployment runbook](docs/deployment.md) and [domain deployment report](docs/domain-deployment-report.json). No secrets belong in this repository or deployment artifact.
