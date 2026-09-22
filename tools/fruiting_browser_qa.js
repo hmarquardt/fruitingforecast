@@ -27,6 +27,7 @@ const ASSET_ORIGIN = 'https://data.hanksjunkdrawer.com/';
     }
   });
 
+  await page.route('https://analytics.aismallbizguru.com/**', r => r.fulfill({ status: 200, contentType: 'application/javascript', body: '' }));
   await page.goto(APP, { waitUntil: 'domcontentloaded' });
   await page.waitForFunction(() => window.__FRUITING_FORECAST_TEST__ && window.__FRUITING_FORECAST_CACHE_TEST__, null, { timeout: 90000 });
   // The manifest is loaded lazily by the first lookup; fetch it through the app's own loader.

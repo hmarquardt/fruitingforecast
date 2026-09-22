@@ -29,6 +29,7 @@ function hourSeries(){const a=[];for(let i=-30*24;i<=7*24;i++){const d=new Date(
   page.on('request',r=>{allRequests.push(r.url());if(r.url().startsWith(R2)&&r.url().endsWith('.parquet'))parquetRequests.push(r.url())});
   await page.addInitScript(()=>window.__FF_TEST_FAST__=true);
   await page.route('**/api/analytics/**',r=>r.fulfill({status:204,body:''}));
+  await page.route('https://analytics.aismallbizguru.com/**',r=>r.fulfill({status:200,contentType:'application/javascript',body:''}));
   await page.route('https://geocoding-api.open-meteo.com/v1/search**',r=>r.fulfill({json:{results:[{name:'Salida',admin1:'Colorado',country_code:'US',latitude:38.5347,longitude:-105.9989}]}}));
   await page.route('https://api.open-meteo.com/v1/forecast**',r=>{
     const u=new URL(r.request().url()),lats=u.searchParams.get('latitude').split(',').map(Number),lons=u.searchParams.get('longitude').split(',').map(Number),days=daySeries(),hours=hourSeries();

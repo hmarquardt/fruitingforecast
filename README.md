@@ -14,15 +14,15 @@ Revision 19 launch QA: **READY WITH DOCUMENTED NON-BLOCKING ISSUES**. Most prope
 
 | Component | Version |
 | --- | --- |
-| Standalone application | `2026.09.20.6` |
+| Standalone application | `2026.09.22.1` |
 | Deterministic scoring model | `FF-1.7.0` |
 | Immutable GIS dataset | `content-db0f839a4352ef82` |
 
-The app-only increments from `.3` record entry-point/data-path normalization, removal of the Junk Drawer analytics dependency, canonical-domain metadata, and deployment-safe response headers. Biology, scoring, GIS and UI behavior remain unchanged.
+The app-only increments from `.3` record entry-point/data-path normalization, removal of the Junk Drawer analytics dependency, canonical-domain metadata, deployment-safe response headers, and first-party registration on `analytics.aismallbizguru.com` with privacy-minimized product events. Biology, scoring, GIS and UI behavior remain unchanged.
 
 ## Architecture
 
-**Static HTML/JavaScript + immutable Parquet object storage + DuckDB-Wasm in the browser.** There is no application server, Worker, VM, database server, bundler, or application build step. `index.html` loads compact local configuration; the manifest points to verified immutable objects at `https://data.hanksjunkdrawer.com/`. IndexedDB holds local records and caches. Weather and observations remain external mutable inputs; optional AI interpretation never replaces deterministic scores.
+**Static HTML/JavaScript + immutable Parquet object storage + DuckDB-Wasm in the browser.** There is no application server, Worker, VM, database server, bundler, or application build step. `index.html` loads compact local configuration; the manifest points to verified immutable objects at `https://data.hanksjunkdrawer.com/`. IndexedDB holds local records and caches. Weather and observations remain external mutable inputs; optional AI interpretation never replaces deterministic scores. First-party product analytics are limited to coarse site/feature events on `analytics.aismallbizguru.com`; see [analytics](docs/deployment.md#analytics).
 
 See [architecture](docs/architecture.md), [data reproduction](docs/data-build.md), and [deployment transition](docs/deployment.md).
 

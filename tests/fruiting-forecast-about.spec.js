@@ -34,6 +34,7 @@ async function setup(page, { weatherFailure = false, observationFailure = false 
   page.on('pageerror', e => errors.push(e.message));
   page.on('console', m => { if (m.type() === 'error' && !m.text().includes('ERR_FAILED') && !m.text().includes('Failed to load resource')) errors.push(m.text()); });
   await page.addInitScript(() => { window.__FF_TEST_FAST__ = true; });
+  await page.route('https://analytics.aismallbizguru.com/**', r => r.fulfill({status:200,contentType:'application/javascript',body:''}));
   await page.route('**/analytics-lite.js', r => r.fulfill({contentType:'application/javascript', body:''}));
   await page.route('https://unpkg.com/**', r => r.abort());
   await page.route('https://tile.openstreetmap.org/**', route => route.abort());
