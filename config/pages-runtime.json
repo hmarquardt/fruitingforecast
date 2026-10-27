@@ -9,7 +9,9 @@
     "data/states.js",
     "data/manifest.json",
     "data/public-land-rules.json",
-    "data/tile-catalog.json"
+    "data/tile-catalog.json",
+    "robots.txt",
+    "sitemap.xml"
   ],
   "excludedData": {
     "ecoregions.json": "Browser uses ecoregions.js; JSON is preprocessing input.",
