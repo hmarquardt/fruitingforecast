@@ -1,0 +1,182 @@
+name: Production
+
+# Authoritative release path for the static application. A pull request only
+# validates; only a push to main may publish, after the validation job passes.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: pages-production-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: '3.12'
+  NODE_VERSION: '24'
+  WRANGLER_VERSION: '4.135.0'
+
+jobs:
+  validate:
+    name: Validate release candidate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install validation dependencies
+        run: python -m pip install --disable-pip-version-check pytest==9.0.3 pyyaml==6.0.2
+
+      - name: Validate release contract and staged artifact
+        run: python -m pytest tests/test_pages_deployment.py -q
+
+      - name: Stage minimal Pages artifact
+        run: python tools/stage_pages.py
+
+      - name: Verify artifact allowlist
+        run: |
+          set -eu
+          find dist -type f -print | sort
+          test -f dist/index.html
+          test -f dist/robots.txt
+          test -f dist/sitemap.xml
+          test -f dist/data/manifest.json
+          test -f dist/_headers
+          test -f dist/404.html
+          test -f dist/deployment.json
+          if find dist -type f \( -name '*.py' -o -name '*.md' -o -name '*.parquet' -o -name '*.pbf' -o -name '.env*' \) | grep -q .; then
+            echo "::error::Forbidden source-only file in Pages artifact"
+            exit 1
+          fi
+          if find dist -type d \( -name tests -o -name tools -o -name docs -o -name production -o -name .git \) | grep -q .; then
+            echo "::error::Forbidden source-only directory in Pages artifact"
+            exit 1
+          fi
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install pinned test tooling
+        run: npm ci
+
+      - name: Install Chrome for Playwright
+        run: npx playwright install --with-deps chrome
+
+      - name: Application smoke tests
+        run: npx playwright test tests/fruiting-forecast.spec.js tests/fruiting-forecast-hosting.spec.js tests/fruiting-forecast-analytics.spec.js --workers=2 --reporter=line
+
+      - name: Upload validated artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: pages-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    name: Deploy production
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment:
+      name: production
+      url: https://fruitingforecast.com/
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Download validated artifact
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: pages-dist
+          path: dist
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Require deployment credentials
+        run: |
+          if [ -z "${CLOUDFLARE_API_TOKEN}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID}" ]; then
+            echo "::error title=Missing Cloudflare credentials::Set repository secrets CLOUDFLARE_API_TOKEN (Account > Cloudflare Pages > Edit) and CLOUDFLARE_ACCOUNT_ID. See docs/deployment.md."
+            exit 1
+          fi
+
+      - name: Verify artifact provenance
+        run: |
+          python - <<'PY'
+          import json, os, pathlib, re, sys
+          commit = json.loads(pathlib.Path('dist/deployment.json').read_text())['commit']
+          if commit != os.environ['GITHUB_SHA']:
+              sys.exit('Artifact commit %s does not match %s' % (commit, os.environ['GITHUB_SHA']))
+          allowed = {
+              'index.html', 'robots.txt', 'sitemap.xml',
+              'data/ecoregions.js', 'data/states.js', 'data/manifest.json',
+              'data/public-land-rules.json', 'data/tile-catalog.json',
+              '_headers', '404.html', 'deployment.json',
+          }
+          published = {str(p.relative_to('dist')) for p in pathlib.Path('dist').rglob('*') if p.is_file()}
+          if published != allowed or any(re.search(r'\.(py|md|parquet|pbf|sqlite)$', p) for p in published):
+              sys.exit('Unexpected artifact inventory: %s' % sorted(published - allowed))
+          print('artifact commit', commit, 'files', len(published))
+          PY
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Publish to Cloudflare Pages
+        run: |
+          set -eu
+          npx --yes wrangler@${WRANGLER_VERSION} pages deploy dist \
+            --project-name fruitingforecast \
+            --branch main \
+            --commit-hash "$GITHUB_SHA" \
+            --commit-dirty=false
+
+      - name: Verify deployed release
+        run: python tools/verify_pages_production.py --expected-commit "$GITHUB_SHA" --report /tmp/ff-production-verify.json
+
+      - name: Install pinned test tooling for production smoke
+        run: npm ci
+
+      - name: Install Chrome for Playwright
+        run: npx playwright install --with-deps chrome
+
+      - name: Production startup and GIS compatibility smoke
+        env:
+          FF_EXPECTED_COMMIT: ${{ github.sha }}
+        run: node tools/fruiting_production_smoke.js /tmp/ff-production-smoke.json
+
+      - name: Upload production evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: production-verification
+          path: |
+            /tmp/ff-production-verify.json
+            /tmp/ff-production-smoke.json
+          if-no-files-found: warn
+          retention-days: 30

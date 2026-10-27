@@ -5,13 +5,13 @@
   "gisOrigin": "https://data.hanksjunkdrawer.com/",
   "files": [
     "index.html",
+    "robots.txt",
+    "sitemap.xml",
     "data/ecoregions.js",
     "data/states.js",
     "data/manifest.json",
     "data/public-land-rules.json",
-    "data/tile-catalog.json",
-    "robots.txt",
-    "sitemap.xml"
+    "data/tile-catalog.json"
   ],
   "excludedData": {
     "ecoregions.json": "Browser uses ecoregions.js; JSON is preprocessing input.",

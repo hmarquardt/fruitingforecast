@@ -14,11 +14,11 @@ Revision 19 launch QA: **READY WITH DOCUMENTED NON-BLOCKING ISSUES**. Most prope
 
 | Component | Version |
 | --- | --- |
-| Standalone application | `2026.09.22.1` |
+| Standalone application | `2026.10.27.1` |
 | Deterministic scoring model | `FF-1.7.0` |
 | Immutable GIS dataset | `content-db0f839a4352ef82` |
 
-The app-only increments from `.3` record entry-point/data-path normalization, removal of the Junk Drawer analytics dependency, canonical-domain metadata, deployment-safe response headers, and first-party registration on `analytics.aismallbizguru.com` with privacy-minimized product events. Biology, scoring, GIS and UI behavior remain unchanged.
+The app-only increments from `.3` record entry-point/data-path normalization, removal of the Junk Drawer analytics dependency, canonical-domain metadata, deployment-safe response headers, and first-party registration on `analytics.aismallbizguru.com` with privacy-minimized product events. The `2026.10.27.1` increment adds `robots.txt`, `sitemap.xml`, `WebApplication` JSON-LD and the GitHub Actions production release path. Biology, scoring, GIS and UI behavior remain unchanged.
 
 ## Architecture
 
@@ -62,11 +62,11 @@ Major sources: [EPA ecoregions](https://www.epa.gov/eco-research/ecoregions), [C
 
 The production application is <https://fruitingforecast.com/> on Cloudflare Pages. `www.fruitingforecast.com` permanently redirects to the apex while preserving the path and query string. GIS remains at the independent, immutable origin <https://data.hanksjunkdrawer.com/>. The previous [Junk Drawer deployment](https://hmarquardt.github.io/junkdrawer/fruiting-forecast.html) remains available as rollback/reference.
 
-The deployment is a deterministic direct upload of a minimal runtime artifact. It does not publish tests, tools, internal reports, or source-only data:
+The deployment is an automated, deterministic direct upload of a minimal runtime artifact. A validated push to `main` runs `.github/workflows/production.yml`, which stages the allowlisted artifact, publishes it to the existing Cloudflare Pages project, and verifies the live commit, canonical domain, redirect, SEO metadata and GIS compatibility. Pull requests validate but never deploy. It does not publish tests, tools, internal reports, or source-only data:
 
 ```sh
 python3 tools/stage_pages.py
-npx wrangler pages deploy dist --project-name fruitingforecast --branch main --commit-hash "$(git rev-parse HEAD)" --commit-dirty=false
+npx wrangler@4.135.0 pages deploy dist --project-name fruitingforecast --branch main --commit-hash "$GITHUB_SHA" --commit-dirty=false
 ```
 
-See the [deployment runbook](docs/deployment.md) and [domain deployment report](docs/domain-deployment-report.json). No secrets belong in this repository or deployment artifact.
+The authenticated `python3 tools/deploy_pages.py` path remains only for deliberate manual recovery. See the [deployment runbook](docs/deployment.md) for required repository secrets, rollback and verification. No secrets belong in this repository or deployment artifact.

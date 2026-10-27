@@ -19,6 +19,15 @@ def stage(root=ROOT):
     assert manifest['datasetVersion'] == 'content-db0f839a4352ef82'
     assert len(manifest['tiles']) == 922
     allowed = set(config['files'])
+    # SEO discovery files must stay inside the artifact and point at the canonical origin.
+    robots = (root / 'robots.txt').read_text()
+    sitemap = (root / 'sitemap.xml').read_text()
+    assert 'Sitemap: ' + config['canonicalOrigin'] + '/sitemap.xml' in robots
+    assert '<loc>' + config['canonicalOrigin'] + '/</loc>' in sitemap
+    assert re.search(r'<link rel="canonical" href="' + re.escape(config['canonicalOrigin']) + r'/"', html)
+    assert '<meta property="og:url" content="' + config['canonicalOrigin'] + '/" />' in html
+    structured = re.findall(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
+    assert any(json.loads(block).get('@type') == 'WebApplication' for block in structured), 'Missing WebApplication JSON-LD'
     class Links(HTMLParser):
         def handle_starttag(self, tag, attrs):
             for key, value in attrs:

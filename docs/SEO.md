@@ -11,7 +11,7 @@ Canonical site: https://fruitingforecast.com/
 
 ## Release and owner verification
 1. Run `python3 tools/stage_pages.py` and verify the built deployment contains `robots.txt`, `sitemap.xml`, and the updated `index.html`.
-2. Direct upload with Wrangler is required to publish the staged artifact.
+2. A validated push to `main` deploys the staged artifact through `.github/workflows/production.yml`; manual Wrangler upload is recovery only. See [deployment](deployment.md).
 3. Once production deployment is confirmed, retrieve the homepage, `/robots.txt` and `/sitemap.xml` through the canonical hostname and confirm HTTP 200, correct contents, and expected canonical metadata.
 4. In Google Search Console, verify the domain property and submit `https://fruitingforecast.com/sitemap.xml`; inspect the homepage using URL Inspection. Indexing is up to Google.
 
